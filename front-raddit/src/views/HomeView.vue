@@ -1,9 +1,15 @@
 <script setup>
 import NavBar from '../components/NavBarComponent.vue'
+
 </script>
 
 <template>
   <head>
-    <NavBar>YO!</NavBar>
+
+
+    <NavBar></NavBar>
   </head>
+  <body>
+    <div>Hello</div>
+  </body>
 </template>
