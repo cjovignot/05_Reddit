@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins_subraddits_link', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('admins_subraddits_link', function (Blueprint $table) {  
+            $table->integer('admin_id');
+            $table->integer('subraddit_id');
+
+            $table->foreign('admin_id')->references('id')->on('users');
+            $table->foreign('subraddit_id')->references('id')->on('subraddits');
+
         });
     }
 

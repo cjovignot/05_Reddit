@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('subraddits', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('id')->autoIncrement();
+            $table->tinytext('name');
+            $table->tinytext('about');
+            $table->tinytext('subraddit_picture_URL');
+            $table->tinytext('banner_picture_URL');
+
+
         });
     }
 
