@@ -23,6 +23,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/', [PostsController::class, 'display']);
 
 Route::get('/subraddit', [SubRadditController::class, 'display']);
-
-// Route::get('', [HomeController::class, 'display']);
-Route::get('/', [PostsController::class, 'display']);
