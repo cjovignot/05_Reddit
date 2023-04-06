@@ -16,6 +16,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -25,3 +26,9 @@ Route::get('/post', [PostController::class, 'index']);
 
 
 Route::get('/subraddit', [SubRadditController::class, 'display']);
+Route::get('/subraddit', [SubRadditController::class, 'displayAll']);
+Route::get('/subraddit/{id}', [SubRadditController::class, 'displayOne']);
+Route::put('/subraddit/{id}', [SubRadditController::class, 'editOne']);
+Route::put('/subraddit/{id}', [SubRadditController::class, 'deleteOne']);
+
+// Route::resource('/subraddit', SubRadditController::class);

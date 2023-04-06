@@ -1,9 +1,14 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import NavBar from '../components/NavBarComponent.vue'
+
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <head>
+    <div class='NavBar'></div>
+  </head>
+
+  <body>
+    <div><button class="btn btn-primary">Button</button></div>
+  </body>
 </template>
