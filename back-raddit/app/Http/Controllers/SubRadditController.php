@@ -22,7 +22,7 @@ class SubRadditController extends Controller
 
         // $subraddit = Subraddits::find($subrId)
         $subraddit = Subraddits::all();
-        return $subraddit;
+        return $subraddit->toJson(JSON_PRETTY_PRINT);
     }
 
 
@@ -62,15 +62,28 @@ class SubRadditController extends Controller
      */
     public function edit(string $id)
     {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Subraddits $post)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+
+        ]);
+
+
+
+        $success = $post->update([
+            'name' => request('name'),
+            'about' => request('about'),
+        ]);
+
+        return [
+            'success' => $success
+        ];
     }
 
     /**
