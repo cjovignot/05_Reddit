@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('subraddits', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->tinytext('name');
-            $table->tinytext('about');
-            $table->tinytext('subraddit_picture_URL');
-            $table->tinytext('banner_picture_URL');
+            $table->tinytext('about')->nullable();
+            $table->tinytext('subraddit_picture_URL')->nullable();
+            $table->tinytext('banner_picture_URL')->nullable();
+            $table->timestamps();
 
 
         });
