@@ -17,8 +17,8 @@ class PostsFactory extends Factory
     public function definition(): array
     {
         return [
-            'author_id' => fake()->randomDigit(),
-            'subraddit_id' => fake()->randomDigit(),
+            'author_id' => fake()->numberBetween($min = 1, $max = 100) ,
+            'subraddit_id' => fake()->numberBetween($min = 1, $max = 100),
             'title' => fake()->sentence() ,
             'content' => fake()->paragraph() , // password
         ];
