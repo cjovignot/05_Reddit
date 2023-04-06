@@ -28,20 +28,26 @@ class SubRadditController extends Controller
 
 
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:100',
+
+        ]);
+        // store user 
+        $created =  Subraddits::create([
+            'name' => $request->name,
+            'about' => $request->about,
+            'subraddit_picture_URL' => $request->subraddit_picture_URL,
+            'banner_picture_URL' => $request->banner_picture_URL
+        ]);
+
+        return ["isCreated" => $created];
     }
 
     /**
@@ -49,34 +55,26 @@ class SubRadditController extends Controller
      * 
      * You need to add the subraddit id in the param
      */
-    public function displayOne(string $id)
+    public function displayOne(string $subName)
     {
-        $subradditAll = Subraddits::all();
-        $subraddit = $subradditAll->find($id);
+        // return $subName;
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
+        // $subraddit = $subradditAll->find($subName);
         // dd($subraddit);
         return $subraddit->toJson(JSON_PRETTY_PRINT);;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-    }
+
 
     /**
-     * Update the specified resource in storage.
+     * Update the subraddit info.
      */
-    public function update(Subraddits $post)
+    public function editOne(string $subName)
     {
-        request()->validate([
-            'name' => 'required',
 
-        ]);
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
 
-
-
-        $success = $post->update([
+        $success =  $subraddit->update([
             'name' => request('name'),
             'about' => request('about'),
         ]);
@@ -89,8 +87,17 @@ class SubRadditController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function deleteOne(string $subName)
     {
-        //
+        // return 'ne marche pas encore';
+        // $subraddit = Subraddits::find($id);
+
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
+
+        $success =  $subraddit->delete();
+
+        return [
+            'deleted' => $success
+        ];
     }
 }
