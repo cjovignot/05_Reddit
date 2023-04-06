@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-
+/**
+ * @group USER Management
+ * 
+ * APIs to manage the USER resources.
+ */
 
 class UserController extends Controller
 {
@@ -34,7 +38,7 @@ class UserController extends Controller
 
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created user in DB.
      */
     public function store(Request $request)
     {
