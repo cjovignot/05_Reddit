@@ -1,0 +1,1834 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var baseUrl = "http://localhost";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.17.0.js"></script>
+
+    <script src="../docs/js/theme-default-4.17.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
+                                <a href="#endpoints-GETapi-user">GET api/user</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-subraddit-management" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="subraddit-management">
+                    <a href="#subraddit-management">SubRaddit Management</a>
+                </li>
+                                    <ul id="tocify-subheader-subraddit-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="subraddit-management-GETapi-subraddit">
+                                <a href="#subraddit-management-GETapi-subraddit">Display a listing of the resource.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="subraddit-management-GETapi-subraddit--id-">
+                                <a href="#subraddit-management-GETapi-subraddit--id-">Display one subraddit.</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: April 6, 2023</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-GETapi-user">GET api/user</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user"></code></pre>
+</span>
+<form id="form-GETapi-user" data-method="GET"
+      data-path="api/user"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user"
+                    onclick="tryItOut('GETapi-user');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user"
+                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                <h1 id="subraddit-management">SubRaddit Management</h1>
+
+    <p>APIs to manage the subraddit resources.</p>
+
+                                <h2 id="subraddit-management-GETapi-subraddit">Display a listing of the resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-subraddit">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/subraddit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/subraddit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-subraddit">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Bailey-Cassin&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Cruickshank-Terry&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:35.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Denesik-Feeney&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Streich LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Williamson, Turcotte and Davis&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Schowalter, Deckow and Heathcote&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Kuvalis-Murphy&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;McDermott Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Douglas-Harris&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;name&quot;: &quot;Dicki-Goyette&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Jerde, Tremblay and Kulas&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Kub-Cartwright&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;name&quot;: &quot;Upton-Reilly&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;name&quot;: &quot;Crona and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;name&quot;: &quot;Hagenes LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;name&quot;: &quot;Jakubowski Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 17,
+        &quot;name&quot;: &quot;Barton Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;name&quot;: &quot;Ziemann, Stokes and Senger&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 19,
+        &quot;name&quot;: &quot;Reynolds, Gleichner and Bode&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 20,
+        &quot;name&quot;: &quot;Klocko Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;name&quot;: &quot;Littel, Weber and Schaden&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 22,
+        &quot;name&quot;: &quot;Green-McGlynn&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;name&quot;: &quot;Lueilwitz LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;name&quot;: &quot;Marks-Metz&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:36.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 25,
+        &quot;name&quot;: &quot;Parker LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 26,
+        &quot;name&quot;: &quot;Schmeler Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 27,
+        &quot;name&quot;: &quot;Ryan-Raynor&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 28,
+        &quot;name&quot;: &quot;Thiel, Torp and Zboncak&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;name&quot;: &quot;Ziemann Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 30,
+        &quot;name&quot;: &quot;Beahan, Russel and Friesen&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;name&quot;: &quot;McClure and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;name&quot;: &quot;Hyatt, Adams and Hessel&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 33,
+        &quot;name&quot;: &quot;Towne Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;name&quot;: &quot;Spinka PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 35,
+        &quot;name&quot;: &quot;Wiegand and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;name&quot;: &quot;Bayer-Heaney&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;name&quot;: &quot;Krajcik-Koepp&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 38,
+        &quot;name&quot;: &quot;Dach-Raynor&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;name&quot;: &quot;Boyer-Fadel&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 40,
+        &quot;name&quot;: &quot;McLaughlin-Runte&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;name&quot;: &quot;Mraz LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 42,
+        &quot;name&quot;: &quot;Ankunding Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 43,
+        &quot;name&quot;: &quot;Mills, McDermott and Jakubowski&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 44,
+        &quot;name&quot;: &quot;Wehner, Schuster and O&#039;Hara&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 45,
+        &quot;name&quot;: &quot;Wuckert, Kshlerin and Herzog&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 46,
+        &quot;name&quot;: &quot;Walker, Schumm and Boyer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 47,
+        &quot;name&quot;: &quot;Rowe Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 48,
+        &quot;name&quot;: &quot;Frami-Moore&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 49,
+        &quot;name&quot;: &quot;Kihn, Feest and Braun&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 50,
+        &quot;name&quot;: &quot;Kunze, Satterfield and Ankunding&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 51,
+        &quot;name&quot;: &quot;Jacobi, Metz and Huel&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 52,
+        &quot;name&quot;: &quot;Lehner, Murray and Dibbert&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 53,
+        &quot;name&quot;: &quot;Bergstrom, Johnston and Larson&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 54,
+        &quot;name&quot;: &quot;Deckow-Carter&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 55,
+        &quot;name&quot;: &quot;Lang-Rolfson&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 56,
+        &quot;name&quot;: &quot;Connelly, Klein and Hill&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 57,
+        &quot;name&quot;: &quot;Fadel-Mohr&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 58,
+        &quot;name&quot;: &quot;Cormier-Parker&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 59,
+        &quot;name&quot;: &quot;Gorczany LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 60,
+        &quot;name&quot;: &quot;Rath-Schaefer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 61,
+        &quot;name&quot;: &quot;Cronin, Hand and Oberbrunner&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 62,
+        &quot;name&quot;: &quot;Rippin, Berge and Cassin&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 63,
+        &quot;name&quot;: &quot;Kerluke-Williamson&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 64,
+        &quot;name&quot;: &quot;Stiedemann and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 65,
+        &quot;name&quot;: &quot;Macejkovic Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 66,
+        &quot;name&quot;: &quot;Bode Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 67,
+        &quot;name&quot;: &quot;Osinski-Ankunding&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 68,
+        &quot;name&quot;: &quot;Lindgren-Roob&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:38.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 69,
+        &quot;name&quot;: &quot;Spinka-Lynch&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 70,
+        &quot;name&quot;: &quot;Carroll, Bosco and Shanahan&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 71,
+        &quot;name&quot;: &quot;Towne-Fay&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 72,
+        &quot;name&quot;: &quot;Moen, Larson and Langosh&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 73,
+        &quot;name&quot;: &quot;Schneider, Breitenberg and Fisher&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 74,
+        &quot;name&quot;: &quot;Graham Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 75,
+        &quot;name&quot;: &quot;Stiedemann, Powlowski and Zemlak&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 76,
+        &quot;name&quot;: &quot;Romaguera, DuBuque and Walsh&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 77,
+        &quot;name&quot;: &quot;Abernathy-Hilpert&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 78,
+        &quot;name&quot;: &quot;Powlowski-Gleichner&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 79,
+        &quot;name&quot;: &quot;Daniel LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 80,
+        &quot;name&quot;: &quot;Cremin, Kuhic and Wintheiser&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 81,
+        &quot;name&quot;: &quot;Kilback-Reichert&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 82,
+        &quot;name&quot;: &quot;Ferry, Zboncak and Sawayn&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 83,
+        &quot;name&quot;: &quot;Dach, Batz and Weber&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 84,
+        &quot;name&quot;: &quot;Waters and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 85,
+        &quot;name&quot;: &quot;Rath-Bayer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 86,
+        &quot;name&quot;: &quot;Senger LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 87,
+        &quot;name&quot;: &quot;Kuhic LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 88,
+        &quot;name&quot;: &quot;Marks-Pouros&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 89,
+        &quot;name&quot;: &quot;Reichert-Leannon&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 90,
+        &quot;name&quot;: &quot;Abernathy Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 91,
+        &quot;name&quot;: &quot;Schroeder, Ebert and Beer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:39.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 92,
+        &quot;name&quot;: &quot;Wisozk-Swift&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 93,
+        &quot;name&quot;: &quot;Sauer, Miller and Stokes&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 94,
+        &quot;name&quot;: &quot;Walker-Runte&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 95,
+        &quot;name&quot;: &quot;Mann, Mueller and Herzog&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 96,
+        &quot;name&quot;: &quot;Jast LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 97,
+        &quot;name&quot;: &quot;Ullrich Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 98,
+        &quot;name&quot;: &quot;Bogan, Murphy and Feil&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 99,
+        &quot;name&quot;: &quot;Baumbach-Mueller&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 100,
+        &quot;name&quot;: &quot;Renner-Emard&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T08:39:40.000000Z&quot;
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-subraddit" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-subraddit"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-subraddit" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-subraddit" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-subraddit"></code></pre>
+</span>
+<form id="form-GETapi-subraddit" data-method="GET"
+      data-path="api/subraddit"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-subraddit', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-subraddit"
+                    onclick="tryItOut('GETapi-subraddit');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-subraddit"
+                    onclick="cancelTryOut('GETapi-subraddit');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-subraddit" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/subraddit</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-subraddit"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-subraddit"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="subraddit-management-GETapi-subraddit--id-">Display one subraddit.</h2>
+
+<p>
+</p>
+
+<p>Add the subraddit id in the param</p>
+
+<span id="example-requests-GETapi-subraddit--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/subraddit/omnis" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/subraddit/omnis"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-subraddit--id-">
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Call to a member function toJson() on null&quot;,
+    &quot;exception&quot;: &quot;Error&quot;,
+    &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php&quot;,
+    &quot;line&quot;: 42,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;displayOne&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\SubRadditController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 43,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 259,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 798,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 126,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 797,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 776,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 740,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
+            &quot;line&quot;: 729,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 86,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 194,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Command/Command.php&quot;,
+            &quot;line&quot;: 312,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 1040,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 314,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php&quot;,
+            &quot;line&quot;: 168,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-subraddit--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-subraddit--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-subraddit--id-" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-subraddit--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-subraddit--id-"></code></pre>
+</span>
+<form id="form-GETapi-subraddit--id-" data-method="GET"
+      data-path="api/subraddit/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-subraddit--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-subraddit--id-"
+                    onclick="tryItOut('GETapi-subraddit--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-subraddit--id-"
+                    onclick="cancelTryOut('GETapi-subraddit--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-subraddit--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/subraddit/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="GETapi-subraddit--id-"
+               value="omnis"
+               data-component="url">
+    <br>
+<p>The ID of the subraddit. Example: <code>omnis</code></p>
+            </div>
+                    </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>

@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->timestamp('created_at');
-            $table->tinytext('profile_picture_URL');
-            $table->tinytext('banner_picture_URL');
-            $table->boolean('king_admin');
+            $table->timestamps();
+
+            $table->tinytext('profile_picture_URL')->nullable();
+            $table->tinytext('banner_picture_URL')->nullable();
+            $table->boolean('king_admin')->default(0);
             $table->rememberToken();
               });
     }
