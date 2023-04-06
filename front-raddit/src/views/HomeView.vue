@@ -1,14 +1,36 @@
 <script setup>
-import NavBar from '../components/NavBarComponent.vue'
+import NavBar from "../components/NavBarComponent.vue"
 
 </script>
 
 <template>
-  <head>
-    <div class='NavBar'></div>
-  </head>
-
   <body>
-    <div><button class="btn btn-primary">Button</button></div>
+    <NavBar></NavBar>
+
+    <!-- *** TOP SUBRADDITS *** -->
+    <div class="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div> 
+  <div class="carousel-item">
+    <img src="../assets/images/RadditsField.png" class="rounded-box" />
+  </div>
+  </div>
+  
   </body>
 </template>
