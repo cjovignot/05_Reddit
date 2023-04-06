@@ -6,7 +6,7 @@
     <!-- *** navigation bar from daisyUI *** -->
     <div class="navbar bg-base-100">
   <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a class="btn btn-ghost normal-case text-xl">Raddit <img src="../assets/images/NEW LOGO.png" width=50px height=50px></a>
   </div>
   <div class="flex-none">
     <div class="dropdown dropdown-end">
@@ -29,7 +29,7 @@
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <!-- <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" /> -->
+          <img src="../assets/images/wholeRaddit.png" />
         </div>
       </label>
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
