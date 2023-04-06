@@ -17,7 +17,11 @@ class CommentsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'author_id' => fake()->numberBetween($min = 1, $max = 10) ,
+            'post_id' => fake()->numberBetween($min = 1, $max = 10) ,
+            'content' => fake()->paragraph(),
+
+
         ];
     }
 }
