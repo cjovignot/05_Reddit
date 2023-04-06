@@ -4,8 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubRadditController;
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Routing Posts
-Route::get('/', [HomeController::class, 'show']);
-Route::resource('posts', PostsController::class);
+Route::get('/post', [PostController::class, 'index']);
+
 
 Route::get('/subraddit', [SubRadditController::class, 'display']);
