@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "http://localhost";
+        var baseUrl = "http://127.0.0.1";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -85,7 +85,13 @@
                                 <a href="#subraddit-management-GETapi-subraddit">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="subraddit-management-GETapi-subraddit--id-">
-                                <a href="#subraddit-management-GETapi-subraddit--id-">Display one subraddit.</a>
+                                <a href="#subraddit-management-GETapi-subraddit--id-">Display a subraddit info.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="subraddit-management-PUTapi-subraddit--id-">
+                                <a href="#subraddit-management-PUTapi-subraddit--id-">Update the subraddit info.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="subraddit-management-POSTapi-subraddit--id-">
+                                <a href="#subraddit-management-POSTapi-subraddit--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -107,7 +113,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://127.0.0.1</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -133,14 +139,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user" \
+    --get "http://127.0.0.1/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "http://127.0.0.1/api/user"
 );
 
 const headers = {
@@ -253,14 +259,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/subraddit" \
+    --get "http://127.0.0.1/api/subraddit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/subraddit"
+    "http://127.0.0.1/api/subraddit"
 );
 
 const headers = {
@@ -283,8 +289,8 @@ fetch(url, {
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
 x-ratelimit-limit: 60
 x-ratelimit-remaining: 59
 access-control-allow-origin: *
@@ -293,12 +299,12 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">[
     {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Bailey-Cassin&quot;,
-        &quot;about&quot;: null,
+        &quot;name&quot;: &quot;Bailey-EDIT&quot;,
+        &quot;about&quot;: &quot;this is my new subraddit&quot;,
         &quot;subraddit_picture_URL&quot;: null,
         &quot;banner_picture_URL&quot;: null,
         &quot;created_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-06T08:39:33.000000Z&quot;
+        &quot;updated_at&quot;: &quot;2023-04-06T11:08:48.000000Z&quot;
     },
     {
         &quot;id&quot;: 2,
@@ -1257,12 +1263,12 @@ access-control-allow-origin: *
             </div>
                         </form>
 
-                    <h2 id="subraddit-management-GETapi-subraddit--id-">Display one subraddit.</h2>
+                    <h2 id="subraddit-management-GETapi-subraddit--id-">Display a subraddit info.</h2>
 
 <p>
 </p>
 
-<p>Add the subraddit id in the param</p>
+<p>You need to add the subraddit id in the param</p>
 
 <span id="example-requests-GETapi-subraddit--id-">
 <blockquote>Example request:</blockquote>
@@ -1270,14 +1276,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/subraddit/omnis" \
+    --get "http://127.0.0.1/api/subraddit/quia" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/subraddit/omnis"
+    "http://127.0.0.1/api/subraddit/quia"
 );
 
 const headers = {
@@ -1311,7 +1317,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;Call to a member function toJson() on null&quot;,
     &quot;exception&quot;: &quot;Error&quot;,
     &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php&quot;,
-    &quot;line&quot;: 42,
+    &quot;line&quot;: 51,
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
@@ -1812,10 +1818,234 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-subraddit--id-"
-               value="omnis"
+               value="quia"
                data-component="url">
     <br>
-<p>The ID of the subraddit. Example: <code>omnis</code></p>
+<p>The ID of the subraddit. Example: <code>quia</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="subraddit-management-PUTapi-subraddit--id-">Update the subraddit info.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi-subraddit--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://127.0.0.1/api/subraddit/doloribus" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1/api/subraddit/doloribus"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-subraddit--id-">
+</span>
+<span id="execution-results-PUTapi-subraddit--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-subraddit--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-subraddit--id-" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-subraddit--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-subraddit--id-"></code></pre>
+</span>
+<form id="form-PUTapi-subraddit--id-" data-method="PUT"
+      data-path="api/subraddit/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-subraddit--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-subraddit--id-"
+                    onclick="tryItOut('PUTapi-subraddit--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-subraddit--id-"
+                    onclick="cancelTryOut('PUTapi-subraddit--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-subraddit--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/subraddit/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="PUTapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="PUTapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="PUTapi-subraddit--id-"
+               value="doloribus"
+               data-component="url">
+    <br>
+<p>The ID of the subraddit. Example: <code>doloribus</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="subraddit-management-POSTapi-subraddit--id-">Remove the specified resource from storage.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-subraddit--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1/api/subraddit/cumque" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1/api/subraddit/cumque"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-subraddit--id-">
+</span>
+<span id="execution-results-POSTapi-subraddit--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-subraddit--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-subraddit--id-" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-subraddit--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-subraddit--id-"></code></pre>
+</span>
+<form id="form-POSTapi-subraddit--id-" data-method="POST"
+      data-path="api/subraddit/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-subraddit--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-subraddit--id-"
+                    onclick="tryItOut('POSTapi-subraddit--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-subraddit--id-"
+                    onclick="cancelTryOut('POSTapi-subraddit--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-subraddit--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/subraddit/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="POSTapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="POSTapi-subraddit--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="POSTapi-subraddit--id-"
+               value="cumque"
+               data-component="url">
+    <br>
+<p>The ID of the subraddit. Example: <code>cumque</code></p>
             </div>
                     </form>
 

@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'http://127.0.0.1'
 paths:
   /api/user:
     get:
@@ -75,12 +75,12 @@ paths:
                 example:
                   -
                     id: 1
-                    name: Bailey-Cassin
-                    about: null
+                    name: Bailey-EDIT
+                    about: 'this is my new subraddit'
                     subraddit_picture_URL: null
                     banner_picture_URL: null
                     created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:33.000000Z'
+                    updated_at: '2023-04-06T11:08:48.000000Z'
                   -
                     id: 2
                     name: Cruickshank-Terry
@@ -878,9 +878,9 @@ paths:
       security: []
   '/api/subraddit/{id}':
     get:
-      summary: 'Display one subraddit.'
-      operationId: displayOneSubraddit
-      description: 'Add the subraddit id in the param'
+      summary: 'Display a subraddit info.'
+      operationId: displayASubradditInfo
+      description: 'You need to add the subraddit id in the param'
       parameters:
         -
           in: header
@@ -907,7 +907,7 @@ paths:
                   message: 'Call to a member function toJson() on null'
                   exception: Error
                   file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php
-                  line: 42
+                  line: 51
                   trace:
                     -
                       file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
@@ -1287,7 +1287,7 @@ paths:
                     example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php
                   line:
                     type: integer
-                    example: 42
+                    example: 51
                   trace:
                     type: array
                     example:
@@ -1678,12 +1678,58 @@ paths:
       tags:
         - 'SubRaddit Management'
       security: []
+    put:
+      summary: 'Update the subraddit info.'
+      operationId: updateTheSubradditInfo
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'SubRaddit Management'
+      security: []
+    post:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'SubRaddit Management'
+      security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the subraddit.'
-        example: omnis
+        example: quia
         required: true
         schema:
           type: string

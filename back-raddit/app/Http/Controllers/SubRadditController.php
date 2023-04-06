@@ -28,13 +28,7 @@ class SubRadditController extends Controller
 
 
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -57,26 +51,17 @@ class SubRadditController extends Controller
         return $subraddit->toJson(JSON_PRETTY_PRINT);;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-    }
+
 
     /**
-     * Update the specified resource in storage.
+     * Update the subraddit info.
      */
-    public function update(Subraddits $post)
+    public function editOne(string $id)
     {
-        request()->validate([
-            'name' => 'required',
 
-        ]);
+        $subraddit = Subraddits::find($id);
 
-
-
-        $success = $post->update([
+        $success =  $subraddit->update([
             'name' => request('name'),
             'about' => request('about'),
         ]);
@@ -89,8 +74,15 @@ class SubRadditController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function deleteOne(string $id)
     {
-        //
+        return 'ne marche pas encore';
+        $subraddit = Subraddits::find($id);
+
+        $success =  $subraddit->delete();
+
+        return [
+            'deleted' => $success
+        ];
     }
 }
