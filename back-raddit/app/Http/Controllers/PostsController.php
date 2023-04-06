@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    public function display() {
-        // $posts = Post::all();
-        echo "Coucou, je suis la liste des posts";
+    public function show(Posts $product)
+    {
+        $posts = Posts::all();
+        $post = Posts::all()->where('post_id', '=', '1');
+        return "Je suis le post dont l'id est XX";
     }
-
 }
