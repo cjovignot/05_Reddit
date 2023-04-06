@@ -11,9 +11,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/subraddit', [SubRadditController::class, 'displayAll']);
-Route::get('/subraddit/{id}', [SubRadditController::class, 'displayOne']);
-Route::put('/subraddit/{id}', [SubRadditController::class, 'editOne']);
-Route::post('/subraddit/{id}', [SubRadditController::class, 'deleteOne']);
+Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
+Route::get('/{subName}', [SubRadditController::class, 'displayOne']);
+Route::put('/{subName}', [SubRadditController::class, 'editOne']);
+Route::delete('/{subName}', [SubRadditController::class, 'deleteOne']);
 
 // Route::resource('/subraddit', SubRadditController::class);

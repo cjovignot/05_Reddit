@@ -43,10 +43,11 @@ class SubRadditController extends Controller
      * 
      * You need to add the subraddit id in the param
      */
-    public function displayOne(string $id)
+    public function displayOne(string $subName)
     {
-        $subradditAll = Subraddits::all();
-        $subraddit = $subradditAll->find($id);
+        // return $subName;
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
+        // $subraddit = $subradditAll->find($subName);
         // dd($subraddit);
         return $subraddit->toJson(JSON_PRETTY_PRINT);;
     }
