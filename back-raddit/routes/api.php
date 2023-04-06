@@ -25,8 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/post', [PostController::class, 'display']);
 Route::get('/post/{title}', [PostController::class, 'displayOne']);
 Route::post('/post/store', [PostController::class, 'storePost']);
-Route::put('/post/{title}', [PostController::class, 'editPost']);
-Route::delete('/post/{title}', [PostController::class, 'deletePost']);
+// Route::put('/post/{title}', [PostController::class, 'editPost']);
+// Route::delete('/post/{title}', [PostController::class, 'deletePost']);
 
 
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
