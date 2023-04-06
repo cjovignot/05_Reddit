@@ -18,8 +18,6 @@ return new class extends Migration
             $table->timestamp('updated_at')->useCurrentOnUpdate();
             $table->integer('author_id');
             $table->integer('subraddit_id');
-
-            
             $table->tinytext('title');
             $table->text('content');
             $table->boolean('nsfw')->default(0);
