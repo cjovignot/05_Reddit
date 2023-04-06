@@ -15,7 +15,7 @@ use App\Models\Subraddits;
 class SubRadditController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the subraddits.
      */
     public function displayAll()
     {

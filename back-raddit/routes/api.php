@@ -14,15 +14,20 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
-Route::post('/subraddit/create', [SubRadditController::class, 'store']);
-Route::get('/{subName}', [SubRadditController::class, 'displayOne']);
-Route::put('/{subName}', [SubRadditController::class, 'editOne']);
-Route::delete('/{subName}', [SubRadditController::class, 'deleteOne']);
+Route::post('/r/create', [SubRadditController::class, 'store']);
+Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
+Route::put('/r/{subName}', [SubRadditController::class, 'editOne']);
+Route::delete('/r/{subName}', [SubRadditController::class, 'deleteOne']);
 
 
-
-Route::get('/users', [UserController::class, 'displayAll']);
+// USER
+Route::get('/user', [UserController::class, 'displayAll']);
 Route::get('/user/{id}', [UserController::class, 'displayOne']);
 Route::put('/user/{id}', [UserController::class, 'editOne']);
 Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
 Route::post('/user', [UserController::class, 'store']);
+
+// LOGIN / LOGOUT
+Route::post('/register', [UserController::class, 'register']);
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/logout', [UserController::class, 'logout']);
