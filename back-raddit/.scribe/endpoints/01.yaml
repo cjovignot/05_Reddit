@@ -6,7 +6,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/subraddit
+    uri: api/subraddits
     metadata:
       groupName: 'SubRaddit Management'
       groupDescription: |-
@@ -35,910 +35,910 @@ endpoints:
           [
               {
                   "id": 1,
-                  "name": "Bailey-EDIT",
-                  "about": "this is my new subraddit",
+                  "name": "NAME EDITED HEHE JSUIS UN HACKER?",
+                  "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T11:08:48.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:22:40.000000Z"
               },
               {
                   "id": 2,
-                  "name": "Cruickshank-Terry",
+                  "name": "Leannon, Carter and Gerhold",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:35.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 3,
-                  "name": "Denesik-Feeney",
+                  "name": "Huel Ltd",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 4,
-                  "name": "Streich LLC",
+                  "name": "Bosco LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 5,
-                  "name": "Williamson, Turcotte and Davis",
+                  "name": "Stanton, Braun and Weimann",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 6,
-                  "name": "Schowalter, Deckow and Heathcote",
+                  "name": "Konopelski-Wilderman",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 7,
-                  "name": "Kuvalis-Murphy",
+                  "name": "Roberts Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 8,
-                  "name": "McDermott Ltd",
+                  "name": "Boehm, Dickinson and Kautzer",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 9,
-                  "name": "Douglas-Harris",
+                  "name": "Miller-Kemmer",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:44.000000Z"
               },
               {
                   "id": 10,
-                  "name": "Dicki-Goyette",
+                  "name": "Treutel, Gutkowski and Hirthe",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 11,
-                  "name": "Jerde, Tremblay and Kulas",
+                  "name": "Greenfelder, Brown and Daugherty",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 12,
-                  "name": "Kub-Cartwright",
+                  "name": "Feest LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 13,
-                  "name": "Upton-Reilly",
+                  "name": "Bradtke and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 14,
-                  "name": "Crona and Sons",
+                  "name": "Hermann, Quitzon and Cummings",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 15,
-                  "name": "Hagenes LLC",
+                  "name": "Cronin Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 16,
-                  "name": "Jakubowski Group",
+                  "name": "Muller and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 17,
-                  "name": "Barton Ltd",
+                  "name": "Casper-Veum",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 18,
-                  "name": "Ziemann, Stokes and Senger",
+                  "name": "Barton Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 19,
-                  "name": "Reynolds, Gleichner and Bode",
+                  "name": "Weber-Carroll",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 20,
-                  "name": "Klocko Group",
+                  "name": "Boehm, Larson and Batz",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 21,
-                  "name": "Littel, Weber and Schaden",
+                  "name": "Rohan-Shields",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 22,
-                  "name": "Green-McGlynn",
+                  "name": "Boyer, Predovic and Rowe",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 23,
-                  "name": "Lueilwitz LLC",
+                  "name": "Graham, Pacocha and Ortiz",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 24,
-                  "name": "Marks-Metz",
+                  "name": "Johns, Schoen and Greenholt",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:36.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 25,
-                  "name": "Parker LLC",
+                  "name": "Reilly Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 26,
-                  "name": "Schmeler Inc",
+                  "name": "Gulgowski-Windler",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 27,
-                  "name": "Ryan-Raynor",
+                  "name": "Pacocha Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 28,
-                  "name": "Thiel, Torp and Zboncak",
+                  "name": "O'Kon Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 29,
-                  "name": "Ziemann Inc",
+                  "name": "Trantow-Simonis",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 30,
-                  "name": "Beahan, Russel and Friesen",
+                  "name": "Flatley Group",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:45.000000Z"
               },
               {
                   "id": 31,
-                  "name": "McClure and Sons",
+                  "name": "Franecki LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 32,
-                  "name": "Hyatt, Adams and Hessel",
+                  "name": "Adams-Wisoky",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 33,
-                  "name": "Towne Group",
+                  "name": "Hirthe-Williamson",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 34,
-                  "name": "Spinka PLC",
+                  "name": "Gulgowski-Mante",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 35,
-                  "name": "Wiegand and Sons",
+                  "name": "Huel, Huel and Franecki",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 36,
-                  "name": "Bayer-Heaney",
+                  "name": "Treutel Ltd",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 37,
-                  "name": "Krajcik-Koepp",
+                  "name": "Farrell, Gulgowski and Marvin",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 38,
-                  "name": "Dach-Raynor",
+                  "name": "Russel-Mitchell",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 39,
-                  "name": "Boyer-Fadel",
+                  "name": "Bernier-Green",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 40,
-                  "name": "McLaughlin-Runte",
+                  "name": "Hoppe LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 41,
-                  "name": "Mraz LLC",
+                  "name": "Abbott-Morar",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 42,
-                  "name": "Ankunding Inc",
+                  "name": "Gaylord, Hansen and Greenholt",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 43,
-                  "name": "Mills, McDermott and Jakubowski",
+                  "name": "Quigley-Greenfelder",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 44,
-                  "name": "Wehner, Schuster and O'Hara",
+                  "name": "Vandervort-Smith",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 45,
-                  "name": "Wuckert, Kshlerin and Herzog",
+                  "name": "Kuvalis Group",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 46,
-                  "name": "Walker, Schumm and Boyer",
+                  "name": "Bailey, Grant and Batz",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:37.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:46.000000Z"
               },
               {
                   "id": 47,
-                  "name": "Rowe Ltd",
+                  "name": "Homenick, Thompson and Macejkovic",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 48,
-                  "name": "Frami-Moore",
+                  "name": "Hodkiewicz-Rogahn",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 49,
-                  "name": "Kihn, Feest and Braun",
+                  "name": "Bradtke-Flatley",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 50,
-                  "name": "Kunze, Satterfield and Ankunding",
+                  "name": "Herman Group",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 51,
-                  "name": "Jacobi, Metz and Huel",
+                  "name": "Goodwin Group",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 52,
-                  "name": "Lehner, Murray and Dibbert",
+                  "name": "Dickens Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 53,
-                  "name": "Bergstrom, Johnston and Larson",
+                  "name": "Upton, Russel and Moore",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 54,
-                  "name": "Deckow-Carter",
+                  "name": "Cronin Ltd",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 55,
-                  "name": "Lang-Rolfson",
+                  "name": "Ebert, Smith and Aufderhar",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 56,
-                  "name": "Connelly, Klein and Hill",
+                  "name": "Gleason PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 57,
-                  "name": "Fadel-Mohr",
+                  "name": "Hessel, West and Hartmann",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 58,
-                  "name": "Cormier-Parker",
+                  "name": "Abbott-Fay",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 59,
-                  "name": "Gorczany LLC",
+                  "name": "McDermott-Gislason",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 60,
-                  "name": "Rath-Schaefer",
+                  "name": "Wisoky PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 61,
-                  "name": "Cronin, Hand and Oberbrunner",
+                  "name": "Corkery-Pfannerstill",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 62,
-                  "name": "Rippin, Berge and Cassin",
+                  "name": "Rohan and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 63,
-                  "name": "Kerluke-Williamson",
+                  "name": "Barton-Zemlak",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 64,
-                  "name": "Stiedemann and Sons",
+                  "name": "Berge, Tremblay and Waters",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 65,
-                  "name": "Macejkovic Group",
+                  "name": "Rosenbaum LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 66,
-                  "name": "Bode Ltd",
+                  "name": "Dickinson-Donnelly",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:47.000000Z"
               },
               {
                   "id": 67,
-                  "name": "Osinski-Ankunding",
+                  "name": "Heathcote Ltd",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 68,
-                  "name": "Lindgren-Roob",
+                  "name": "Rogahn, Auer and Cronin",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:38.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 69,
-                  "name": "Spinka-Lynch",
+                  "name": "Cartwright and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 70,
-                  "name": "Carroll, Bosco and Shanahan",
+                  "name": "Kris and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 71,
-                  "name": "Towne-Fay",
+                  "name": "Dibbert and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 72,
-                  "name": "Moen, Larson and Langosh",
+                  "name": "Buckridge Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 73,
-                  "name": "Schneider, Breitenberg and Fisher",
+                  "name": "Maggio-DuBuque",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 74,
-                  "name": "Graham Group",
+                  "name": "Roob LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 75,
-                  "name": "Stiedemann, Powlowski and Zemlak",
+                  "name": "Reichert PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 76,
-                  "name": "Romaguera, DuBuque and Walsh",
+                  "name": "Keebler, Buckridge and Hudson",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 77,
-                  "name": "Abernathy-Hilpert",
+                  "name": "O'Connell, Jakubowski and Turner",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 78,
-                  "name": "Powlowski-Gleichner",
+                  "name": "Trantow Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 79,
-                  "name": "Daniel LLC",
+                  "name": "Cormier PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 80,
-                  "name": "Cremin, Kuhic and Wintheiser",
+                  "name": "Feeney PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 81,
-                  "name": "Kilback-Reichert",
+                  "name": "Gulgowski-Reinger",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 82,
-                  "name": "Ferry, Zboncak and Sawayn",
+                  "name": "Rippin-Kutch",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 83,
-                  "name": "Dach, Batz and Weber",
+                  "name": "Ruecker PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 84,
-                  "name": "Waters and Sons",
+                  "name": "Kunde Ltd",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 85,
-                  "name": "Rath-Bayer",
+                  "name": "Stoltenberg and Sons",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 86,
-                  "name": "Senger LLC",
+                  "name": "Koss PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 87,
-                  "name": "Kuhic LLC",
+                  "name": "Ruecker-Kub",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 88,
-                  "name": "Marks-Pouros",
+                  "name": "Emard-Nader",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:48.000000Z"
               },
               {
                   "id": 89,
-                  "name": "Reichert-Leannon",
+                  "name": "Batz, Kohler and Harvey",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 90,
-                  "name": "Abernathy Ltd",
+                  "name": "Windler LLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 91,
-                  "name": "Schroeder, Ebert and Beer",
+                  "name": "Walsh, D'Amore and Kshlerin",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:39.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 92,
-                  "name": "Wisozk-Swift",
+                  "name": "Adams PLC",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 93,
-                  "name": "Sauer, Miller and Stokes",
+                  "name": "Metz, Krajcik and King",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 94,
-                  "name": "Walker-Runte",
+                  "name": "Ledner Group",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 95,
-                  "name": "Mann, Mueller and Herzog",
+                  "name": "Collins, Koelpin and Bergnaum",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 96,
-                  "name": "Jast LLC",
+                  "name": "Casper-Hegmann",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 97,
-                  "name": "Ullrich Ltd",
+                  "name": "Mohr-Frami",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 98,
-                  "name": "Bogan, Murphy and Feil",
+                  "name": "Hintz-Botsford",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 99,
-                  "name": "Baumbach-Mueller",
+                  "name": "Steuber-Smith",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               },
               {
                   "id": 100,
-                  "name": "Renner-Emard",
+                  "name": "Bailey Inc",
                   "about": null,
                   "subraddit_picture_URL": null,
                   "banner_picture_URL": null,
-                  "created_at": "2023-04-06T08:39:33.000000Z",
-                  "updated_at": "2023-04-06T08:39:40.000000Z"
+                  "created_at": "2023-04-06T14:13:44.000000Z",
+                  "updated_at": "2023-04-06T14:13:49.000000Z"
               }
           ]
         headers:
           content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -950,8 +950,48 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - POST
+    uri: api/subraddit/create
+    metadata:
+      groupName: 'SubRaddit Management'
+      groupDescription: |-
+
+        APIs to manage the subraddit resources.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: bihmunwobsepborohujpcluy
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: bihmunwobsepborohujpcluy
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - GET
-    uri: 'api/subraddit/{id}'
+    uri: 'api/{subName}'
     metadata:
       groupName: 'SubRaddit Management'
       groupDescription: |-
@@ -967,15 +1007,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      id:
-        name: id
-        description: 'The ID of the subraddit.'
+      subName:
+        name: subName
+        description: ''
         required: true
-        example: quia
+        example: dolor
         type: string
         custom: []
     cleanUrlParameters:
-      id: quia
+      subName: dolor
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -983,54 +1023,40 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Call to a member function toJson() on null",
-              "exception": "Error",
-              "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php",
-              "line": 51,
+              "message": "No query results for model [App\\Models\\Subraddits].",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+              "line": 408,
               "trace": [
                   {
-                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+                      "line": 384,
+                      "function": "prepareException",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
                       "line": 54,
-                      "function": "displayOne",
-                      "class": "App\\Http\\Controllers\\SubRadditController",
+                      "function": "render",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
                       "type": "->"
                   },
                   {
-                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
-                      "line": 43,
-                      "function": "callAction",
-                      "class": "Illuminate\\Routing\\Controller",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 259,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\ControllerDispatcher",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 205,
-                      "function": "runController",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 798,
-                      "function": "run",
-                      "class": "Illuminate\\Routing\\Route",
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
+                      "line": 51,
+                      "function": "render",
+                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
                       "type": "->"
                   },
                   {
                       "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Routing\\{closure}",
-                      "class": "Illuminate\\Routing\\Router",
+                      "line": 143,
+                      "function": "handleException",
+                      "class": "Illuminate\\Routing\\Pipeline",
                       "type": "->"
                   },
                   {
@@ -1424,7 +1450,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1437,7 +1463,7 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/subraddit/{id}'
+    uri: 'api/{subName}'
     metadata:
       groupName: 'SubRaddit Management'
       groupDescription: |-
@@ -1453,15 +1479,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      id:
-        name: id
-        description: 'The ID of the subraddit.'
+      subName:
+        name: subName
+        description: ''
         required: true
-        example: doloribus
+        example: harum
         type: string
         custom: []
     cleanUrlParameters:
-      id: doloribus
+      subName: harum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1476,8 +1502,8 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - POST
-    uri: 'api/subraddit/{id}'
+      - DELETE
+    uri: 'api/{subName}'
     metadata:
       groupName: 'SubRaddit Management'
       groupDescription: |-
@@ -1493,15 +1519,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      id:
-        name: id
-        description: 'The ID of the subraddit.'
+      subName:
+        name: subName
+        description: ''
         required: true
-        example: cumque
+        example: incidunt
         type: string
         custom: []
     cleanUrlParameters:
-      id: cumque
+      subName: incidunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

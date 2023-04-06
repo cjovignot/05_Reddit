@@ -43,10 +43,56 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/subraddit:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: xfuxcfmwwcelab
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: heaney.rosendo@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: ut
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/users:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Display all users'
+      operationId: displayAllUsers
       description: ''
       parameters:
         -
@@ -64,886 +110,41 @@ paths:
           schema:
             type: string
       responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example:
-                  -
-                    id: 1
-                    name: Bailey-EDIT
-                    about: 'this is my new subraddit'
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T11:08:48.000000Z'
-                  -
-                    id: 2
-                    name: Cruickshank-Terry
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:35.000000Z'
-                  -
-                    id: 3
-                    name: Denesik-Feeney
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 4
-                    name: 'Streich LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 5
-                    name: 'Williamson, Turcotte and Davis'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 6
-                    name: 'Schowalter, Deckow and Heathcote'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 7
-                    name: Kuvalis-Murphy
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 8
-                    name: 'McDermott Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 9
-                    name: Douglas-Harris
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 10
-                    name: Dicki-Goyette
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 11
-                    name: 'Jerde, Tremblay and Kulas'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 12
-                    name: Kub-Cartwright
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 13
-                    name: Upton-Reilly
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 14
-                    name: 'Crona and Sons'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 15
-                    name: 'Hagenes LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 16
-                    name: 'Jakubowski Group'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 17
-                    name: 'Barton Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 18
-                    name: 'Ziemann, Stokes and Senger'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 19
-                    name: 'Reynolds, Gleichner and Bode'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 20
-                    name: 'Klocko Group'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 21
-                    name: 'Littel, Weber and Schaden'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 22
-                    name: Green-McGlynn
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 23
-                    name: 'Lueilwitz LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 24
-                    name: Marks-Metz
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:36.000000Z'
-                  -
-                    id: 25
-                    name: 'Parker LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 26
-                    name: 'Schmeler Inc'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 27
-                    name: Ryan-Raynor
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 28
-                    name: 'Thiel, Torp and Zboncak'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 29
-                    name: 'Ziemann Inc'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 30
-                    name: 'Beahan, Russel and Friesen'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 31
-                    name: 'McClure and Sons'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 32
-                    name: 'Hyatt, Adams and Hessel'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 33
-                    name: 'Towne Group'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 34
-                    name: 'Spinka PLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 35
-                    name: 'Wiegand and Sons'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 36
-                    name: Bayer-Heaney
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 37
-                    name: Krajcik-Koepp
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 38
-                    name: Dach-Raynor
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 39
-                    name: Boyer-Fadel
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 40
-                    name: McLaughlin-Runte
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 41
-                    name: 'Mraz LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 42
-                    name: 'Ankunding Inc'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 43
-                    name: 'Mills, McDermott and Jakubowski'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 44
-                    name: "Wehner, Schuster and O'Hara"
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 45
-                    name: 'Wuckert, Kshlerin and Herzog'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 46
-                    name: 'Walker, Schumm and Boyer'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:37.000000Z'
-                  -
-                    id: 47
-                    name: 'Rowe Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 48
-                    name: Frami-Moore
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 49
-                    name: 'Kihn, Feest and Braun'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 50
-                    name: 'Kunze, Satterfield and Ankunding'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 51
-                    name: 'Jacobi, Metz and Huel'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 52
-                    name: 'Lehner, Murray and Dibbert'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 53
-                    name: 'Bergstrom, Johnston and Larson'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 54
-                    name: Deckow-Carter
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 55
-                    name: Lang-Rolfson
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 56
-                    name: 'Connelly, Klein and Hill'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 57
-                    name: Fadel-Mohr
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 58
-                    name: Cormier-Parker
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 59
-                    name: 'Gorczany LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 60
-                    name: Rath-Schaefer
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 61
-                    name: 'Cronin, Hand and Oberbrunner'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 62
-                    name: 'Rippin, Berge and Cassin'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 63
-                    name: Kerluke-Williamson
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 64
-                    name: 'Stiedemann and Sons'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 65
-                    name: 'Macejkovic Group'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 66
-                    name: 'Bode Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 67
-                    name: Osinski-Ankunding
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 68
-                    name: Lindgren-Roob
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:38.000000Z'
-                  -
-                    id: 69
-                    name: Spinka-Lynch
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 70
-                    name: 'Carroll, Bosco and Shanahan'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 71
-                    name: Towne-Fay
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 72
-                    name: 'Moen, Larson and Langosh'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 73
-                    name: 'Schneider, Breitenberg and Fisher'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 74
-                    name: 'Graham Group'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 75
-                    name: 'Stiedemann, Powlowski and Zemlak'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 76
-                    name: 'Romaguera, DuBuque and Walsh'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 77
-                    name: Abernathy-Hilpert
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 78
-                    name: Powlowski-Gleichner
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 79
-                    name: 'Daniel LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 80
-                    name: 'Cremin, Kuhic and Wintheiser'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 81
-                    name: Kilback-Reichert
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 82
-                    name: 'Ferry, Zboncak and Sawayn'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 83
-                    name: 'Dach, Batz and Weber'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 84
-                    name: 'Waters and Sons'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 85
-                    name: Rath-Bayer
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 86
-                    name: 'Senger LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 87
-                    name: 'Kuhic LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 88
-                    name: Marks-Pouros
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 89
-                    name: Reichert-Leannon
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 90
-                    name: 'Abernathy Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 91
-                    name: 'Schroeder, Ebert and Beer'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:39.000000Z'
-                  -
-                    id: 92
-                    name: Wisozk-Swift
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 93
-                    name: 'Sauer, Miller and Stokes'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 94
-                    name: Walker-Runte
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 95
-                    name: 'Mann, Mueller and Herzog'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 96
-                    name: 'Jast LLC'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 97
-                    name: 'Ullrich Ltd'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 98
-                    name: 'Bogan, Murphy and Feil'
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 99
-                    name: Baumbach-Mueller
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-                  -
-                    id: 100
-                    name: Renner-Emard
-                    about: null
-                    subraddit_picture_URL: null
-                    banner_picture_URL: null
-                    created_at: '2023-04-06T08:39:33.000000Z'
-                    updated_at: '2023-04-06T08:39:40.000000Z'
-      tags:
-        - 'SubRaddit Management'
-      security: []
-  '/api/subraddit/{id}':
-    get:
-      summary: 'Display a subraddit info.'
-      operationId: displayASubradditInfo
-      description: 'You need to add the subraddit id in the param'
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        500:
+        404:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'Call to a member function toJson() on null'
-                  exception: Error
-                  file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php
-                  line: 51
+                  message: 'No query results for model [App\Models\Subraddits].'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 408
                   trace:
                     -
-                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 384
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
                       line: 54
-                      function: displayOne
-                      class: App\Http\Controllers\SubRadditController
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
                       type: '->'
                     -
-                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                      line: 43
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 259
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                      line: 205
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                      line: 798
-                      function: run
-                      class: Illuminate\Routing\Route
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
                       type: '->'
                     -
                       file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
+                      line: 143
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
                       type: '->'
                     -
                       file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
@@ -1278,54 +479,42 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'Call to a member function toJson() on null'
+                    example: 'No query results for model [App\Models\Subraddits].'
                   exception:
                     type: string
-                    example: Error
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file:
                     type: string
-                    example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Controllers/SubRadditController.php
+                    example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line:
                     type: integer
-                    example: 51
+                    example: 408
                   trace:
                     type: array
                     example:
                       -
-                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 384
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
                         line: 54
-                        function: displayOne
-                        class: App\Http\Controllers\SubRadditController
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
                         type: '->'
                       -
-                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
-                        line: 43
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 259
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Route.php
-                        line: 205
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
-                        line: 798
-                        function: run
-                        class: Illuminate\Routing\Route
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
                         type: '->'
                       -
                         file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
+                        line: 143
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
                         type: '->'
                       -
                         file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
@@ -1662,16 +851,1737 @@ paths:
                       properties:
                         file:
                           type: string
-                          example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                          example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                         line:
                           type: integer
-                          example: 54
+                          example: 384
                         function:
                           type: string
-                          example: displayOne
+                          example: prepareException
                         class:
                           type: string
-                          example: App\Http\Controllers\SubRadditController
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Endpoints
+      security: []
+  '/api/user/{id}':
+    get:
+      summary: 'Display one user filtered by an id'
+      operationId: displayOneUserFilteredByAnId
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: Briana
+                  email: bradtke.presley@example.net
+                  created_at: '2023-04-06T14:13:57.000000Z'
+                  updated_at: '2023-04-06T14:13:57.000000Z'
+                  profile_picture_URL: null
+                  banner_picture_URL: null
+                  king_admin: 0
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Briana
+                  email:
+                    type: string
+                    example: bradtke.presley@example.net
+                  created_at:
+                    type: string
+                    example: '2023-04-06T14:13:57.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-04-06T14:13:57.000000Z'
+                  profile_picture_URL:
+                    type: string
+                    example: null
+                  banner_picture_URL:
+                    type: string
+                    example: null
+                  king_admin:
+                    type: integer
+                    example: 0
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/subraddits:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: 'NAME EDITED HEHE JSUIS UN HACKER?'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:22:40.000000Z'
+                  -
+                    id: 2
+                    name: 'Leannon, Carter and Gerhold'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 3
+                    name: 'Huel Ltd'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 4
+                    name: 'Bosco LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 5
+                    name: 'Stanton, Braun and Weimann'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 6
+                    name: Konopelski-Wilderman
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 7
+                    name: 'Roberts Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 8
+                    name: 'Boehm, Dickinson and Kautzer'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 9
+                    name: Miller-Kemmer
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:44.000000Z'
+                  -
+                    id: 10
+                    name: 'Treutel, Gutkowski and Hirthe'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 11
+                    name: 'Greenfelder, Brown and Daugherty'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 12
+                    name: 'Feest LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 13
+                    name: 'Bradtke and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 14
+                    name: 'Hermann, Quitzon and Cummings'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 15
+                    name: 'Cronin Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 16
+                    name: 'Muller and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 17
+                    name: Casper-Veum
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 18
+                    name: 'Barton Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 19
+                    name: Weber-Carroll
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 20
+                    name: 'Boehm, Larson and Batz'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 21
+                    name: Rohan-Shields
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 22
+                    name: 'Boyer, Predovic and Rowe'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 23
+                    name: 'Graham, Pacocha and Ortiz'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 24
+                    name: 'Johns, Schoen and Greenholt'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 25
+                    name: 'Reilly Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 26
+                    name: Gulgowski-Windler
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 27
+                    name: 'Pacocha Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 28
+                    name: "O'Kon Inc"
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 29
+                    name: Trantow-Simonis
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 30
+                    name: 'Flatley Group'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:45.000000Z'
+                  -
+                    id: 31
+                    name: 'Franecki LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 32
+                    name: Adams-Wisoky
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 33
+                    name: Hirthe-Williamson
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 34
+                    name: Gulgowski-Mante
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 35
+                    name: 'Huel, Huel and Franecki'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 36
+                    name: 'Treutel Ltd'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 37
+                    name: 'Farrell, Gulgowski and Marvin'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 38
+                    name: Russel-Mitchell
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 39
+                    name: Bernier-Green
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 40
+                    name: 'Hoppe LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 41
+                    name: Abbott-Morar
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 42
+                    name: 'Gaylord, Hansen and Greenholt'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 43
+                    name: Quigley-Greenfelder
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 44
+                    name: Vandervort-Smith
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 45
+                    name: 'Kuvalis Group'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 46
+                    name: 'Bailey, Grant and Batz'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:46.000000Z'
+                  -
+                    id: 47
+                    name: 'Homenick, Thompson and Macejkovic'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 48
+                    name: Hodkiewicz-Rogahn
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 49
+                    name: Bradtke-Flatley
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 50
+                    name: 'Herman Group'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 51
+                    name: 'Goodwin Group'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 52
+                    name: 'Dickens Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 53
+                    name: 'Upton, Russel and Moore'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 54
+                    name: 'Cronin Ltd'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 55
+                    name: 'Ebert, Smith and Aufderhar'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 56
+                    name: 'Gleason PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 57
+                    name: 'Hessel, West and Hartmann'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 58
+                    name: Abbott-Fay
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 59
+                    name: McDermott-Gislason
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 60
+                    name: 'Wisoky PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 61
+                    name: Corkery-Pfannerstill
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 62
+                    name: 'Rohan and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 63
+                    name: Barton-Zemlak
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 64
+                    name: 'Berge, Tremblay and Waters'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 65
+                    name: 'Rosenbaum LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 66
+                    name: Dickinson-Donnelly
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:47.000000Z'
+                  -
+                    id: 67
+                    name: 'Heathcote Ltd'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 68
+                    name: 'Rogahn, Auer and Cronin'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 69
+                    name: 'Cartwright and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 70
+                    name: 'Kris and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 71
+                    name: 'Dibbert and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 72
+                    name: 'Buckridge Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 73
+                    name: Maggio-DuBuque
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 74
+                    name: 'Roob LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 75
+                    name: 'Reichert PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 76
+                    name: 'Keebler, Buckridge and Hudson'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 77
+                    name: "O'Connell, Jakubowski and Turner"
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 78
+                    name: 'Trantow Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 79
+                    name: 'Cormier PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 80
+                    name: 'Feeney PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 81
+                    name: Gulgowski-Reinger
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 82
+                    name: Rippin-Kutch
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 83
+                    name: 'Ruecker PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 84
+                    name: 'Kunde Ltd'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 85
+                    name: 'Stoltenberg and Sons'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 86
+                    name: 'Koss PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 87
+                    name: Ruecker-Kub
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 88
+                    name: Emard-Nader
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:48.000000Z'
+                  -
+                    id: 89
+                    name: 'Batz, Kohler and Harvey'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 90
+                    name: 'Windler LLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 91
+                    name: "Walsh, D'Amore and Kshlerin"
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 92
+                    name: 'Adams PLC'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 93
+                    name: 'Metz, Krajcik and King'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 94
+                    name: 'Ledner Group'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 95
+                    name: 'Collins, Koelpin and Bergnaum'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 96
+                    name: Casper-Hegmann
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 97
+                    name: Mohr-Frami
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 98
+                    name: Hintz-Botsford
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 99
+                    name: Steuber-Smith
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+                  -
+                    id: 100
+                    name: 'Bailey Inc'
+                    about: null
+                    subraddit_picture_URL: null
+                    banner_picture_URL: null
+                    created_at: '2023-04-06T14:13:44.000000Z'
+                    updated_at: '2023-04-06T14:13:49.000000Z'
+      tags:
+        - 'SubRaddit Management'
+      security: []
+  /api/subraddit/create:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'SubRaddit Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: bihmunwobsepborohujpcluy
+              required:
+                - name
+      security: []
+  '/api/{subName}':
+    get:
+      summary: 'Display a subraddit info.'
+      operationId: displayASubradditInfo
+      description: 'You need to add the subraddit id in the param'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Subraddits].'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 408
+                  trace:
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 384
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 143
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 126
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 92
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 54
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 797
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 776
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 740
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 729
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 299
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 287
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 92
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 45
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 209
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 163
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 124
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 71
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 49
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 51
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 35
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 194
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Command/Command.php
+                      line: 312
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 163
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                      line: 1040
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                      line: 314
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                      line: 168
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 200
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/artisan
+                      line: 35
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Subraddits].'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line:
+                    type: integer
+                    example: 408
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 384
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 143
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 126
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 92
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 54
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 797
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 776
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 740
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 729
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 299
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 287
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 92
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 45
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 209
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 163
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 124
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 71
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 49
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 51
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 35
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 194
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Command/Command.php
+                        line: 312
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 163
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                        line: 1040
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                        line: 314
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php
+                        line: 168
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 200
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/artisan
+                        line: 35
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line:
+                          type: integer
+                          example: 384
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
                         type:
                           type: string
                           example: '->'
@@ -1701,7 +2611,7 @@ paths:
       tags:
         - 'SubRaddit Management'
       security: []
-    post:
+    delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
       description: ''
@@ -1727,9 +2637,9 @@ paths:
     parameters:
       -
         in: path
-        name: id
-        description: 'The ID of the subraddit.'
-        example: quia
+        name: subName
+        description: ''
+        example: dolor
         required: true
         schema:
           type: string

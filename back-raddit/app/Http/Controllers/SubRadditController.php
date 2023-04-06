@@ -35,7 +35,19 @@ class SubRadditController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:100',
+
+        ]);
+        // store user 
+        $created =  Subraddits::create([
+            'name' => $request->name,
+            'about' => $request->about,
+            'subraddit_picture_URL' => $request->subraddit_picture_URL,
+            'banner_picture_URL' => $request->banner_picture_URL
+        ]);
+
+        return ["isCreated" => $created];
     }
 
     /**
@@ -57,10 +69,10 @@ class SubRadditController extends Controller
     /**
      * Update the subraddit info.
      */
-    public function editOne(string $id)
+    public function editOne(string $subName)
     {
 
-        $subraddit = Subraddits::find($id);
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
 
         $success =  $subraddit->update([
             'name' => request('name'),
@@ -75,10 +87,12 @@ class SubRadditController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function deleteOne(string $id)
+    public function deleteOne(string $subName)
     {
-        return 'ne marche pas encore';
-        $subraddit = Subraddits::find($id);
+        // return 'ne marche pas encore';
+        // $subraddit = Subraddits::find($id);
+
+        $subraddit = Subraddits::where('name', $subName)->firstOrFail();
 
         $success =  $subraddit->delete();
 
