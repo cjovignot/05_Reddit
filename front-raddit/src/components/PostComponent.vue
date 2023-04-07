@@ -6,11 +6,10 @@ export default
   props: 
   {
     SubRadditTitle: String,
-    Author: Number,
-    ProductionDate: Number,
+    Author: String,
     PostTitle: String,
     PostBody: String,
-  }
+  } 
 }
 </script>
 
@@ -22,10 +21,8 @@ export default
         <div class ="ctnr_postData">
 
             <div class="ctnr_greenBar">
-                <div><img src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/slicedRaddit_yiapyj.png"></div> 
-                <div>{{ SubRadditTitle }}</div>
+                <div><img src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/slicedRaddit_yiapyj.png" width=40px height=40px>{{ SubRadditTitle }}</div>
                 <div>{{ Author }}</div>
-                <div>{{ ProductionDate }}</div>
             </div>
 
             <div class="ctnr_postTitle">{{ PostTitle }}</div>
@@ -35,7 +32,6 @@ export default
                 <div class="ctnr_commentCounter">📜</div>
                 <div class="ctnr_shareBtn">⤴️</div>
             </div>
-
         </div>
     </div>
 
@@ -43,9 +39,24 @@ export default
 <style scoped>
 .ctnr_main
 {
-    display: flexbox;
+    display: flex;
     flex-direction: row;
 }
 
-.
+.ctnr_postData
+{
+    display: flex;
+    flex-direction: column;
+}
+.ctnr_greenBar
+{
+    display: flex;
+    flex-direction: row;
+}
+.ctnr_postFootBar
+
+{
+    display: flex;
+    flex-direction: row;
+}
 </style>
