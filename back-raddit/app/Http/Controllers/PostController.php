@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // Will need Posts Model to request API
 use App\Models\Posts;
+use App\Models\Comments;
 
 class PostController extends Controller
 {   
     public function displayAllPosts() {
         $posts = Posts::all();
+        return response()->json($posts);
+    }
+
+    public function postByCrops() {
+        $posts = Posts::orderBy('crops', 'desc')->get();
         return response()->json($posts);
     }
 
@@ -50,5 +56,19 @@ class PostController extends Controller
         return [
             'deleted' => $success
         ];
+    }
+
+
+
+    public function displayComments($post_id) {
+        $post = Posts::all()->where('id', $post_id);
+        $comments = Comments::all()->where('post_id', $post_id);
+
+        $array = [
+            'post' => $post,
+            'comments' => $comments
+        ];
+
+        return response()->json([$array]);
     }
 }
