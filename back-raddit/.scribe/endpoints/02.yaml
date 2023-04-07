@@ -1,20 +1,20 @@
-name: 'USER Management'
+name: 'SubRaddit Management'
 description: |-
 
-  APIs to manage the USER resources.
+  APIs to manage the subraddit resources.
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/user
+    uri: api/subraddits
     metadata:
-      groupName: 'USER Management'
+      groupName: 'SubRaddit Management'
       groupDescription: |-
 
-        APIs to manage the USER resources.
+        APIs to manage the subraddit resources.
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display all users'
+      title: 'Display a listing of the subraddits.'
       description: ''
       authenticated: false
       custom: []
@@ -46,32 +46,72 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
-    uri: 'api/user/{id}'
+      - POST
+    uri: api/r/create
     metadata:
-      groupName: 'USER Management'
+      groupName: 'SubRaddit Management'
       groupDescription: |-
 
-        APIs to manage the USER resources.
+        APIs to manage the subraddit resources.
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display one user filtered by an id'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the user.'
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
         required: true
-        example: 1
-        type: integer
+        example: lgiuojxfqkiuvhrjzdhv
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: lgiuojxfqkiuvhrjzdhv
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/r/{subName}'
+    metadata:
+      groupName: 'SubRaddit Management'
+      groupDescription: |-
+
+        APIs to manage the subraddit resources.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a subraddit info.'
+      description: 'You need to add the subraddit id in the param'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subName:
+        name: subName
+        description: ''
+        required: true
+        example: repellendus
+        type: string
         custom: []
     cleanUrlParameters:
-      id: 1
+      subName: repellendus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -506,7 +546,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
+          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -518,128 +558,32 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - POST
-    uri: api/register
+      - PUT
+    uri: 'api/r/{subName}'
     metadata:
-      groupName: 'USER Management'
+      groupName: 'SubRaddit Management'
       groupDescription: |-
 
-        APIs to manage the USER resources.
+        APIs to manage the subraddit resources.
       subgroup: ''
       subgroupDescription: ''
-      title: 'USER REGISTRATION'
+      title: 'Update the subraddit info.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: owiflbzndrbrnnkrxh
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: aniya96@example.com
-        type: string
-        custom: []
-      password:
-        name: password
+    urlParameters:
+      subName:
+        name: subName
         description: ''
         required: true
-        example: aspernatur
+        example: quisquam
         type: string
         custom: []
-    cleanBodyParameters:
-      name: owiflbzndrbrnnkrxh
-      email: aniya96@example.com
-      password: aspernatur
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/login
-    metadata:
-      groupName: 'USER Management'
-      groupDescription: |-
-
-        APIs to manage the USER resources.
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'USER LOGIN'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: laverne26@example.net
-        type: string
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: 'v7k|Q5x:\(CYRu'
-        type: string
-        custom: []
-    cleanBodyParameters:
-      email: laverne26@example.net
-      password: 'v7k|Q5x:\(CYRu'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/logout
-    metadata:
-      groupName: 'USER Management'
-      groupDescription: |-
-
-        APIs to manage the USER resources.
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'USER LOGOUT'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    cleanUrlParameters:
+      subName: quisquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -655,15 +599,15 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/user/{id}'
+    uri: 'api/r/{subName}'
     metadata:
-      groupName: 'USER Management'
+      groupName: 'SubRaddit Management'
       groupDescription: |-
 
-        APIs to manage the USER resources.
+        APIs to manage the subraddit resources.
       subgroup: ''
       subgroupDescription: ''
-      title: 'Delete USER'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       custom: []
@@ -671,15 +615,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      id:
-        name: id
-        description: 'The ID of the user.'
+      subName:
+        name: subName
+        description: ''
         required: true
-        example: 1
-        type: integer
+        example: dignissimos
+        type: string
         custom: []
     cleanUrlParameters:
-      id: 1
+      subName: dignissimos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

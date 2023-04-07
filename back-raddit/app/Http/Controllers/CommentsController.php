@@ -4,37 +4,59 @@ namespace App\Http\Controllers;
 
 use App\Models\Comments;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\CommentsResource;
+use App\Http\Requests\StoreCommentRequest;
+use App\Traits\HttpResponses;
+
+
 
 class CommentsController extends Controller
 {
+
+    use HttpResponses;
     /**
      * Display a listing of the comments.
      */
     public function displayAll()
     {
 
+
         $comments = Comments::all();
         return $comments->toJson(JSON_PRETTY_PRINT);
     }
 
     /**
+     * Display only one
+     */
+
+    public function displayOne($id)
+    {
+        return $id;
+        $comment = Comments::get($id);
+
+        return $comment;
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
+    // StoreCommentRequest
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required|max:100',
 
+
+        // $request->validated($request->all());
+
+        $comment = Comments::create([
+            'author_id' => Auth::user()->id,
+            'post_id' => $request->post_id,
+            'content' => $request->content
         ]);
 
-        $created =  Comments::create([
-            'name' => $request->name,
-            'about' => $request->about,
-            'comment_picture_URL' => $request->comment_picture_URL,
-            'banner_picture_URL' => $request->banner_picture_URL
-        ]);
-
-        return ["isCreated" => $created];
+        // return new CommentsResource($comment);
+        return $comment;
     }
 
     /**
@@ -42,47 +64,61 @@ class CommentsController extends Controller
      * 
      * You need to add the comment id in the param
      */
-    public function displayOne(string $subName)
-    {
-        // return $subName;
-        $comment = Comments::where('name', $subName)->firstOrFail();
+    // public function displayOne(string $postId)
+    // {
 
-        return $comment->toJson(JSON_PRETTY_PRINT);;
-    }
+    //     return CommentsResource::collection(
+    //         Comments::where('post_id', $postId)->get()
+    //     );
+
+    //     // return $subName;
+    //     // $comment = Comments::where('name', $subName)->firstOrFail();
+    //     // return $comment->toJson(JSON_PRETTY_PRINT);;
+    // }
 
 
 
     /**
      * Update the comment info.
      */
-    public function editOne(string $subName)
+    public function editOne($commentId)
     {
 
-        $comment = Comments::where('name', $subName)->firstOrFail();
+        // return $commentId;
 
-        $success =  $comment->update([
-            'name' => request('name'),
-            'about' => request('about'),
-        ]);
+        // $comment = Comments::where('id', $commentId);
+        $comment = Comments::where('id', $commentId)->firstOrFail();
+        // return $comment;
 
-        return [
-            'success' => $success
-        ];
+        if ($comment->author_id ===  Auth::user()->id) {
+            // return [$comment, $request];
+            $comment->update([
+                'content' => request('content'),
+
+            ]);
+
+            return $this->success([]);
+        } else {
+            return $this->error('', 'Unauthorized', 401);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function deleteOne(string $subName)
+    public function deleteOne($commentId)
     {
 
+        $comment = Comments::where('id', $commentId)->firstOrFail();
 
-        $comment = Comments::where('name', $subName)->firstOrFail();
+        if ($comment->author_id ===  Auth::user()->id) {
+            // return [$comment, $request];
 
-        $success =  $comment->delete();
+            $success =  $comment->delete();
 
-        return [
-            'deleted' => $success
-        ];
+            return $this->success([]);
+        } else {
+            return $this->error('', 'Unauthorized', 401);
+        }
     }
 }

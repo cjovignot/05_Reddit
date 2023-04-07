@@ -47,21 +47,21 @@ class UserController extends Controller
     /**
      * Store a newly created user in DB.
      */
-    public function store(StoreUserRequest $request)
-    {
-        $request->validated($request->all());
+    // public function store(StoreUserRequest $request)
+    // {
+    //     $request->validated($request->all());
 
-        // store user 
-        $created =  User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'profile_picture_URL' => $request->profile_picture_URL,
-            'banner_picture_URL' => $request->banner_picture_URL
-        ]);
+    //     // store user 
+    //     $created =  User::create([
+    //         'name' => $request->name,
+    //         'email' => $request->email,
+    //         'password' => Hash::make($request->password),
+    //         'profile_picture_URL' => $request->profile_picture_URL,
+    //         'banner_picture_URL' => $request->banner_picture_URL
+    //     ]);
 
-        return ["isCreated" => $created];
-    }
+    //     return ["isCreated" => $created];
+    // }
 
     /**
      * Delete USER
@@ -116,6 +116,11 @@ class UserController extends Controller
      */
     public function logout()
     {
-        return response()->json('this is my logout method');
+        // return response()->json('this is my logout method');
+        Auth::user()->currentAccessToken()->delete();
+
+        return $this->success([
+            'message' => 'You have succesfully been logged out'
+        ]);
     }
 }
