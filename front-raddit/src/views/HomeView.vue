@@ -26,9 +26,8 @@ import Post from "../components/PostComponent.vue"
     <!-- *** POSTS *** -->
     <div class="ctnr_posts">
       <Post 
-      SubRadditTile="Radis en folie"
+      SubRadditTitle="Tout sur le Radis"
       Author="Dino"
-      ProductionDate="7 Avril 2023"
       PostTitle="Les radis sont nos amis"
       PostBody="Le bon vieux lorem ipsum" />
     </div>
