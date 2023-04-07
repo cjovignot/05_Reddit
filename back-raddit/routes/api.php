@@ -24,7 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // POST
-// 
+// FOR DINO : Display All Posts SORTED BY Creation Date LIMIT 10
+
 // Displays All Posts, NO FILTER
 Route::get('/posts', [PostController::class, 'displayAllPosts']);
 // Displays All Posts ordered by CROPS DESC
@@ -41,9 +42,8 @@ Route::put('/{id}', [PostController::class, 'editPost']);
 Route::delete('/post/{id}', [PostController::class, 'deletePost']);
 
 // COMMENTS
-//
-// Displays all COMMENTS
-Route::get('/comments', [PostController::class, 'displayComments']);
+// Displays all COMMENTS of ONE POST
+Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
 
 
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);

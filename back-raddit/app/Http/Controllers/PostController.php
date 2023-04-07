@@ -60,11 +60,15 @@ class PostController extends Controller
 
 
 
+    public function displayComments($post_id) {
+        $post = Posts::all()->where('id', $post_id);
+        $comments = Comments::all()->where('post_id', $post_id);
 
+        $array = [
+            'post' => $post,
+            'comments' => $comments
+        ];
 
-    public function displayComments() {
-        // $post = Posts::where('subraddit_name', $subName)->where('id', $id)->firstOrFail();
-        $comments = Comments::all();
-        return response()->json($comments);
+        return response()->json([$array]);
     }
 }
