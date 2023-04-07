@@ -22,11 +22,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Routing Posts
-Route::get('/post', [PostController::class, 'display']);
-Route::get('/post/{title}', [PostController::class, 'displayOne']);
-Route::post('/post/store', [PostController::class, 'storePost']);
-// Route::put('/post/{title}', [PostController::class, 'editPost']);
-// Route::delete('/post/{title}', [PostController::class, 'deletePost']);
+// 
+// Displays All Posts, NO FILTER
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
+// Displays All Posts from a Subraddit
+Route::get('/{subName}/posts', [PostController::class, 'display']);
+// Displays ONLY One Post from a Subraddit
+Route::get('/{subName}/{title}', [PostController::class, 'displayOne']);
+// Creates a Post in a Subraddit called from input -> Change values in function
+Route::post('/post', [PostController::class, 'storePost']);
+// Edits a post from its ID
+Route::put('/{id}', [PostController::class, 'editPost']);
+// Deletes a post from its ID
+Route::delete('/post/{id}', [PostController::class, 'deletePost']);
 
 
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
