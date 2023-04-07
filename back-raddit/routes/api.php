@@ -30,7 +30,7 @@ Route::get('/posts', [PostController::class, 'displayAllPosts']);
 // Displays All Posts from a Subraddit
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
-Route::get('/{subName}/{title}', [PostController::class, 'displayOne']);
+Route::get('/{subName}/{id}', [PostController::class, 'displayOne']);
 // Creates a Post in a Subraddit called from input -> Change values in function
 Route::post('/post', [PostController::class, 'storePost']);
 // Edits a post from its ID
