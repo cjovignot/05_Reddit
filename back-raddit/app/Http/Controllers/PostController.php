@@ -6,37 +6,49 @@ use Illuminate\Http\Request;
 use App\Models\Posts;
 
 class PostController extends Controller
-{    
-    public function display()
-    {
+{   
+    public function displayAllPosts() {
         $posts = Posts::all();
         return response()->json($posts);
     }
-    
-    public function displayOne(string $title) {
-        $posts = Posts::all()->where('title', $title);
+
+    public function display(string $subName)
+    {
+        $posts = Posts::all()->where('subraddit_name', $subName);
         return response()->json($posts);
+    }
+    
+    public function displayOne(string $subName, string $title) {
+        $post = Posts::where('subName', $subName)->where('title', $title)->firstOrFail();
+        return response()->json($post);
     }
     
     public function storePost(Request $request) {
         $post = new Posts;
 
-        $post->author_id = "2";
-        $post->subraddit_name = "Rosenbaum LLC";
-        $post->title = "Test article 2";
-        $post->content = "Test contenu 2";
+        $post->author_id = request('author_id');
+        $post->subraddit_name = request('subraddit_name');
+        $post->title = request('title');
+        $post->content = request('content');
 
         $post->save();
-        dd($post);
 
         return Posts::all();
     }
 
-    public function edit() {
+    public function editPost(Request $request, $id) {
+        $post = Posts::where('id', $id)->firstOrFail();
 
+        $post->update($request->all());
+        return $post;
     }
 
-    public function delete() {
+    public function deletePost(string $id) {
+        $post = Posts::where('id', $id)->firstOrFail();
+        $success =  $post->delete();
 
+        return [
+            'deleted' => $success
+        ];
     }
 }
