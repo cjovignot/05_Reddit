@@ -44,3 +44,4 @@ Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 // Route::get('', [HomeController::class, 'display']);
 Route::get('/', [PostsController::class, 'display']);
+Route::get('/subraddit', [SubRadditController::class, 'display']);
