@@ -3,8 +3,6 @@
 
 <template>
     
-    <!-- *** navigation bar from daisyUI *** -->
-
 <div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">Raddit <img src="../assets/images/NEW LOGO.png" width=45px height=45px></a>
@@ -16,7 +14,7 @@
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img src="../assets/images/wholeRaddit.png" />
+          <img src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/wholeRaddit_x3fbys.png" />
         </div>
       </label>
       <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
