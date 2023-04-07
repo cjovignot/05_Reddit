@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('author_id')->references('id')->on('users');
             $table->integer('post_id')->references('id')->on('posts');
             $table->text('content');
-            $table->timestamp('Created_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrentOnUpdate()->nullable();
             $table->integer('crops')->default(0);;
 
