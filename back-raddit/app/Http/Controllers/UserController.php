@@ -106,7 +106,7 @@ class UserController extends Controller
 
         return $this->success([
             'user' => $user,
-            'token' => $user->createToken('Token API of: ' . $user->name)
+            'token' => $user->createToken('Token API of: ' . $user->name)->plainTextToken
         ]);
     }
 
