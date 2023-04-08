@@ -54,10 +54,10 @@ export const useAdminStore = defineStore('adminStore', {
       return state.users.length
     }
   }
-  //   actions: {
-  //     async fetchUsers() {
-  //       const response = await axios.get('http://127.0.0.1:8000/api/user')
-  //       this.users = response.data
-  //     }
+  // actions: {
+  //   async fetchUsers() {
+  //     const response = await axios.get('http://127.0.0.1:8000/api/user')
+  //     this.users = response.data
   //   }
+  // }
 })

@@ -1,4 +1,6 @@
-<script></script>
+<script setup>
+import Register from './UserConnexionModal.vue'
+</script>
 
 <template>
   <div class="navbar bg-base-100">
@@ -14,6 +16,7 @@
       <div class="form-control">
         <input type="text" placeholder="Search" class="input input-bordered" />
       </div>
+      <Register />
       <RouterLink class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
