@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { createToaster } from '@meforma/vue-toaster'
+const toaster = createToaster()
 
 // for our const variable, 'use...'is a naming convention
 // adminStore -> ref name to use in components (must be unique)
@@ -56,9 +58,10 @@ export const useAuthStore = defineStore('authStore', {
   },
   actions: {
     registerUser(userInput) {
-      axios
-        .post('http://127.0.0.1:8000/api/register', userInput)
-        .then((response) => console.log(response.data))
+      axios.post('http://127.0.0.1:8000/api/register', userInput).then((response) => {
+        console.log(response.data)
+        toaster.success(`Account created 🚀`)
+      })
       //   const response = axios.get('http://127.0.0.1:8000/api/posts')
       //   console.log(response.data)
     }
