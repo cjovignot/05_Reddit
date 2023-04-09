@@ -1,7 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
-// import axios from 'axios'
+import { uniqueNamesGenerator, starWars } from 'unique-names-generator'
+
+// const config: Config = {
+//   dictionaries: [starWars]
+// }
+// const characterName: string = uniqueNamesGenerator(config);
+const randomName = uniqueNamesGenerator({ dictionaries: [starWars] })
+console.log(randomName)
 
 const authStore = useAuthStore()
 
@@ -10,7 +17,7 @@ const headerTxt = ref('Connect to your account')
 const emailRef = ref('')
 const passwordRef = ref('')
 const passwordConfRef = ref('')
-const nameRef = ref('')
+const nameRef = ref(randomName)
 
 const switchModal = () => {
   signInModal.value = !signInModal.value
@@ -55,7 +62,7 @@ const signinSubmit = () => {
   <div class="modal modal-bottom sm:modal-middle">
     <div class="modal-box">
       <div class="modal-header flex justify-between">
-        <h4 class="self-center">{{ headerTxt }}</h4>
+        <h4 class="underline self-center decoration-solid">{{ headerTxt }}</h4>
         <div class="modal-action m-0">
           <label for="my-modal-6" class="btn">X</label>
         </div>
@@ -89,6 +96,9 @@ const signinSubmit = () => {
         </div>
       </section>
       <section v-else class="signup">
+        <div>
+          <label class="text-slate-400" for="name">name:</label>
+        </div>
         <input
           name="name"
           type="text"

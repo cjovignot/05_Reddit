@@ -73,11 +73,11 @@ endpoints:
         name: name
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: lgiuojxfqkiuvhrjzdhv
+        example: bfjxyruredstegiwst
         type: string
         custom: []
     cleanBodyParameters:
-      name: lgiuojxfqkiuvhrjzdhv
+      name: bfjxyruredstegiwst
     fileParameters: []
     responses: []
     responseFields: []
@@ -548,7 +548,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
+          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -581,11 +581,11 @@ endpoints:
         name: subName
         description: ''
         required: true
-        example: quisquam
+        example: incidunt
         type: string
         custom: []
     cleanUrlParameters:
-      subName: quisquam
+      subName: incidunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -621,11 +621,11 @@ endpoints:
         name: subName
         description: ''
         required: true
-        example: dignissimos
+        example: tempore
         type: string
         custom: []
     cleanUrlParameters:
-      subName: dignissimos
+      subName: tempore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

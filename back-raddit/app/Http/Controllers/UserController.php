@@ -44,35 +44,23 @@ class UserController extends Controller
     }
 
 
-    /**
-     * Store a newly created user in DB.
-     */
-    // public function store(StoreUserRequest $request)
-    // {
-    //     $request->validated($request->all());
-
-    //     // store user 
-    //     $created =  User::create([
-    //         'name' => $request->name,
-    //         'email' => $request->email,
-    //         'password' => Hash::make($request->password),
-    //         'profile_picture_URL' => $request->profile_picture_URL,
-    //         'banner_picture_URL' => $request->banner_picture_URL
-    //     ]);
-
-    //     return ["isCreated" => $created];
-    // }
 
     /**
-     * Delete USER
+     * Delete USER - king admin action only
      * 
      */
-    public function deleteOne()
+    public function deleteOne($id)
     {
         //delete on cascade all posts - all data related to him / also comments?
+        // return $id;
+        $user = User::all();
+
+        $user = $user->find($id);
 
 
+        $user->delete();
 
+        return $this->success([], message: 'user deleted');
     }
 
     /**
@@ -80,17 +68,27 @@ class UserController extends Controller
      */
     public function register(StoreUserRequest $request)
     {
+
+        // return gettype((int)$request->king_admin);
+        $adminBool = (int)$request->king_admin;
+
         $request->validated($request->all());
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'king_admin' => $adminBool
         ]);
         return $this->success([
             'user' => $user,
             'token' => $user->createToken('Token API of: ' . $user->name)->plainTextToken
         ]);
     }
+
+
+
+
+
 
     /**
      * USER LOGIN

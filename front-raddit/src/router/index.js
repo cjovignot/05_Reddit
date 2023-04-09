@@ -13,7 +13,16 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'Admin',
-      component: AdminView
+      component: AdminView,
+      meta: {
+        title: 'Admin',
+        metaTags: [
+          {
+            name: 'Admin',
+            content: 'Admin stuff'
+          }
+        ]
+      }
     }
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route

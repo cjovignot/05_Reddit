@@ -70,6 +70,11 @@ Route::post('/logout', [UserController::class, 'logout']);
 Route::get('/', [PostsController::class, 'display']);
 Route::get('/subraddit', [SubRadditController::class, 'display']);
 
+// to move in protected after tests
+Route::get('/user', [UserController::class, 'displayAll']);
+Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
+
+
 
 // PROTECTED ROUTES (if logged in)
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -85,9 +90,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::put('/r/{subName}', [SubRadditController::class, 'editOne']);
     Route::delete('/r/{subName}', [SubRadditController::class, 'deleteOne']);
 
-    Route::get('/user', [UserController::class, 'displayAll']);
+    // Route::get('/user', [UserController::class, 'displayAll']);
     Route::put('/user/{id}', [UserController::class, 'editOne']);
-    Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
     Route::post('/user', [UserController::class, 'store']);
     Route::post('/logout', [UserController::class, 'logout']);
 });
