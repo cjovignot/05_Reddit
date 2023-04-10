@@ -1,6 +1,5 @@
 <script setup>
 import Register from './UserConnexionModal.vue'
-import ThemeBtn from './ThemeBtnComponent.vue'
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
@@ -75,11 +74,15 @@ if (userData) {
             </a>
           </li>
           <li>
-            <ThemeBtn />
+            <button id="random-btn">Theme <i class="fa-solid fa-palette"></i>💥</button>
           </li>
 
-          <li><a>Settings</a></li>
-          <li><a @click="logOut">Logout</a></li>
+          <li>
+            <a
+              ><RouterLink to="/settings">Settings <i class="fa-solid fa-gear"></i></RouterLink
+            ></a>
+          </li>
+          <li><a @click="logOut">Logout 🥺</a></li>
         </ul>
       </div>
     </div>
