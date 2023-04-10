@@ -1,5 +1,22 @@
 <script setup>
 import Register from './UserConnexionModal.vue'
+import { ref } from 'vue'
+
+const isLoggedIn = ref(false)
+const isSuperAdmin = ref(false)
+
+const userToken = localStorage.getItem('userToken')
+const userData = JSON.parse(localStorage.getItem('user'))
+
+if (userToken && userData) {
+  console.log(userData.king_admin)
+  if (userData.king_admin === 1 && userToken) isSuperAdmin.value = true
+
+  console.log(isSuperAdmin.value)
+}
+// else if (!userToken) {
+//   router.push('/')
+//}
 </script>
 
 <template>
@@ -17,7 +34,7 @@ import Register from './UserConnexionModal.vue'
         <input type="text" placeholder="Search" class="input input-bordered" />
       </div>
       <Register />
-      <RouterLink class="btn" to="/admin">Admin</RouterLink>
+      <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">

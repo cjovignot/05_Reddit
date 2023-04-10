@@ -1,12 +1,46 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useAdminStore } from '../stores/AdminStore'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const userToken = localStorage.getItem('userToken')
+const userData = JSON.parse(localStorage.getItem('user'))
+
+if (userToken && userData) {
+  console.log(userData.king_admin)
+  if (userData.king_admin !== 1 && userToken) router.push('/')
+} else if (!userToken) {
+  router.push('/')
+}
+
+// onMounted(() => {
+//   axios
+//     .get('http://127.0.0.1:8000/api/posts', {
+//       headers: {
+//         'Content-Type': 'application/vnd.api+json',
+//         Accept: 'application/vnd.api+json',
+//         Authorization: `Bearer ${userToken}`
+//       }
+//     })
+//     .then((res) => console.log(res))
+//     .catch((err) => {
+//       console.log('🤯')
+//       console.log(err)
+//     })
+
+// headers: {
+//   'Content-Type': 'application/vnd.api+json',
+//   Accept: 'application/vnd.api+json',
+// }
+//})
 
 const adminStore = useAdminStore()
 
 adminStore.getUsers()
-const { users, isLoading, id, totalCount, userCount } = storeToRefs(adminStore)
+const { totalCount, userCount } = storeToRefs(adminStore)
 
 const dropValue = ref('')
 

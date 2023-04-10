@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dracula">
+<html id="html" lang="en" data-theme="dracula">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <script src="https://kit.fontawesome.com/766e633129.js" crossorigin="anonymous"></script>
     <title>Raddit</title>
   </head>

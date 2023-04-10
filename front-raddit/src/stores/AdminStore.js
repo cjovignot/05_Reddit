@@ -36,7 +36,14 @@ export const useAdminStore = defineStore('adminStore', {
           this.users = response.data
           this.isLoading = false
         })
-        .catch((err) => console.error(err))
+        .catch((err) => {
+          console.log('could not load user list ❌')
+          console.error(err)
+        })
+      // headers: {
+      //   'Content-Type': 'application/vnd.api+json',
+      //   Accept: 'application/vnd.api+json',
+      // }
     },
     deleteUser(id) {
       this.users = this.users.filter((u) => {

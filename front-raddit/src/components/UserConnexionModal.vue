@@ -2,6 +2,9 @@
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { uniqueNamesGenerator, starWars } from 'unique-names-generator'
+// import axios from 'axios'
+import { createToaster } from '@meforma/vue-toaster'
+const toaster = createToaster()
 
 // const config: Config = {
 //   dictionaries: [starWars]
@@ -29,10 +32,16 @@ const switchModal = () => {
   //   console.log(signInModal.value)
 }
 
+const loginSubmit = () => {
+  const userObj = {
+    email: emailRef.value,
+    password: passwordRef.value
+  }
+
+  authStore.login(userObj)
+}
+
 const signinSubmit = () => {
-  console.log('form click')
-  console.log(emailRef.value)
-  console.log(passwordRef.value)
   if (
     emailRef.value.length > 0 &&
     passwordRef.value == passwordConfRef.value &&
@@ -44,11 +53,10 @@ const signinSubmit = () => {
       password: passwordRef.value,
       password_confirmation: passwordConfRef.value
     }
-    // axios
-    //   .post('http://127.0.0.1:8000/api/register', userObj)
-    //   .then((response) => console.log(response.data))
-    // console.log(userObj)
+
     authStore.registerUser(userObj)
+  } else {
+    toaster.error('Wrong input, try again.')
   }
 }
 </script>
@@ -69,7 +77,7 @@ const signinSubmit = () => {
       </div>
       <section v-if="signInModal" class="signin">
         <input
-          type="text"
+          type="email"
           placeholder="email"
           class="input input-bordered w-full max-w-xs mb-1"
           v-model="emailRef"

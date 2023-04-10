@@ -28,7 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // FOR DINO : Display All Posts SORTED BY Creation Date LIMIT 10
 
 // Displays All Posts, NO FILTER
-Route::get('/posts', [PostController::class, 'displayAllPosts']);
+// Route::get('/posts', [PostController::class, 'displayAllPosts']);
 // Displays All Posts ordered by CROPS DESC
 Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 // Displays All Posts from a Subraddit
@@ -78,6 +78,9 @@ Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
 
 // PROTECTED ROUTES (if logged in)
 Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    Route::get('/posts', [PostController::class, 'displayAllPosts']);
+
 
     Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
     Route::get('/comments', [CommentsController::class, 'displayAll']);

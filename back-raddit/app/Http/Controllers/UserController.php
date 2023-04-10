@@ -95,6 +95,7 @@ class UserController extends Controller
      */
     public function login(LoginUserRequest $request)
     {
+        // return $request;
         $request->validated($request->all());
         if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
