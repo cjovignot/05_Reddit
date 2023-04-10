@@ -1,14 +1,15 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useAdminStore } from '../stores/AdminStore'
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import { ref } from 'vue'
+// import axios from 'axios'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const userToken = localStorage.getItem('userToken')
 const userData = JSON.parse(localStorage.getItem('user'))
 
+// REDIRECTION IF NOT TOP ADMIN LOGGED IN
 if (userToken && userData) {
   console.log(userData.king_admin)
   if (userData.king_admin !== 1 && userToken) router.push('/')

@@ -15,6 +15,7 @@ const router = createRouter({
       name: 'Admin',
       component: AdminView,
       meta: {
+        // requiresAuth: true,
         title: 'Admin',
         metaTags: [
           {

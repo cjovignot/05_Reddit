@@ -1,22 +1,42 @@
 <script setup>
 import Register from './UserConnexionModal.vue'
+import ThemeBtn from './ThemeBtnComponent.vue'
 import { ref } from 'vue'
+import { useAuthStore } from '../stores/AuthStore'
+import { storeToRefs } from 'pinia'
 
-const isLoggedIn = ref(false)
+// import { storeToRefs } from 'pinia'
+const authStore = useAuthStore()
+
 const isSuperAdmin = ref(false)
 
-const userToken = localStorage.getItem('userToken')
+const { loggedIn } = storeToRefs(authStore)
+console.log({ loggedIn })
+
+console.log(authStore.loggedIn)
+// const loggedIn = authStore.loggedIn
+
+console.log(loggedIn)
+
+const logOut = () => {
+  console.log('click')
+  authStore.logout()
+}
+
+// // const isLoggedIn = ref(authStore.loggedIn)
+// // console.log({ isLoggedIn })
+// const { loggedIn } = storeToRefs(authStore)
+// console.log(loggedIn)
+
+// const userToken = localStorage.getItem('userToken')
 const userData = JSON.parse(localStorage.getItem('user'))
 
-if (userToken && userData) {
+if (userData) {
   console.log(userData.king_admin)
-  if (userData.king_admin === 1 && userToken) isSuperAdmin.value = true
+  if (userData.king_admin === 1 && authStore.loggedIn) isSuperAdmin.value = true
 
   console.log(isSuperAdmin.value)
 }
-// else if (!userToken) {
-//   router.push('/')
-//}
 </script>
 
 <template>
@@ -33,7 +53,8 @@ if (userToken && userData) {
       <div class="form-control">
         <input type="text" placeholder="Search" class="input input-bordered" />
       </div>
-      <Register />
+      <Register v-if="!loggedIn" />
+
       <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -53,8 +74,12 @@ if (userToken && userData) {
               <span class="badge">New</span>
             </a>
           </li>
+          <li>
+            <ThemeBtn />
+          </li>
+
           <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><a @click="logOut">Logout</a></li>
         </ul>
       </div>
     </div>

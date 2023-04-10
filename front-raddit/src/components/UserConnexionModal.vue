@@ -11,7 +11,6 @@ const toaster = createToaster()
 // }
 // const characterName: string = uniqueNamesGenerator(config);
 const randomName = uniqueNamesGenerator({ dictionaries: [starWars] })
-console.log(randomName)
 
 const authStore = useAuthStore()
 

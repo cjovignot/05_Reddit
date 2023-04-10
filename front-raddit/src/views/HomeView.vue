@@ -1,5 +1,7 @@
 <script setup>
 import Post from '../components/PostComponent.vue'
+
+console.log(!!localStorage.getItem('userToken'))
 </script>
 <template>
   <body>
