@@ -1,13 +1,21 @@
 <script setup>
 import Post from '../components/PostComponent.vue'
 import LeftPanelComponent from '../components/LeftPanelComponent.vue'
+import { storeToRefs } from 'pinia'
+import { usePostStore } from '../stores/PostStore'
+
+const PostStore = usePostStore()
+const { totalCount, userCount } = storeToRefs(PostStore)
+
+const posts = PostStore.getAllPosts()
 
 console.log(!!localStorage.getItem('userToken'))
 </script>
-<template>
-  <body style="display: flex;">
-    <LeftPanelComponent />
-    <!-- *** TOP SUBRADDITS *** -->
+<template>   
+
+<!-- *** TOP SUBRADDITS *** -->
+<body class="flex">
+   <LeftPanelComponent />
     <section class="page">
     <div class="ctnr_top">
       <div class="ctnr_field topSubRaddit1"><img src="../assets/images/RadditsField.png" /></div>
@@ -23,7 +31,8 @@ console.log(!!localStorage.getItem('userToken'))
       </div>
 
       <!-- *** POSTS *** -->
-        <div class="ctnr_filter">
+        <div class="ctnr_filter" v-for="post in posts">
+          
         <Post
           SubRadditTitle="Tout sur le Radis"
           Author="Dino"
