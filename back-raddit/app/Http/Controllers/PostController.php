@@ -13,11 +13,6 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
-    public function postByCrops() {
-        $posts = Posts::orderBy('crops', 'desc')->get();
-        return response()->json($posts);
-    }
-
     public function display(string $subName)
     {
         $posts = Posts::all()->where('subraddit_name', $subName);
@@ -56,6 +51,47 @@ class PostController extends Controller
         return [
             'deleted' => $success
         ];
+    }
+
+
+    // TOP FILTTER BAR
+
+    public function postByCropsDown() {
+        $posts = Posts::orderBy('crops', 'desc')->get();
+        return response()->json($posts);
+    }
+
+    public function postByCropsUp() {
+        $posts = Posts::orderBy('crops', 'asc')->get();
+        return response()->json($posts);
+    }
+
+    public function postsByCreateDateUp() {
+        $posts = Posts::orderBy('created_at', 'asc')->get();
+        return response()->json($posts);
+    }
+
+    public function postsByCreateDateDown() {
+        $posts = Posts::orderBy('created_at', 'desc')->get();
+        return response()->json($posts);
+    }
+
+    public function postsHotUp() {
+        $curdate = now();
+        // $new = Posts::parse($curdate)->format('Y-m-d');;
+        // $dates = Posts::all('created_at')->firstOrFail();
+        // $diff = dateDiff($dates, $curdate);
+        // $format = $dates->format('');
+
+        // $datediff = diffInDays($curdate, $dates);
+
+
+
+        return response()->json($curdate);
+    }
+
+    public function postsHotDown() {
+        
     }
 
 
