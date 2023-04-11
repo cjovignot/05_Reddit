@@ -40,9 +40,14 @@ export default
 .ctnr_main
 {
     display: flex;
+    background-color: aquamarine;
+    width: 78%;
+    margin: auto;
     flex-direction: row;
 }
-
+.ctnr_A {
+    background-color: red;
+}
 .ctnr_postData
 {
     display: flex;
