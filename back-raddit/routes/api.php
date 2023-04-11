@@ -83,7 +83,7 @@ Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 // Route::get('', [HomeController::class, 'display']);
-// Route::get('/', [PostsController::class, 'display']);
+// Route::get('/', [PostController::class, 'display']);
 Route::get('/subraddit', [SubRadditController::class, 'display']);
 
 // to move in protected after tests

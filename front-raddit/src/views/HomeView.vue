@@ -1,13 +1,21 @@
 <script setup>
 import Post from '../components/PostComponent.vue'
 import LeftPanelComponent from '../components/LeftPanelComponent.vue'
+import { storeToRefs } from 'pinia'
+import { usePostStore } from '../stores/PostStore'
+
+const PostStore = usePostStore()
+const { totalCount, userCount } = storeToRefs(PostStore)
+
+const posts = PostStore.getAllPosts()
 
 console.log(!!localStorage.getItem('userToken'))
 </script>
-<template>
-  <body style="display: flex;">
-    <LeftPanelComponent />
-    <!-- *** TOP SUBRADDITS *** -->
+<template>   
+
+<!-- *** TOP SUBRADDITS *** -->
+<body class="flex">
+   <LeftPanelComponent class="hidden" />
     <section class="page">
     <div class="ctnr_top">
       <div class="ctnr_field topSubRaddit1"><img src="../assets/images/RadditsField.png" /></div>
@@ -17,20 +25,46 @@ console.log(!!localStorage.getItem('userToken'))
     </div>
 
       <!-- *** FILTERBAR *** -->
-      <div class="ctnr_filter">
+      <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-10">
         <div class="ctnr_new">🆕</div>
         <div class="ctnr_hot">🔥</div>
       </div>
 
       <!-- *** POSTS *** -->
-        <div class="ctnr_filter">
+        <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
+          
         <Post
           SubRadditTitle="Tout sur le Radis"
           Author="Dino"
           PostTitle="Les radis sont nos amis"
           PostBody="Le bon vieux lorem ipsum"
-        />
+          class="content-center"
+          />
+          
       </div>
+      <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
+          
+          <Post
+            SubRadditTitle="Tout sur le Radis"
+            Author="Dino"
+            PostTitle="Les radis sont nos amis"
+            PostBody="Le bon vieux lorem ipsum"
+            class="content-center"
+            />
+            
+        </div>
+        <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
+          
+          <Post
+            SubRadditTitle="Tout sur le Radis"
+            Author="Dino"
+            PostTitle="Les radis sont nos amis"
+            PostBody="Le bon vieux lorem ipsum"
+            class="content-center"
+            />
+            
+        </div>
+    
     </section>
   </body>
 </template>
