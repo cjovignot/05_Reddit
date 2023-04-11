@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="block sm:hidden">
+    <section class="sm:block">
         <h2>Catégories</h2>
         <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
             <div class="collapse-title font-medium">First category</div>
