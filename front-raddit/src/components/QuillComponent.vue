@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <textarea style="width: 100%;" name="" id="" cols="30" rows="10">HELLO</textarea>
+    <textarea v-model="post_content" class="textarea textarea-bordered textarea-sm w-full" placeholder="Your content" style="margin: 10px 0;"></textarea>
 </template>
 
 <style scoped>

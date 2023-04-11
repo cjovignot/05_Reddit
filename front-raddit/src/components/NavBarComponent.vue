@@ -3,7 +3,7 @@ import Register from './UserConnexionModal.vue'
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
-import Quill from './QuillComponent.vue'
+import CreatePost from './CreatePostModal.vue'
 
 // import { storeToRefs } from 'pinia'
 const authStore = useAuthStore()
@@ -56,19 +56,9 @@ if (userData) {
 
       <!-- The button to open Post modal -->
       <label for="my-modal-5" class="btn">+</label>
-        <input type="checkbox" id="my-modal-5" class="modal-toggle" />
-        <div class="modal">
-          <div class="modal-box w-11/12 max-w-5xl">
-            <h3 class="font-bold text-lg">POST CREATION</h3>
-            <Quill />
-            <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-            <div class="modal-action">
-              <label for="my-modal-5" class="btn">Yay!</label>
-            </div>
-          </div>
-        </div>
-
+      
       <Register v-if="!loggedIn" />
+      <CreatePost />
 
       <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">

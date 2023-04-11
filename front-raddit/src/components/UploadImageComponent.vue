@@ -1,4 +1,8 @@
 <script setup>
+import {ref} from 'vue';
+import { createToaster } from "@meforma/vue-toaster";
+const url = ref('');
+const toaster = createToaster({ /* options */ });
 const widget = window.cloudinary.createUploadWidget(
   {
     cloud_name: 'dbivyjzla',
@@ -6,7 +10,10 @@ const widget = window.cloudinary.createUploadWidget(
   },
   (error, result) => {
     if (!error && result && result.event === 'success') {
-      console.log(result.info.url)
+      url.value = result.info.url;
+      console.log(url.value);
+      toaster.success('Picture uploaded successfully');
+      return url;
     }
   }
 )
@@ -16,9 +23,10 @@ const openModal = () => {
 </script>
 
 <template>
-  <button class="border-2 rounded-full p-2" @click="openModal">
-    <i class="fa-solid fa-camera-retro"></i>
-  </button>
+    <button class="border-2 rounded-full p-2" @click="openModal" style="margin: 10px;" >
+      <i class="fa-solid fa-camera-retro"></i>
+    </button>
+  <img style="height: auto; width: 50px;" :src="url" alt="">
 </template>
 
 <style>
