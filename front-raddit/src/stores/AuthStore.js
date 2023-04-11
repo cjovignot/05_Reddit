@@ -51,11 +51,9 @@ export const useAuthStore = defineStore('authStore', {
       //   const response = axios.get('http://127.0.0.1:8000/api/posts')
       //   console.log(response.data)
     },
-    login(credentials) {
-      // console.log(credentials)
-      // return
+    login(userInput) {
       axios
-        .post('http://127.0.0.1:8000/api/login', credentials)
+        .post('http://127.0.0.1:8000/api/login', userInput)
         .then((response) => {
           console.log(response.data.data.user)
           console.log(response.data.data.token)
@@ -79,41 +77,33 @@ export const useAuthStore = defineStore('authStore', {
     logout() {
       console.log(localStorage.getItem('userToken'))
 
-      const userToken = localStorage.getItem('userToken')
+      let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'http://127.0.0.1:8000/api/logout',
+        headers: {
+          Accept: 'application/vnd.api+json',
+          'Content-Type': 'application/vnd.api+json',
+          Authorization: `Bearer ${localStorage.getItem('userToken')}`
+        }
+      }
 
       axios
-        .get('http://127.0.0.1:8000/api/posts', {
-          headers: {
-            'Content-Type': 'application/vnd.api+json',
-            Accept: 'application/vnd.api+json',
-            Authorization: `Bearer ${userToken}`
-          }
+        .request(config)
+        .then((response) => {
+          console.log(response)
+          localStorage.removeItem('user')
+          localStorage.removeItem('userToken')
+          //router.push('/')
+          toaster.success(`Logged out`)
         })
-        .then((res) => console.log(res))
         .catch((err) => {
-          console.log('🤯')
-          console.log(err)
+          console.error(err)
+          toaster.error(`Could not log out`)
         })
-
-      // axios
-      //   .post('http://127.0.0.1:8000/api/logout', {
-      //     headers: {
-      //       'Content-Type': 'application/vnd.api+json',
-      //       Accept: 'application/vnd.api+json',
-      //       Authorization: `Bearer ${localStorage.getItem('userToken')}`
-      //     }
-      //   })
-      //   .then((response) => {
-      //     console.log(response)
-      //     localStorage.removeItem('user')
-      //     localStorage.removeItem('userToken')
-      //     router.push('/')
-      //     toaster.success(`Logged out`)
-      //   })
-      //   .catch((err) => {
-      //     console.error(err)
-      //     toaster.error(`Could not log out`)
-      //   })
+    },
+    editUserData(userInput) {
+      console.log(userInput)
     }
   }
 })
