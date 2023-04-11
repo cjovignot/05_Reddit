@@ -1,13 +1,22 @@
 <script setup>
-import { ref } from 'vue';
+// import { ref } from 'vue';
 
-import Quill from './QuillComponent.vue'
 import UploadImage from './UploadImageComponent.vue'
 
-let post_title = ref('');
-function getInput() {
-    console.log(post_title);
-}
+// let post_title = ref('');
+// let post_content = ref('');
+// let new_post = ref({});
+
+// function getInput() {
+//     console.log(post_title);
+//     console.log(post_content);
+
+//     $new_post = {
+//         title => $post_title,
+//         content => $post_content,
+//         image => $url,
+//     };
+// }
 
 
 </script>
@@ -21,7 +30,7 @@ function getInput() {
         <UploadImage />
         <div id="input_div">
             <input v-model="post_title" type="text" placeholder="Your title" class="input input-bordered input-md w-full" />
-            <Quill />
+            <textarea v-model="post_content" class="textarea textarea-bordered textarea-sm w-full" placeholder="Your content" style="margin: 10px 0;"></textarea>
         </div>
         <div class="divider"></div>
         <div class="modal-action" style="display: flex; justify-content:space-between;">
