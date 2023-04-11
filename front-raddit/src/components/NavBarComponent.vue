@@ -3,6 +3,7 @@ import Register from './UserConnexionModal.vue'
 import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
+import CreatePost from './CreatePostModal.vue'
 
 // import { storeToRefs } from 'pinia'
 const authStore = useAuthStore()
@@ -52,7 +53,12 @@ if (userData) {
       <div class="form-control">
         <input type="text" placeholder="Search" class="input input-bordered" />
       </div>
+
+      <!-- The button to open Post modal -->
+      <label for="my-modal-5" class="btn">+</label>
+      
       <Register v-if="!loggedIn" />
+      <CreatePost />
 
       <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">

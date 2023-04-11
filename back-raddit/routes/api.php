@@ -25,10 +25,23 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // POST
+// TOP FILTER BAR
+// Displays All Posts ordered by CROPS DESC
+Route::get('/posts/crops/down', [PostController::class, 'postByCropsDown']);
+// Displays All Posts ordered by CROPS ASC
+Route::get('/posts/crops/up', [PostController::class, 'postByCropsUp']);
+// Displays All Posts ordered by Creation Date ASC [OLD TO NEW]
+Route::get('/posts/cdate/up', [PostController::class, 'postsByCreateDateUp']);
+// Displays All Posts ordered by Creation Date DESC [NEW TO OLD]
+Route::get('/posts/cdate/down', [PostController::class, 'postsByCreateDateDown']);
+// Displays All Posts ordered by HOT UP
+Route::get('/posts/hot/up', [PostController::class, 'postsHotUp']);
+// Display All Posts ordered by HOT DOWN
+Route::get('/posts/hot/down', [PostController::class, 'postsHotDown']);
 // FOR DINO : Display All Posts SORTED BY Creation Date LIMIT 10
 
 // Displays All Posts, NO FILTER
-// Route::get('/posts', [PostController::class, 'displayAllPosts']);
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
 // Displays All Posts ordered by CROPS DESC
 Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 // Displays All Posts from a Subraddit
@@ -41,6 +54,9 @@ Route::post('/post', [PostController::class, 'storePost']);
 Route::put('/{id}', [PostController::class, 'editPost']);
 // Deletes a post from its ID
 Route::delete('/post/{id}', [PostController::class, 'deletePost']);
+// 
+
+
 
 // Displays all COMMENTS of ONE POST
 Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
