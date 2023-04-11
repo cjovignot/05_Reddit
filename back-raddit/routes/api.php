@@ -41,7 +41,7 @@ Route::get('/posts/hot/down', [PostController::class, 'postsHotDown']);
 // FOR DINO : Display All Posts SORTED BY Creation Date LIMIT 10
 
 // Displays All Posts, NO FILTER
-// Route::get('/posts', [PostController::class, 'displayAllPosts']);
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
 // Displays All Posts from a Subraddit
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
