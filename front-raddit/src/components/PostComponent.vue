@@ -14,7 +14,7 @@ let props =defineProps({
 
 <template>
 
-    <div class="flex flex-row bg-red-500 w-2/3">
+    <div class="flex flex-row bg-red-500 w-[60%] ">
         <div class="w-16 bg-green-100 w-[5%] " >
             <Vote></Vote>
         </div>
@@ -22,7 +22,10 @@ let props =defineProps({
         <div class ="flex flex-col bg-green-400 w-[100%] ">
 
             <div class="flex flex-row bg-slate-400 text-gray-500 h-[20%]" >
-                <!-- <img src="../assets/images/slicedRaddit.png " class="object-contain p-0 object-cover">{{ SubRadditTitle }} -->
+                <div class="w-[2.5%] rounded-xl bg-green-100">
+                    <img src="../assets/images/wholeRaddit.png" />
+                </div>
+                {{ SubRadditTitle }}
                 posted by {{ Author }}  
             </div>
 

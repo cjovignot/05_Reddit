@@ -20,7 +20,7 @@ console.log(!!localStorage.getItem('userToken'))
     </div>
 
     <!-- *** POSTS *** -->
-    <div class="ctnr_posts">
+    <div class="flex items-center justify-center h-screen">
       <Post
         SubRadditTitle="Tout sur le Radis"
         Author="Dino"
