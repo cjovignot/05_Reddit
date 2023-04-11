@@ -55,7 +55,7 @@ export const useAuthStore = defineStore('authStore', {
       // console.log(credentials)
       // return
       axios
-        .post('http://127.0.0.1:8000/api/login', credentials)
+        .post('http://127.0.0.1:8000/api/login', credentials, { headers: { Authorization: '***' } })
         .then((response) => {
           console.log(response.data.data.user)
           console.log(response.data.data.token)
