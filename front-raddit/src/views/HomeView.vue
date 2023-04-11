@@ -23,7 +23,7 @@ console.log(!!localStorage.getItem('userToken'))
       </div>
 
       <!-- *** POSTS *** -->
-      <div class="ctnr_posts">
+        <div class="ctnr_filter">
         <Post
           SubRadditTitle="Tout sur le Radis"
           Author="Dino"
