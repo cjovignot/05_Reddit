@@ -4,47 +4,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/posts
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '[{"id":2,"created_at":"2023-04-06T14:59:32.000000Z","updated_at":"2023-04-07T12:29:39.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 1","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":3,"created_at":"2023-04-06T14:59:46.000000Z","updated_at":"2023-04-07T12:29:51.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 2","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":4,"created_at":"2023-04-06T15:00:28.000000Z","updated_at":"2023-04-07T12:30:04.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 3","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":4},{"id":5,"created_at":"2023-04-06T15:04:10.000000Z","updated_at":"2023-04-07T12:37:07.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 4","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":3},{"id":6,"created_at":"2023-04-06T15:04:25.000000Z","updated_at":"2023-04-07T12:37:27.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 5","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10}]'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
     uri: api/posts/crops
     metadata:
       groupName: Endpoints
@@ -73,8 +32,8 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
-          access-control-allow-origin: '*'
+          x-ratelimit-remaining: '58'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -104,11 +63,11 @@ endpoints:
         name: subName
         description: ''
         required: true
-        example: tempora
+        example: numquam
         type: string
         custom: []
     cleanUrlParameters:
-      subName: tempora
+      subName: numquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -122,8 +81,8 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
+          x-ratelimit-remaining: '57'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -153,19 +112,19 @@ endpoints:
         name: subName
         description: ''
         required: true
-        example: fuga
+        example: est
         type: string
         custom: []
       id:
         name: id
         description: 'The ID of the {subName}.'
         required: true
-        example: harum
+        example: eum
         type: string
         custom: []
     cleanUrlParameters:
-      subName: fuga
-      id: harum
+      subName: est
+      id: eum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -249,6 +208,41 @@ endpoints:
                       "line": 180,
                       "function": "handle",
                       "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 33,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 32,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
                       "type": "->"
                   },
                   {
@@ -600,8 +594,8 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
-          access-control-allow-origin: '*'
+          x-ratelimit-remaining: '56'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -661,11 +655,11 @@ endpoints:
         name: id
         description: 'The ID of the api.'
         required: true
-        example: et
+        example: nesciunt
         type: string
         custom: []
     cleanUrlParameters:
-      id: et
+      id: nesciunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -699,11 +693,11 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: rem
+        example: sunt
         type: string
         custom: []
     cleanUrlParameters:
-      id: rem
+      id: sunt
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -737,11 +731,11 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: ducimus
+        example: ad
         type: string
         custom: []
     cleanUrlParameters:
-      post_id: ducimus
+      post_id: ad
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -755,8 +749,8 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
-          access-control-allow-origin: '*'
+          x-ratelimit-remaining: '55'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -786,11 +780,11 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: et
+        example: necessitatibus
         type: string
         custom: []
     cleanUrlParameters:
-      id: et
+      id: necessitatibus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -874,6 +868,41 @@ endpoints:
                       "line": 180,
                       "function": "handle",
                       "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 33,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 32,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
                       "type": "->"
                   },
                   {
@@ -1225,8 +1254,47 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
+          x-ratelimit-remaining: '53'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/posts
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -1265,7 +1333,7 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          access-control-allow-origin: '*'
+          vary: Origin
         description: null
         custom: []
     responseFields: []
@@ -1325,11 +1393,11 @@ endpoints:
         name: commentId
         description: ''
         required: true
-        example: eius
+        example: ut
         type: string
         custom: []
     cleanUrlParameters:
-      commentId: eius
+      commentId: ut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1363,11 +1431,11 @@ endpoints:
         name: commentId
         description: ''
         required: true
-        example: totam
+        example: fugit
         type: string
         custom: []
     cleanUrlParameters:
-      commentId: totam
+      commentId: fugit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
