@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "http://127.0.0.1";
+        var baseUrl = "http://127.0.0.1:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -71,10 +71,7 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts">
-                                <a href="#endpoints-GETapi-posts">GET api/posts</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-crops">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-crops">
                                 <a href="#endpoints-GETapi-posts-crops">GET api/posts/crops</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi--subName--posts">
@@ -97,6 +94,9 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-comment--id-">
                                 <a href="#endpoints-GETapi-comment--id-">Display only one</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts">
+                                <a href="#endpoints-GETapi-posts">GET api/posts</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-comments">
                                 <a href="#endpoints-GETapi-comments">Display a listing of the comments.</a>
@@ -168,7 +168,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 9, 2023</li>
+        <li>Last updated: April 11, 2023</li>
     </ul>
 </div>
 
@@ -177,7 +177,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://127.0.0.1</code>
+    <strong>Base URL</strong>: <code>http://127.0.0.1:8000</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -190,189 +190,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-GETapi-posts">GET api/posts</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-posts">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/posts" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/posts"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-posts">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 2,
-        &quot;created_at&quot;: &quot;2023-04-06T14:59:32.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-07T12:29:39.000000Z&quot;,
-        &quot;author_id&quot;: 1,
-        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
-        &quot;title&quot;: &quot;Article 1&quot;,
-        &quot;content&quot;: &quot;Modified content Article 5&quot;,
-        &quot;nsfw&quot;: 1,
-        &quot;spoiler&quot;: 1,
-        &quot;OC&quot;: 1,
-        &quot;crops&quot;: 10
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;created_at&quot;: &quot;2023-04-06T14:59:46.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-07T12:29:51.000000Z&quot;,
-        &quot;author_id&quot;: 1,
-        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
-        &quot;title&quot;: &quot;Article 2&quot;,
-        &quot;content&quot;: &quot;Modified content Article 5&quot;,
-        &quot;nsfw&quot;: 1,
-        &quot;spoiler&quot;: 1,
-        &quot;OC&quot;: 1,
-        &quot;crops&quot;: 10
-    },
-    {
-        &quot;id&quot;: 4,
-        &quot;created_at&quot;: &quot;2023-04-06T15:00:28.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-07T12:30:04.000000Z&quot;,
-        &quot;author_id&quot;: 1,
-        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
-        &quot;title&quot;: &quot;Article 3&quot;,
-        &quot;content&quot;: &quot;Modified content Article 5&quot;,
-        &quot;nsfw&quot;: 1,
-        &quot;spoiler&quot;: 1,
-        &quot;OC&quot;: 1,
-        &quot;crops&quot;: 4
-    },
-    {
-        &quot;id&quot;: 5,
-        &quot;created_at&quot;: &quot;2023-04-06T15:04:10.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-07T12:37:07.000000Z&quot;,
-        &quot;author_id&quot;: 1,
-        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
-        &quot;title&quot;: &quot;Article 4&quot;,
-        &quot;content&quot;: &quot;Modified content Article 5&quot;,
-        &quot;nsfw&quot;: 1,
-        &quot;spoiler&quot;: 1,
-        &quot;OC&quot;: 1,
-        &quot;crops&quot;: 3
-    },
-    {
-        &quot;id&quot;: 6,
-        &quot;created_at&quot;: &quot;2023-04-06T15:04:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-07T12:37:27.000000Z&quot;,
-        &quot;author_id&quot;: 1,
-        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
-        &quot;title&quot;: &quot;Article 5&quot;,
-        &quot;content&quot;: &quot;Modified content Article 5&quot;,
-        &quot;nsfw&quot;: 1,
-        &quot;spoiler&quot;: 1,
-        &quot;OC&quot;: 1,
-        &quot;crops&quot;: 10
-    }
-]</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-posts" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-posts"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-posts" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-posts" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-posts"></code></pre>
-</span>
-<form id="form-GETapi-posts" data-method="GET"
-      data-path="api/posts"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-posts"
-                    onclick="tryItOut('GETapi-posts');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-posts"
-                    onclick="cancelTryOut('GETapi-posts');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-posts" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/posts</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-posts"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-posts"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-posts-crops">GET api/posts/crops</h2>
+                                <h2 id="endpoints-GETapi-posts-crops">GET api/posts/crops</h2>
 
 <p>
 </p>
@@ -385,14 +203,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/posts/crops" \
+    --get "http://127.0.0.1:8000/api/posts/crops" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/posts/crops"
+    "http://127.0.0.1:8000/api/posts/crops"
 );
 
 const headers = {
@@ -418,8 +236,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
-access-control-allow-origin: *
+x-ratelimit-remaining: 58
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">[
@@ -567,14 +385,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/tempora/posts" \
+    --get "http://127.0.0.1:8000/api/numquam/posts" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/tempora/posts"
+    "http://127.0.0.1:8000/api/numquam/posts"
 );
 
 const headers = {
@@ -600,8 +418,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
-access-control-allow-origin: *
+x-ratelimit-remaining: 57
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">[]</code>
@@ -675,10 +493,10 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi--subName--posts"
-               value="tempora"
+               value="numquam"
                data-component="url">
     <br>
-<p>Example: <code>tempora</code></p>
+<p>Example: <code>numquam</code></p>
             </div>
                     </form>
 
@@ -695,14 +513,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/fuga/harum" \
+    --get "http://127.0.0.1:8000/api/est/eum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/fuga/harum"
+    "http://127.0.0.1:8000/api/est/eum"
 );
 
 const headers = {
@@ -728,8 +546,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
-access-control-allow-origin: *
+x-ratelimit-remaining: 56
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -806,6 +624,41 @@ access-control-allow-origin: *
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 33,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\{closure}&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 32,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -1223,10 +1076,10 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi--subName---id-"
-               value="fuga"
+               value="est"
                data-component="url">
     <br>
-<p>Example: <code>fuga</code></p>
+<p>Example: <code>est</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -1234,10 +1087,10 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi--subName---id-"
-               value="harum"
+               value="eum"
                data-component="url">
     <br>
-<p>The ID of the {subName}. Example: <code>harum</code></p>
+<p>The ID of the {subName}. Example: <code>eum</code></p>
             </div>
                     </form>
 
@@ -1254,14 +1107,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/post" \
+    "http://127.0.0.1:8000/api/post" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/post"
+    "http://127.0.0.1:8000/api/post"
 );
 
 const headers = {
@@ -1354,14 +1207,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1/api/et" \
+    "http://127.0.0.1:8000/api/nesciunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/et"
+    "http://127.0.0.1:8000/api/nesciunt"
 );
 
 const headers = {
@@ -1446,10 +1299,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="PUTapi--id-"
-               value="et"
+               value="nesciunt"
                data-component="url">
     <br>
-<p>The ID of the api. Example: <code>et</code></p>
+<p>The ID of the api. Example: <code>nesciunt</code></p>
             </div>
                     </form>
 
@@ -1466,14 +1319,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1/api/post/rem" \
+    "http://127.0.0.1:8000/api/post/sunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/post/rem"
+    "http://127.0.0.1:8000/api/post/sunt"
 );
 
 const headers = {
@@ -1558,10 +1411,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="DELETEapi-post--id-"
-               value="rem"
+               value="sunt"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>rem</code></p>
+<p>The ID of the post. Example: <code>sunt</code></p>
             </div>
                     </form>
 
@@ -1578,14 +1431,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/post/comments/ducimus" \
+    --get "http://127.0.0.1:8000/api/post/comments/ad" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/post/comments/ducimus"
+    "http://127.0.0.1:8000/api/post/comments/ad"
 );
 
 const headers = {
@@ -1611,8 +1464,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
-access-control-allow-origin: *
+x-ratelimit-remaining: 55
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">[
@@ -1691,10 +1544,10 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="post_id"                data-endpoint="GETapi-post-comments--post_id-"
-               value="ducimus"
+               value="ad"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>ducimus</code></p>
+<p>The ID of the post. Example: <code>ad</code></p>
             </div>
                     </form>
 
@@ -1711,14 +1564,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/comment/et" \
+    --get "http://127.0.0.1:8000/api/comment/necessitatibus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/comment/et"
+    "http://127.0.0.1:8000/api/comment/necessitatibus"
 );
 
 const headers = {
@@ -1744,8 +1597,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
-access-control-allow-origin: *
+x-ratelimit-remaining: 53
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -1822,6 +1675,41 @@ access-control-allow-origin: *
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 33,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\{closure}&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 32,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -2239,12 +2127,128 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-comment--id-"
-               value="et"
+               value="necessitatibus"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>et</code></p>
+<p>The ID of the comment. Example: <code>necessitatibus</code></p>
             </div>
                     </form>
+
+                    <h2 id="endpoints-GETapi-posts">GET api/posts</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts"></code></pre>
+</span>
+<form id="form-GETapi-posts" data-method="GET"
+      data-path="api/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts"
+                    onclick="tryItOut('GETapi-posts');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts"
+                    onclick="cancelTryOut('GETapi-posts');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
 
                     <h2 id="endpoints-GETapi-comments">Display a listing of the comments.</h2>
 
@@ -2259,14 +2263,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/comments" \
+    --get "http://127.0.0.1:8000/api/comments" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/comments"
+    "http://127.0.0.1:8000/api/comments"
 );
 
 const headers = {
@@ -2291,7 +2295,7 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-access-control-allow-origin: *
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -2375,14 +2379,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/comment" \
+    "http://127.0.0.1:8000/api/comment" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/comment"
+    "http://127.0.0.1:8000/api/comment"
 );
 
 const headers = {
@@ -2475,14 +2479,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1/api/comment/eius" \
+    "http://127.0.0.1:8000/api/comment/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/comment/eius"
+    "http://127.0.0.1:8000/api/comment/ut"
 );
 
 const headers = {
@@ -2567,10 +2571,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="commentId"                data-endpoint="PUTapi-comment--commentId-"
-               value="eius"
+               value="ut"
                data-component="url">
     <br>
-<p>Example: <code>eius</code></p>
+<p>Example: <code>ut</code></p>
             </div>
                     </form>
 
@@ -2587,14 +2591,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1/api/comment/totam" \
+    "http://127.0.0.1:8000/api/comment/fugit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/comment/totam"
+    "http://127.0.0.1:8000/api/comment/fugit"
 );
 
 const headers = {
@@ -2679,10 +2683,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="commentId"                data-endpoint="DELETEapi-comment--commentId-"
-               value="totam"
+               value="fugit"
                data-component="url">
     <br>
-<p>Example: <code>totam</code></p>
+<p>Example: <code>fugit</code></p>
             </div>
                     </form>
 
@@ -2703,14 +2707,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/subraddits" \
+    --get "http://127.0.0.1:8000/api/subraddits" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/subraddits"
+    "http://127.0.0.1:8000/api/subraddits"
 );
 
 const headers = {
@@ -2735,7 +2739,7 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-access-control-allow-origin: *
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -2819,18 +2823,18 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/r/create" \
+    "http://127.0.0.1:8000/api/r/create" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"bfjxyruredstegiwst\"
+    \"name\": \"cxozomflzmrghiyecylnipjd\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/r/create"
+    "http://127.0.0.1:8000/api/r/create"
 );
 
 const headers = {
@@ -2839,7 +2843,7 @@ const headers = {
 };
 
 let body = {
-    "name": "bfjxyruredstegiwst"
+    "name": "cxozomflzmrghiyecylnipjd"
 };
 
 fetch(url, {
@@ -2920,10 +2924,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-r-create"
-               value="bfjxyruredstegiwst"
+               value="cxozomflzmrghiyecylnipjd"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>bfjxyruredstegiwst</code></p>
+<p>Must not be greater than 100 characters. Example: <code>cxozomflzmrghiyecylnipjd</code></p>
         </div>
         </form>
 
@@ -2940,14 +2944,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/r/repellendus" \
+    --get "http://127.0.0.1:8000/api/r/corporis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/r/repellendus"
+    "http://127.0.0.1:8000/api/r/corporis"
 );
 
 const headers = {
@@ -2973,8 +2977,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
-access-control-allow-origin: *
+x-ratelimit-remaining: 54
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -3051,6 +3055,41 @@ access-control-allow-origin: *
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 33,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\{closure}&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 32,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -3468,10 +3507,10 @@ access-control-allow-origin: *
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi-r--subName-"
-               value="repellendus"
+               value="corporis"
                data-component="url">
     <br>
-<p>Example: <code>repellendus</code></p>
+<p>Example: <code>corporis</code></p>
             </div>
                     </form>
 
@@ -3488,14 +3527,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1/api/r/incidunt" \
+    "http://127.0.0.1:8000/api/r/totam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/r/incidunt"
+    "http://127.0.0.1:8000/api/r/totam"
 );
 
 const headers = {
@@ -3580,10 +3619,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="PUTapi-r--subName-"
-               value="incidunt"
+               value="totam"
                data-component="url">
     <br>
-<p>Example: <code>incidunt</code></p>
+<p>Example: <code>totam</code></p>
             </div>
                     </form>
 
@@ -3600,14 +3639,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1/api/r/tempore" \
+    "http://127.0.0.1:8000/api/r/quae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/r/tempore"
+    "http://127.0.0.1:8000/api/r/quae"
 );
 
 const headers = {
@@ -3692,10 +3731,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="DELETEapi-r--subName-"
-               value="tempore"
+               value="quae"
                data-component="url">
     <br>
-<p>Example: <code>tempore</code></p>
+<p>Example: <code>quae</code></p>
             </div>
                     </form>
 
@@ -3716,14 +3755,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/user" \
+    --get "http://127.0.0.1:8000/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/user"
+    "http://127.0.0.1:8000/api/user"
 );
 
 const headers = {
@@ -3750,7 +3789,7 @@ fetch(url, {
 content-type: application/json
 x-ratelimit-limit: 60
 x-ratelimit-remaining: 59
-access-control-allow-origin: *
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">[
@@ -3758,16 +3797,6 @@ access-control-allow-origin: *
         &quot;id&quot;: 1,
         &quot;name&quot;: &quot;Briana&quot;,
         &quot;email&quot;: &quot;bradtke.presley@example.net&quot;,
-        &quot;created_at&quot;: &quot;2023-04-06T14:13:57.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-06T14:13:57.000000Z&quot;,
-        &quot;profile_picture_URL&quot;: null,
-        &quot;banner_picture_URL&quot;: null,
-        &quot;king_admin&quot;: 0
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;name&quot;: &quot;Brook&quot;,
-        &quot;email&quot;: &quot;emilio.emmerich@example.com&quot;,
         &quot;created_at&quot;: &quot;2023-04-06T14:13:57.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2023-04-06T14:13:57.000000Z&quot;,
         &quot;profile_picture_URL&quot;: null,
@@ -4905,16 +4934,6 @@ access-control-allow-origin: *
         &quot;king_admin&quot;: 1
     },
     {
-        &quot;id&quot;: 129,
-        &quot;name&quot;: &quot;coucouno&quot;,
-        &quot;email&quot;: &quot;coucouno@gmail.com&quot;,
-        &quot;created_at&quot;: &quot;2023-04-09T12:10:05.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2023-04-09T12:10:05.000000Z&quot;,
-        &quot;profile_picture_URL&quot;: null,
-        &quot;banner_picture_URL&quot;: null,
-        &quot;king_admin&quot;: 0
-    },
-    {
         &quot;id&quot;: 131,
         &quot;name&quot;: &quot;King Cosme III&quot;,
         &quot;email&quot;: &quot;adminroyal31@gmail.com&quot;,
@@ -4923,6 +4942,66 @@ access-control-allow-origin: *
         &quot;profile_picture_URL&quot;: null,
         &quot;banner_picture_URL&quot;: null,
         &quot;king_admin&quot;: 1
+    },
+    {
+        &quot;id&quot;: 135,
+        &quot;name&quot;: &quot;Mas Amedda&quot;,
+        &quot;email&quot;: &quot;amedda@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-09T20:48:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-09T20:48:46.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 0
+    },
+    {
+        &quot;id&quot;: 136,
+        &quot;name&quot;: &quot;Barriss Offee&quot;,
+        &quot;email&quot;: &quot;barriss@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-10T09:59:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-10T09:59:48.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 0
+    },
+    {
+        &quot;id&quot;: 137,
+        &quot;name&quot;: &quot;Saesee Tiin&quot;,
+        &quot;email&quot;: &quot;saesee@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-10T10:01:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-10T10:01:25.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 0
+    },
+    {
+        &quot;id&quot;: 138,
+        &quot;name&quot;: &quot;king admin&quot;,
+        &quot;email&quot;: &quot;kingadmin@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-10T10:54:26.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-10T10:54:26.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 1
+    },
+    {
+        &quot;id&quot;: 139,
+        &quot;name&quot;: &quot;Shaak Ti&quot;,
+        &quot;email&quot;: &quot;shaak@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-11T10:03:47.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-11T10:03:47.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 0
+    },
+    {
+        &quot;id&quot;: 140,
+        &quot;name&quot;: &quot;Ric Oli&eacute;&quot;,
+        &quot;email&quot;: &quot;ric@gmail.com&quot;,
+        &quot;created_at&quot;: &quot;2023-04-11T13:00:27.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-11T13:00:27.000000Z&quot;,
+        &quot;profile_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;king_admin&quot;: 0
     }
 ]</code>
  </pre>
@@ -5003,14 +5082,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1/api/user/1" \
+    --get "http://127.0.0.1:8000/api/user/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/user/1"
+    "http://127.0.0.1:8000/api/user/1"
 );
 
 const headers = {
@@ -5036,8 +5115,8 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
-access-control-allow-origin: *
+x-ratelimit-remaining: 52
+vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
@@ -5114,6 +5193,41 @@ access-control-allow-origin: *
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 33,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\{closure}&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php&quot;,
+            &quot;line&quot;: 32,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -5551,20 +5665,20 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/register" \
+    "http://127.0.0.1:8000/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"spsb\",
-    \"email\": \"cassin.tyrel@example.org\",
-    \"password\": \"commodi\"
+    \"name\": \"qejgahdqtmjkrt\",
+    \"email\": \"jesus.kuphal@example.net\",
+    \"password\": \"fugit\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/register"
+    "http://127.0.0.1:8000/api/register"
 );
 
 const headers = {
@@ -5573,9 +5687,9 @@ const headers = {
 };
 
 let body = {
-    "name": "spsb",
-    "email": "cassin.tyrel@example.org",
-    "password": "commodi"
+    "name": "qejgahdqtmjkrt",
+    "email": "jesus.kuphal@example.net",
+    "password": "fugit"
 };
 
 fetch(url, {
@@ -5656,10 +5770,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-register"
-               value="spsb"
+               value="qejgahdqtmjkrt"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>spsb</code></p>
+<p>Must not be greater than 255 characters. Example: <code>qejgahdqtmjkrt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -5667,10 +5781,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-register"
-               value="cassin.tyrel@example.org"
+               value="jesus.kuphal@example.net"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>cassin.tyrel@example.org</code></p>
+<p>Must not be greater than 255 characters. Example: <code>jesus.kuphal@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -5678,10 +5792,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-register"
-               value="commodi"
+               value="fugit"
                data-component="body">
     <br>
-<p>Example: <code>commodi</code></p>
+<p>Example: <code>fugit</code></p>
         </div>
         </form>
 
@@ -5698,19 +5812,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/login" \
+    "http://127.0.0.1:8000/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"hill.lynn@example.org\",
-    \"password\": \"|HX&amp;YA\"
+    \"email\": \"jeanne.flatley@example.net\",
+    \"password\": \";#3&lt;&gt;N.6ul,q;?%6dy\\\\\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/login"
+    "http://127.0.0.1:8000/api/login"
 );
 
 const headers = {
@@ -5719,8 +5833,8 @@ const headers = {
 };
 
 let body = {
-    "email": "hill.lynn@example.org",
-    "password": "|HX&amp;YA"
+    "email": "jeanne.flatley@example.net",
+    "password": ";#3&lt;&gt;N.6ul,q;?%6dy\\"
 };
 
 fetch(url, {
@@ -5801,10 +5915,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-login"
-               value="hill.lynn@example.org"
+               value="jeanne.flatley@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>hill.lynn@example.org</code></p>
+<p>Must be a valid email address. Example: <code>jeanne.flatley@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -5812,10 +5926,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-login"
-               value="|HX&YA"
+               value=";#3<>N.6ul,q;?%6dy\"
                data-component="body">
     <br>
-<p>Example: <code>|HX&amp;YA</code></p>
+<p>Example: <code>;#3&lt;&gt;N.6ul,q;?%6dy\</code></p>
         </div>
         </form>
 
@@ -5832,14 +5946,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1/api/logout" \
+    "http://127.0.0.1:8000/api/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/logout"
+    "http://127.0.0.1:8000/api/logout"
 );
 
 const headers = {
@@ -5932,14 +6046,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1/api/user/1" \
+    "http://127.0.0.1:8000/api/user/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1/api/user/1"
+    "http://127.0.0.1:8000/api/user/1"
 );
 
 const headers = {
