@@ -1,20 +1,16 @@
-name: 'SubRaddit Management'
-description: |-
-
-  APIs to manage the subraddit resources.
+name: Endpoints
+description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/subraddits
+    uri: api/posts
     metadata:
-      groupName: 'SubRaddit Management'
-      groupDescription: |-
-
-        APIs to manage the subraddit resources.
+      groupName: Endpoints
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the subraddits.'
+      title: ''
       description: ''
       authenticated: false
       custom: []
@@ -31,912 +27,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: |-
-          [
-              {
-                  "id": 1,
-                  "name": "NAME EDITED HEHE JSUIS UN HACKER?",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:22:40.000000Z"
-              },
-              {
-                  "id": 2,
-                  "name": "Leannon, Carter and Gerhold",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 3,
-                  "name": "Huel Ltd",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 4,
-                  "name": "Bosco LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 5,
-                  "name": "Stanton, Braun and Weimann",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 6,
-                  "name": "Konopelski-Wilderman",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 7,
-                  "name": "Roberts Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 8,
-                  "name": "Boehm, Dickinson and Kautzer",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 9,
-                  "name": "Miller-Kemmer",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:44.000000Z"
-              },
-              {
-                  "id": 10,
-                  "name": "Treutel, Gutkowski and Hirthe",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 11,
-                  "name": "Greenfelder, Brown and Daugherty",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 12,
-                  "name": "Feest LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 13,
-                  "name": "Bradtke and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 14,
-                  "name": "Hermann, Quitzon and Cummings",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 15,
-                  "name": "Cronin Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 16,
-                  "name": "Muller and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 17,
-                  "name": "Casper-Veum",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 18,
-                  "name": "Barton Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 19,
-                  "name": "Weber-Carroll",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 20,
-                  "name": "Boehm, Larson and Batz",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 21,
-                  "name": "Rohan-Shields",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 22,
-                  "name": "Boyer, Predovic and Rowe",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 23,
-                  "name": "Graham, Pacocha and Ortiz",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 24,
-                  "name": "Johns, Schoen and Greenholt",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 25,
-                  "name": "Reilly Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 26,
-                  "name": "Gulgowski-Windler",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 27,
-                  "name": "Pacocha Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 28,
-                  "name": "O'Kon Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 29,
-                  "name": "Trantow-Simonis",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 30,
-                  "name": "Flatley Group",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:45.000000Z"
-              },
-              {
-                  "id": 31,
-                  "name": "Franecki LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 32,
-                  "name": "Adams-Wisoky",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 33,
-                  "name": "Hirthe-Williamson",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 34,
-                  "name": "Gulgowski-Mante",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 35,
-                  "name": "Huel, Huel and Franecki",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 36,
-                  "name": "Treutel Ltd",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 37,
-                  "name": "Farrell, Gulgowski and Marvin",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 38,
-                  "name": "Russel-Mitchell",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 39,
-                  "name": "Bernier-Green",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 40,
-                  "name": "Hoppe LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 41,
-                  "name": "Abbott-Morar",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 42,
-                  "name": "Gaylord, Hansen and Greenholt",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 43,
-                  "name": "Quigley-Greenfelder",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 44,
-                  "name": "Vandervort-Smith",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 45,
-                  "name": "Kuvalis Group",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 46,
-                  "name": "Bailey, Grant and Batz",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:46.000000Z"
-              },
-              {
-                  "id": 47,
-                  "name": "Homenick, Thompson and Macejkovic",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 48,
-                  "name": "Hodkiewicz-Rogahn",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 49,
-                  "name": "Bradtke-Flatley",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 50,
-                  "name": "Herman Group",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 51,
-                  "name": "Goodwin Group",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 52,
-                  "name": "Dickens Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 53,
-                  "name": "Upton, Russel and Moore",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 54,
-                  "name": "Cronin Ltd",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 55,
-                  "name": "Ebert, Smith and Aufderhar",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 56,
-                  "name": "Gleason PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 57,
-                  "name": "Hessel, West and Hartmann",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 58,
-                  "name": "Abbott-Fay",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 59,
-                  "name": "McDermott-Gislason",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 60,
-                  "name": "Wisoky PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 61,
-                  "name": "Corkery-Pfannerstill",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 62,
-                  "name": "Rohan and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 63,
-                  "name": "Barton-Zemlak",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 64,
-                  "name": "Berge, Tremblay and Waters",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 65,
-                  "name": "Rosenbaum LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 66,
-                  "name": "Dickinson-Donnelly",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:47.000000Z"
-              },
-              {
-                  "id": 67,
-                  "name": "Heathcote Ltd",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 68,
-                  "name": "Rogahn, Auer and Cronin",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 69,
-                  "name": "Cartwright and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 70,
-                  "name": "Kris and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 71,
-                  "name": "Dibbert and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 72,
-                  "name": "Buckridge Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 73,
-                  "name": "Maggio-DuBuque",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 74,
-                  "name": "Roob LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 75,
-                  "name": "Reichert PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 76,
-                  "name": "Keebler, Buckridge and Hudson",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 77,
-                  "name": "O'Connell, Jakubowski and Turner",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 78,
-                  "name": "Trantow Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 79,
-                  "name": "Cormier PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 80,
-                  "name": "Feeney PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 81,
-                  "name": "Gulgowski-Reinger",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 82,
-                  "name": "Rippin-Kutch",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 83,
-                  "name": "Ruecker PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 84,
-                  "name": "Kunde Ltd",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 85,
-                  "name": "Stoltenberg and Sons",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 86,
-                  "name": "Koss PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 87,
-                  "name": "Ruecker-Kub",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 88,
-                  "name": "Emard-Nader",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:48.000000Z"
-              },
-              {
-                  "id": 89,
-                  "name": "Batz, Kohler and Harvey",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 90,
-                  "name": "Windler LLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 91,
-                  "name": "Walsh, D'Amore and Kshlerin",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 92,
-                  "name": "Adams PLC",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 93,
-                  "name": "Metz, Krajcik and King",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 94,
-                  "name": "Ledner Group",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 95,
-                  "name": "Collins, Koelpin and Bergnaum",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 96,
-                  "name": "Casper-Hegmann",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 97,
-                  "name": "Mohr-Frami",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 98,
-                  "name": "Hintz-Botsford",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 99,
-                  "name": "Steuber-Smith",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              },
-              {
-                  "id": 100,
-                  "name": "Bailey Inc",
-                  "about": null,
-                  "subraddit_picture_URL": null,
-                  "banner_picture_URL": null,
-                  "created_at": "2023-04-06T14:13:44.000000Z",
-                  "updated_at": "2023-04-06T14:13:49.000000Z"
-              }
-          ]
+        content: '[{"id":2,"created_at":"2023-04-06T14:59:32.000000Z","updated_at":"2023-04-07T12:29:39.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 1","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":3,"created_at":"2023-04-06T14:59:46.000000Z","updated_at":"2023-04-07T12:29:51.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 2","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":4,"created_at":"2023-04-06T15:00:28.000000Z","updated_at":"2023-04-07T12:30:04.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 3","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":4},{"id":5,"created_at":"2023-04-06T15:04:10.000000Z","updated_at":"2023-04-07T12:37:07.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 4","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":3},{"id":6,"created_at":"2023-04-06T15:04:25.000000Z","updated_at":"2023-04-07T12:37:27.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 5","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10}]'
         headers:
-          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
+          content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
@@ -950,16 +44,14 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - POST
-    uri: api/r/create
+      - GET
+    uri: api/posts/crops
     metadata:
-      groupName: 'SubRaddit Management'
-      groupDescription: |-
-
-        APIs to manage the subraddit resources.
+      groupName: Endpoints
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: ''
       description: ''
       authenticated: false
       custom: []
@@ -970,18 +62,21 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 100 characters.'
-        required: true
-        example: wlmntplfvjcmmr
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: wlmntplfvjcmmr
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":2,"created_at":"2023-04-06T14:59:32.000000Z","updated_at":"2023-04-07T12:29:39.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 1","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":3,"created_at":"2023-04-06T14:59:46.000000Z","updated_at":"2023-04-07T12:29:51.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 2","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":6,"created_at":"2023-04-06T15:04:25.000000Z","updated_at":"2023-04-07T12:37:27.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 5","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":10},{"id":4,"created_at":"2023-04-06T15:00:28.000000Z","updated_at":"2023-04-07T12:30:04.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 3","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":4},{"id":5,"created_at":"2023-04-06T15:04:10.000000Z","updated_at":"2023-04-07T12:37:07.000000Z","author_id":1,"subraddit_name":"Rosenbaum LLC","title":"Article 4","content":"Modified content Article 5","nsfw":1,"spoiler":1,"OC":1,"crops":3}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -991,16 +86,14 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/r/{subName}'
+    uri: 'api/{subName}/posts'
     metadata:
-      groupName: 'SubRaddit Management'
-      groupDescription: |-
-
-        APIs to manage the subraddit resources.
+      groupName: Endpoints
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a subraddit info.'
-      description: 'You need to add the subraddit id in the param'
+      title: ''
+      description: ''
       authenticated: false
       custom: []
     headers:
@@ -1011,11 +104,68 @@ endpoints:
         name: subName
         description: ''
         required: true
-        example: pariatur
+        example: tempora
         type: string
         custom: []
     cleanUrlParameters:
-      subName: pariatur
+      subName: tempora
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/{subName}/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subName:
+        name: subName
+        description: ''
+        required: true
+        example: fuga
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the {subName}.'
+        required: true
+        example: harum
+        type: string
+        custom: []
+    cleanUrlParameters:
+      subName: fuga
+      id: harum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1026,7 +176,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Subraddits].",
+              "message": "No query results for model [App\\Models\\Posts].",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 408,
@@ -1450,7 +600,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1462,16 +612,44 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - PUT
-    uri: 'api/r/{subName}'
+      - POST
+    uri: api/post
     metadata:
-      groupName: 'SubRaddit Management'
-      groupDescription: |-
-
-        APIs to manage the subraddit resources.
+      groupName: Endpoints
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the subraddit info.'
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
       description: ''
       authenticated: false
       custom: []
@@ -1479,15 +657,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      subName:
-        name: subName
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the api.'
         required: true
-        example: placeat
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      subName: placeat
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1503,12 +681,674 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/r/{subName}'
+    uri: 'api/post/{id}'
     metadata:
-      groupName: 'SubRaddit Management'
-      groupDescription: |-
-
-        APIs to manage the subraddit resources.
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: rem
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: rem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/post/comments/{post_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: ducimus
+        type: string
+        custom: []
+    cleanUrlParameters:
+      post_id: ducimus
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"post":[],"comments":[]}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/comment/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display only one'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the comment.'
+        required: true
+        example: et
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: et
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Posts].",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+              "line": 408,
+              "trace": [
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+                      "line": 384,
+                      "function": "prepareException",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
+                      "line": 54,
+                      "function": "render",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
+                      "line": 51,
+                      "function": "render",
+                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 143,
+                      "function": "handleException",
+                      "class": "Illuminate\\Routing\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 126,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 92,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 54,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 797,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 776,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 740,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 729,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 92,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 209,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 124,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 71,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 49,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 51,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 194,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Command/Command.php",
+                      "line": 312,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 163,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php",
+                      "line": 1040,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php",
+                      "line": 314,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/symfony/console/Application.php",
+                      "line": 168,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 200,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/artisan",
+                      "line": 35,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/comments
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the comments.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/comment
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/comment/{commentId}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the comment info.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      commentId:
+        name: commentId
+        description: ''
+        required: true
+        example: eius
+        type: string
+        custom: []
+    cleanUrlParameters:
+      commentId: eius
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/comment/{commentId}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
       title: 'Remove the specified resource from storage.'
@@ -1519,15 +1359,15 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      subName:
-        name: subName
+      commentId:
+        name: commentId
         description: ''
         required: true
-        example: optio
+        example: totam
         type: string
         custom: []
     cleanUrlParameters:
-      subName: optio
+      commentId: totam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -1,12 +1,16 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import NavBar from './components/NavBarComponent.vue'
 </script>
 
 <template>
-      <nav>
-        <!-- <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink> -->
-      </nav>
+  <NavBar></NavBar>
+
   <RouterView />
 </template>
 
+<style>
+/* a.router-link-exact-active {
+  border: 1px solid red;
+} */
+</style>

@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'profile_picture_URL',
+        'banner_picture_URL',
+        'king_admin'
     ];
 
     /**

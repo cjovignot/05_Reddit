@@ -20,6 +20,7 @@ class SubRadditController extends Controller
     public function displayAll()
     {
 
+
         // $subraddit = Subraddits::find($subrId)
         $subraddit = Subraddits::all();
         return $subraddit->toJson(JSON_PRETTY_PRINT);
