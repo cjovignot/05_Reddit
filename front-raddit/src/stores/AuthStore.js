@@ -81,39 +81,42 @@ export const useAuthStore = defineStore('authStore', {
 
       const userToken = localStorage.getItem('userToken')
 
-      axios
-        .get('http://127.0.0.1:8000/api/posts', {
-          headers: {
-            'Content-Type': 'application/vnd.api+json',
-            Accept: 'application/vnd.api+json',
-            Authorization: `Bearer ${userToken}`
-          }
-        })
-        .then((res) => console.log(res))
-        .catch((err) => {
-          console.log('🤯')
-          console.log(err)
-        })
-
       // axios
-      //   .post('http://127.0.0.1:8000/api/logout', {
+      //   .get('http://127.0.0.1:8000/api/posts', {
       //     headers: {
       //       'Content-Type': 'application/vnd.api+json',
       //       Accept: 'application/vnd.api+json',
-      //       Authorization: `Bearer ${localStorage.getItem('userToken')}`
+      //       Authorization: `Bearer ${userToken}`
       //     }
       //   })
-      //   .then((response) => {
-      //     console.log(response)
-      //     localStorage.removeItem('user')
-      //     localStorage.removeItem('userToken')
-      //     router.push('/')
-      //     toaster.success(`Logged out`)
+      //   .then((res) => {
+      //     console.log('log out success')
+      //     console.log(res)
       //   })
       //   .catch((err) => {
-      //     console.error(err)
-      //     toaster.error(`Could not log out`)
+      //     console.log('🤯')
+      //     console.log(err)
       //   })
+
+      axios
+        .post('http://127.0.0.1:8000/api/logout', {
+          headers: {
+            'Content-Type': 'application/vnd.api+json',
+            Accept: 'application/vnd.api+json',
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
+          }
+        })
+        .then((response) => {
+          console.log(response)
+          localStorage.removeItem('user')
+          localStorage.removeItem('userToken')
+          //router.push('/')
+          toaster.success(`Logged out`)
+        })
+        .catch((err) => {
+          console.error(err)
+          toaster.error(`Could not log out`)
+        })
     }
   }
 })
