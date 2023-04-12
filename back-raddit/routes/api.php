@@ -90,19 +90,20 @@ Route::get('/subraddit', [SubRadditController::class, 'display']);
 Route::get('/user', [UserController::class, 'displayAll']);
 Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
 
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
+
+
+Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
+Route::get('/comments', [CommentsController::class, 'displayAll']);
+Route::post('/comment', [CommentsController::class, 'store']);
+Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
+Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);
 
 
 // PROTECTED ROUTES (if logged in)
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
-    Route::get('/posts', [PostController::class, 'displayAllPosts']);
 
-
-    Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
-    Route::get('/comments', [CommentsController::class, 'displayAll']);
-    Route::post('/comment', [CommentsController::class, 'store']);
-    Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
-    Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);
 
 
     Route::post('/r/create', [SubRadditController::class, 'store']);
