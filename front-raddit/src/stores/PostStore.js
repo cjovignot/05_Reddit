@@ -19,7 +19,7 @@ export const usePostStore = defineStore('postStore', {
             axios
               .get('http://127.0.0.1:8000/api/posts')
               .then((response) => {
-                this.users = response.data
+                this.posts = response.data
                 this.isLoading = false
               })
               .catch((err) => {
