@@ -39,15 +39,23 @@ const openModal = () => {
 </script>
 
 <template>
-  <button class="border-2 rounded-full p-2" @click="openModal" style="margin: 10px">
-    <i class="fa-solid fa-camera-retro"></i>
-  </button>
-  <img style="height: auto; width: 50px" :src="url" alt="" />
+  <div class="upload">
+    <button class="border-2 rounded-full p-2" @click="openModal" style="margin: 10px">
+      <i class="fa-solid fa-camera-retro"></i>
+    </button>
+    <h1 v-if="!imageStore.imageUrl">Import a picture</h1>
+    <img style="height: auto; width: 50px" :src="url" alt="" />
+    
+  </div>
 </template>
 
 <style>
 #uw-glamor-3331 .css-5leaax,
 #uw-glamor-3331 [data-css-5leaax] {
   background-color: rgb(217, 90, 22);
+}
+.upload {
+  display: flex;
+  align-items: center;
 }
 </style>
