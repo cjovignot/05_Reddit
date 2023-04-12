@@ -98,12 +98,15 @@ class UserController extends Controller
     {
 
         // return $id;
-        return $request;
+        // return $request;
 
         $user = User::where('id', $id)->firstOrFail();
-        return  $user;
+        // return  $user;
 
-        // $user->update($request->all());
+        $user->update($request->all());
+
+        return $this->success([], message: 'user detail updated');
+
         // return $edit;
         // dd($request);
         // return request("name");

@@ -56,7 +56,10 @@ export const useImageStore = defineStore('imageStore', {
               }
             }
           )
-          .then((res) => console.log(res))
+          .then((res) => {
+            console.log('profile pic url saved in db 📸')
+            console.log(res)
+          })
           .catch((err) => console.log(err))
       }
       if (idValue == 'banner') {
