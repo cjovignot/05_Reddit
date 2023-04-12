@@ -4,6 +4,7 @@ import { useAuthStore } from '../stores/AuthStore'
 import { uniqueNamesGenerator, starWars } from 'unique-names-generator'
 // import axios from 'axios'
 import { createToaster } from '@meforma/vue-toaster'
+import axios from 'axios'
 const toaster = createToaster()
 
 // const config: Config = {
