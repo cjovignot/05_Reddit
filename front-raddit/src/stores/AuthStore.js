@@ -103,6 +103,10 @@ export const useAuthStore = defineStore('authStore', {
         })
     },
     editUserData(userInput) {
+      // get called on three occasions:
+      // 1. name change
+      // 2. image (avatar) changed
+      // 3. image (banner) changed
       console.log(userInput)
     }
   }
