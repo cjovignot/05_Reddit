@@ -1,22 +1,30 @@
 <script setup>
-// import { ref } from 'vue';
+import { ref } from 'vue';
+import UploadImage from './UploadImageComponent.vue';
+import { usePostStore } from '@/stores/PostStore';
 
-import UploadImage from './UploadImageComponent.vue'
+let post_title = ref('');
+let post_content = ref('');
+let new_post = ref({});
+const img = usePostStore();
 
-// let post_title = ref('');
-// let post_content = ref('');
-// let new_post = ref({});
+function getInput() {
+    console.log(post_title);
+    console.log(post_content);
+    let array =  {
+        title: post_title,
+        content: post_content,
+        img_url: img,
+    };
 
-// function getInput() {
-//     console.log(post_title);
-//     console.log(post_content);
-
-//     $new_post = {
-//         title => $post_title,
-//         content => $post_content,
-//         image => $url,
-//     };
-// }
+    console.log(array);
+    // $new_post = {
+    //     title => $post_title,
+    //     content => $post_content,
+    //     image => $url,
+    // };
+}
+// console.log(getInput());
 
 
 </script>
