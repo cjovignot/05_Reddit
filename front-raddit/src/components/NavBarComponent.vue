@@ -13,7 +13,7 @@ const isSuperAdmin = ref(false)
 const { loggedIn } = storeToRefs(authStore)
 console.log({ loggedIn })
 
-console.log(authStore.loggedIn)
+// console.log(authStore.loggedIn)
 // const loggedIn = authStore.loggedIn
 
 console.log(loggedIn)
@@ -56,7 +56,7 @@ if (userData) {
 
       <!-- The button to open Post modal -->
       <label for="my-modal-5" class="btn">+</label>
-      
+
       <Register v-if="!loggedIn" />
       <CreatePost />
 
