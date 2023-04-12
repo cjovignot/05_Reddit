@@ -24,7 +24,7 @@ const widget = window.cloudinary.createUploadWidget(
       console.log(url.value)
 
       // 🍍
-      imageStore.storeImage(result.info.url)
+      imageStore.storeImage(result.info.url, id.value)
 
       toaster.success('Picture uploaded successfully')
       return url
@@ -33,6 +33,7 @@ const widget = window.cloudinary.createUploadWidget(
 )
 const openModal = () => {
   console.log(id.value)
+  // imageStore.storeId(id.value)
 
   widget.open()
 }
