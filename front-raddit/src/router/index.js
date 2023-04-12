@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AdminView from '../views/AdminView.vue'
 import SettingsView from '../views/SettingsView.vue'
+import UserView from '../views/UserView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,12 @@ const router = createRouter({
       path: '/settings',
       name: 'Settings',
       component: SettingsView
+    },
+    {
+      //find a way to get the user from the local storage
+      path: '/user/:id',
+      name: 'User Page',
+      component: UserView
     }
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
