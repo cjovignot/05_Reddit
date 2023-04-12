@@ -11,6 +11,11 @@ const imageStore = useImageStore()
 
 const { imageUrl } = storeToRefs(imageStore)
 
+if (imageStore.imageUrl !== '') {
+  console.log('inside if image condition')
+  imageStore.storeImage
+}
+
 const cld = new Cloudinary({
   cloud: {
     cloudName: 'demo'

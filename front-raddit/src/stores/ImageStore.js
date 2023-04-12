@@ -11,6 +11,7 @@ export const useImageStore = defineStore('imageStore', {
   // In here we define things like the state
   state: () => ({
     imageUrl: '',
+    id: '',
 
     name: 'Image Store'
   }),
@@ -28,8 +29,9 @@ export const useImageStore = defineStore('imageStore', {
     }
   },
   actions: {
-    storeImage(imageUrlRes) {
+    storeImage(imageUrlRes, idValue) {
       console.log(`coucou de la fonction storeImage 🍍 - url 👉 ${imageUrlRes}`)
+      console.log(idValue)
 
       this.imageUrl = imageUrlRes
     }
