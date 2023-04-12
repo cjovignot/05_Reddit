@@ -63,7 +63,6 @@ Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments'
 // SUBRADDIT
 
 
-Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
 Route::post('/r/create', [SubRadditController::class, 'store']);
 Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
 
@@ -84,7 +83,7 @@ Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 // Route::get('', [HomeController::class, 'display']);
 // Route::get('/', [PostController::class, 'display']);
-Route::get('/subraddit', [SubRadditController::class, 'display']);
+// Route::get('/subraddit', [SubRadditController::class, 'display']);
 
 // to move in protected after tests
 Route::get('/user', [UserController::class, 'displayAll']);
@@ -111,6 +110,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/r/{subName}', [SubRadditController::class, 'deleteOne']);
 
     // Route::get('/user', [UserController::class, 'displayAll']);
+    Route::patch('/user/{id}', [UserController::class, 'editOne']);
     Route::put('/user/{id}', [UserController::class, 'editOne']);
     Route::post('/user', [UserController::class, 'store']);
     Route::post('/logout', [UserController::class, 'logout']);

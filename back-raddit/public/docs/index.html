@@ -71,8 +71,26 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-crops">
-                                <a href="#endpoints-GETapi-posts-crops">GET api/posts/crops</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-crops-down">
+                                <a href="#endpoints-GETapi-posts-crops-down">GET api/posts/crops/down</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-crops-up">
+                                <a href="#endpoints-GETapi-posts-crops-up">GET api/posts/crops/up</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-cdate-up">
+                                <a href="#endpoints-GETapi-posts-cdate-up">GET api/posts/cdate/up</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-cdate-down">
+                                <a href="#endpoints-GETapi-posts-cdate-down">GET api/posts/cdate/down</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-hot-up">
+                                <a href="#endpoints-GETapi-posts-hot-up">GET api/posts/hot/up</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts-hot-down">
+                                <a href="#endpoints-GETapi-posts-hot-down">GET api/posts/hot/down</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts">
+                                <a href="#endpoints-GETapi-posts">GET api/posts</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi--subName--posts">
                                 <a href="#endpoints-GETapi--subName--posts">GET api/{subName}/posts</a>
@@ -94,9 +112,6 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-comment--id-">
                                 <a href="#endpoints-GETapi-comment--id-">Display only one</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-posts">
-                                <a href="#endpoints-GETapi-posts">GET api/posts</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-comments">
                                 <a href="#endpoints-GETapi-comments">Display a listing of the comments.</a>
@@ -157,6 +172,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="user-management-DELETEapi-user--id-">
                                 <a href="#user-management-DELETEapi-user--id-">Delete USER - king admin action only</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-management-PUTapi-user--id-">
+                                <a href="#user-management-PUTapi-user--id-">USER EDIT</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -168,7 +186,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 11, 2023</li>
+        <li>Last updated: April 12, 2023</li>
     </ul>
 </div>
 
@@ -190,27 +208,27 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-GETapi-posts-crops">GET api/posts/crops</h2>
+                                <h2 id="endpoints-GETapi-posts-crops-down">GET api/posts/crops/down</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-posts-crops">
+<span id="example-requests-GETapi-posts-crops-down">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/posts/crops" \
+    --get "http://127.0.0.1:8000/api/posts/crops/down" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts/crops"
+    "http://127.0.0.1:8000/api/posts/crops/down"
 );
 
 const headers = {
@@ -225,7 +243,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-posts-crops">
+<span id="example-responses-GETapi-posts-crops-down">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -237,6 +255,11 @@ fetch(url, {
 content-type: application/json
 x-ratelimit-limit: 60
 x-ratelimit-remaining: 58
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -309,43 +332,43 @@ vary: Origin
 ]</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-posts-crops" hidden>
+<span id="execution-results-GETapi-posts-crops-down" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-posts-crops"></span>:
+                id="execution-response-status-GETapi-posts-crops-down"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-posts-crops" style="max-height: 400px;"></code></pre>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-crops-down" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-posts-crops" hidden>
+<span id="execution-error-GETapi-posts-crops-down" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-posts-crops"></code></pre>
+    <pre><code id="execution-error-message-GETapi-posts-crops-down"></code></pre>
 </span>
-<form id="form-GETapi-posts-crops" data-method="GET"
-      data-path="api/posts/crops"
+<form id="form-GETapi-posts-crops-down" data-method="GET"
+      data-path="api/posts/crops/down"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-crops', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-crops-down', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-posts-crops"
-                    onclick="tryItOut('GETapi-posts-crops');">Try it out ⚡
+                    id="btn-tryout-GETapi-posts-crops-down"
+                    onclick="tryItOut('GETapi-posts-crops-down');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-posts-crops"
-                    onclick="cancelTryOut('GETapi-posts-crops');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-posts-crops-down"
+                    onclick="cancelTryOut('GETapi-posts-crops-down');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-posts-crops" hidden>Send Request 💥
+                    id="btn-executetryout-GETapi-posts-crops-down" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/posts/crops</code></b>
+            <b><code>api/posts/crops/down</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -353,7 +376,7 @@ vary: Origin
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-posts-crops"
+               name="Content-Type"                data-endpoint="GETapi-posts-crops-down"
                value="application/json"
                data-component="header">
     <br>
@@ -364,7 +387,997 @@ vary: Origin
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-posts-crops"
+               name="Accept"                data-endpoint="GETapi-posts-crops-down"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts-crops-up">GET api/posts/crops/up</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts-crops-up">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts/crops/up" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts/crops/up"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts-crops-up">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 57
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 5,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:10.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:07.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 4&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 3
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;created_at&quot;: &quot;2023-04-06T15:00:28.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:30:04.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 3&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 4
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:32.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:39.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 1&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:51.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 2&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:27.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 5&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts-crops-up" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts-crops-up"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-crops-up" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts-crops-up" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts-crops-up"></code></pre>
+</span>
+<form id="form-GETapi-posts-crops-up" data-method="GET"
+      data-path="api/posts/crops/up"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-crops-up', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts-crops-up"
+                    onclick="tryItOut('GETapi-posts-crops-up');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts-crops-up"
+                    onclick="cancelTryOut('GETapi-posts-crops-up');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts-crops-up" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/crops/up</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts-crops-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts-crops-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts-cdate-up">GET api/posts/cdate/up</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts-cdate-up">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts/cdate/up" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts/cdate/up"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts-cdate-up">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 56
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 2,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:32.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:39.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 1&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:51.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 2&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;created_at&quot;: &quot;2023-04-06T15:00:28.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:30:04.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 3&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 4
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:10.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:07.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 4&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 3
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:27.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 5&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts-cdate-up" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts-cdate-up"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-cdate-up" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts-cdate-up" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts-cdate-up"></code></pre>
+</span>
+<form id="form-GETapi-posts-cdate-up" data-method="GET"
+      data-path="api/posts/cdate/up"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-cdate-up', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts-cdate-up"
+                    onclick="tryItOut('GETapi-posts-cdate-up');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts-cdate-up"
+                    onclick="cancelTryOut('GETapi-posts-cdate-up');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts-cdate-up" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/cdate/up</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts-cdate-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts-cdate-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts-cdate-down">GET api/posts/cdate/down</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts-cdate-down">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts/cdate/down" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts/cdate/down"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts-cdate-down">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 55
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 6,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:27.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 5&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:10.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:07.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 4&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 3
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;created_at&quot;: &quot;2023-04-06T15:00:28.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:30:04.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 3&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 4
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:51.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 2&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:32.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:39.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 1&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts-cdate-down" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts-cdate-down"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-cdate-down" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts-cdate-down" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts-cdate-down"></code></pre>
+</span>
+<form id="form-GETapi-posts-cdate-down" data-method="GET"
+      data-path="api/posts/cdate/down"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-cdate-down', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts-cdate-down"
+                    onclick="tryItOut('GETapi-posts-cdate-down');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts-cdate-down"
+                    onclick="cancelTryOut('GETapi-posts-cdate-down');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts-cdate-down" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/cdate/down</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts-cdate-down"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts-cdate-down"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts-hot-up">GET api/posts/hot/up</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts-hot-up">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts/hot/up" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts/hot/up"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts-hot-up">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 54
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">&quot;2023-04-12T10:41:31.718729Z&quot;</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts-hot-up" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts-hot-up"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-hot-up" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts-hot-up" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts-hot-up"></code></pre>
+</span>
+<form id="form-GETapi-posts-hot-up" data-method="GET"
+      data-path="api/posts/hot/up"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-hot-up', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts-hot-up"
+                    onclick="tryItOut('GETapi-posts-hot-up');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts-hot-up"
+                    onclick="cancelTryOut('GETapi-posts-hot-up');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts-hot-up" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/hot/up</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts-hot-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts-hot-up"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts-hot-down">GET api/posts/hot/down</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts-hot-down">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts/hot/down" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts/hot/down"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts-hot-down">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 53
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts-hot-down" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts-hot-down"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts-hot-down" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts-hot-down" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts-hot-down"></code></pre>
+</span>
+<form id="form-GETapi-posts-hot-down" data-method="GET"
+      data-path="api/posts/hot/down"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts-hot-down', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts-hot-down"
+                    onclick="tryItOut('GETapi-posts-hot-down');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts-hot-down"
+                    onclick="cancelTryOut('GETapi-posts-hot-down');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts-hot-down" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts/hot/down</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts-hot-down"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts-hot-down"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-posts">GET api/posts</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-posts">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://127.0.0.1:8000/api/posts" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/posts"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-posts">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 2,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:32.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:39.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 1&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;created_at&quot;: &quot;2023-04-06T14:59:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:29:51.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 2&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;created_at&quot;: &quot;2023-04-06T15:00:28.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:30:04.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 3&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 4
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:10.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:07.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 4&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 3
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;created_at&quot;: &quot;2023-04-06T15:04:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T12:37:27.000000Z&quot;,
+        &quot;author_id&quot;: 1,
+        &quot;subraddit_name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;title&quot;: &quot;Article 5&quot;,
+        &quot;content&quot;: &quot;Modified content Article 5&quot;,
+        &quot;nsfw&quot;: 1,
+        &quot;spoiler&quot;: 1,
+        &quot;OC&quot;: 1,
+        &quot;crops&quot;: 10
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-posts" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-posts"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-posts" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-posts" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-posts"></code></pre>
+</span>
+<form id="form-GETapi-posts" data-method="GET"
+      data-path="api/posts"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-posts"
+                    onclick="tryItOut('GETapi-posts');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-posts"
+                    onclick="cancelTryOut('GETapi-posts');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-posts" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/posts</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-posts"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-posts"
                value="application/json"
                data-component="header">
     <br>
@@ -385,14 +1398,14 @@ vary: Origin
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/numquam/posts" \
+    --get "http://127.0.0.1:8000/api/quo/posts" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/numquam/posts"
+    "http://127.0.0.1:8000/api/quo/posts"
 );
 
 const headers = {
@@ -418,7 +1431,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 51
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -493,10 +1511,10 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi--subName--posts"
-               value="numquam"
+               value="quo"
                data-component="url">
     <br>
-<p>Example: <code>numquam</code></p>
+<p>Example: <code>quo</code></p>
             </div>
                     </form>
 
@@ -513,14 +1531,14 @@ vary: Origin
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/est/eum" \
+    --get "http://127.0.0.1:8000/api/ullam/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/est/eum"
+    "http://127.0.0.1:8000/api/ullam/sit"
 );
 
 const headers = {
@@ -546,7 +1564,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 50
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -708,6 +1731,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Middleware/CorsMiddleware.php&quot;,
+            &quot;line&quot;: 11,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Middleware\\CorsMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -1076,10 +2113,10 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi--subName---id-"
-               value="est"
+               value="ullam"
                data-component="url">
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>ullam</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -1087,10 +2124,10 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi--subName---id-"
-               value="eum"
+               value="sit"
                data-component="url">
     <br>
-<p>The ID of the {subName}. Example: <code>eum</code></p>
+<p>The ID of the {subName}. Example: <code>sit</code></p>
             </div>
                     </form>
 
@@ -1207,14 +2244,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/nesciunt" \
+    "http://127.0.0.1:8000/api/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/nesciunt"
+    "http://127.0.0.1:8000/api/sit"
 );
 
 const headers = {
@@ -1299,10 +2336,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="PUTapi--id-"
-               value="nesciunt"
+               value="sit"
                data-component="url">
     <br>
-<p>The ID of the api. Example: <code>nesciunt</code></p>
+<p>The ID of the api. Example: <code>sit</code></p>
             </div>
                     </form>
 
@@ -1319,14 +2356,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/post/sunt" \
+    "http://127.0.0.1:8000/api/post/quasi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/post/sunt"
+    "http://127.0.0.1:8000/api/post/quasi"
 );
 
 const headers = {
@@ -1411,10 +2448,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="DELETEapi-post--id-"
-               value="sunt"
+               value="quasi"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>sunt</code></p>
+<p>The ID of the post. Example: <code>quasi</code></p>
             </div>
                     </form>
 
@@ -1431,14 +2468,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/post/comments/ad" \
+    --get "http://127.0.0.1:8000/api/post/comments/rerum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/post/comments/ad"
+    "http://127.0.0.1:8000/api/post/comments/rerum"
 );
 
 const headers = {
@@ -1464,7 +2501,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 49
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1544,10 +2586,10 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="post_id"                data-endpoint="GETapi-post-comments--post_id-"
-               value="ad"
+               value="rerum"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>ad</code></p>
+<p>The ID of the post. Example: <code>rerum</code></p>
             </div>
                     </form>
 
@@ -1564,14 +2606,14 @@ vary: Origin
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/comment/necessitatibus" \
+    --get "http://127.0.0.1:8000/api/comment/repellat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment/necessitatibus"
+    "http://127.0.0.1:8000/api/comment/repellat"
 );
 
 const headers = {
@@ -1597,7 +2639,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 46
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1759,6 +2806,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Middleware/CorsMiddleware.php&quot;,
+            &quot;line&quot;: 11,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Middleware\\CorsMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -2127,128 +3188,12 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-comment--id-"
-               value="necessitatibus"
+               value="repellat"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>necessitatibus</code></p>
+<p>The ID of the comment. Example: <code>repellat</code></p>
             </div>
                     </form>
-
-                    <h2 id="endpoints-GETapi-posts">GET api/posts</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-posts">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/posts" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/posts"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-posts">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-posts" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-posts"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-posts" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-posts" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-posts"></code></pre>
-</span>
-<form id="form-GETapi-posts" data-method="GET"
-      data-path="api/posts"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-posts', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-posts"
-                    onclick="tryItOut('GETapi-posts');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-posts"
-                    onclick="cancelTryOut('GETapi-posts');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-posts" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/posts</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-               name="Content-Type"                data-endpoint="GETapi-posts"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-               name="Accept"                data-endpoint="GETapi-posts"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
 
                     <h2 id="endpoints-GETapi-comments">Display a listing of the comments.</h2>
 
@@ -2287,20 +3232,440 @@ fetch(url, {
 
 <span id="example-responses-GETapi-comments">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 44
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 1,
+        &quot;author_id&quot;: 14,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Voluptatem qui esse sunt quis praesentium hic impedit cupiditate. Perspiciatis temporibus sequi fugiat autem alias aut. Quidem corporis id exercitationem beatae aut. Cupiditate alias facere eligendi quaerat ipsum aut.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;author_id&quot;: 64,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Id qui molestias tenetur velit. Nihil distinctio repellat nisi eos. Nam enim harum est modi suscipit. Autem numquam quis soluta.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;author_id&quot;: 26,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Dolore ullam nemo non ducimus. Aut porro nihil accusantium et. Consectetur non impedit minima dolores voluptatibus voluptatem nobis.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;author_id&quot;: 5,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Nesciunt unde dolor quidem quas. Adipisci harum repellat tempora commodi nostrum ducimus saepe. Laborum eligendi nam inventore cum quia qui. Architecto quibusdam ad aliquid necessitatibus.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;author_id&quot;: 73,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Amet ea beatae quis facilis officiis blanditiis quod. Et architecto earum consequatur odio cum est ex. Molestiae qui commodi ad eaque quam. Commodi temporibus vel ea officiis eos rem qui ratione.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;author_id&quot;: 44,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Voluptas sint non a vel illum. Id aut labore ut veritatis. Beatae quos quod eius qui et ratione veritatis. Quos vitae alias est cumque.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;author_id&quot;: 76,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Aspernatur dignissimos sit sed exercitationem quam laboriosam. Incidunt voluptas sed quo veniam sint enim eos. Dolorem libero alias voluptates aut deserunt officiis fugiat excepturi.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:32:32&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:32:32.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;author_id&quot;: 13,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Nihil repellat qui eos voluptas corporis consequatur. Quibusdam et quidem et reprehenderit sunt velit recusandae qui. Voluptatibus ut labore tempore minus vero unde repellat.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:07&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:07.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;author_id&quot;: 24,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Laboriosam non dolorum veritatis cum alias voluptatem. Qui quidem in at. Culpa consequuntur et et minus.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:07&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:07.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;author_id&quot;: 10,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Officiis tempora et est ex qui. Sunt nostrum nam corrupti temporibus quos. Id ut molestiae non. Beatae mollitia dolores ipsum.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:07&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:07.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;author_id&quot;: 75,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Impedit sint doloremque quo dolorum magnam. Et ut cupiditate ipsa sunt velit quia saepe.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:07&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:07.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;author_id&quot;: 9,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Atque sequi sequi aspernatur aut quas deserunt sit qui. Architecto qui qui incidunt numquam sed. Aut ipsa soluta rerum ratione. Ipsa officia molestiae et ipsam.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:07&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:07.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;author_id&quot;: 60,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Eaque ut culpa libero autem. Et unde nobis omnis. Soluta culpa unde provident nemo enim. Dignissimos architecto ad inventore rem quis consequatur.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:09&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:09.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;author_id&quot;: 7,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Autem reprehenderit reprehenderit quod illum. Deserunt rerum impedit beatae totam. Voluptas qui dolorem dolorem ut corrupti qui repudiandae qui. Dolores aut accusantium molestias similique dolor. Et aliquid corrupti ut repellat numquam consequatur id.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:09&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:09.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;author_id&quot;: 27,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Et veniam in qui voluptatem aut perferendis quibusdam. Nostrum temporibus quaerat quod qui quia dolor qui dolor. Amet provident voluptatem vel culpa repellat. Dolor sunt et in ipsum ut qui dicta.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:10&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:10.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 20,
+        &quot;author_id&quot;: 29,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Error quo et qui ipsa voluptas voluptatum ipsa. Odio temporibus distinctio qui provident. Animi rerum aut omnis voluptas hic repudiandae.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;author_id&quot;: 49,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Qui deserunt in et. Ipsam sunt inventore vero libero distinctio quis. Minus vitae voluptatem optio possimus ducimus ut sequi.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 22,
+        &quot;author_id&quot;: 72,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Dicta sed adipisci voluptas quod laboriosam ut. Velit repudiandae velit inventore accusamus et. Molestias provident nulla voluptas et facilis molestias libero.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;author_id&quot;: 69,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Id quis ut quis ut. Quo porro possimus fugiat. Qui ducimus et necessitatibus provident nam eum sit. Laborum expedita eveniet quis ea ullam voluptas et.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;author_id&quot;: 89,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Et architecto ea quae ut officiis voluptas provident omnis. Placeat pariatur quis nesciunt autem. Adipisci qui et earum suscipit. Eos ut eligendi deserunt.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 25,
+        &quot;author_id&quot;: 70,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Modi soluta assumenda perspiciatis sit recusandae qui neque. Fuga deserunt totam quasi saepe. Et explicabo quos odit mollitia. Quia nam eaque perspiciatis et nostrum molestiae aut laborum.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 27,
+        &quot;author_id&quot;: 73,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Autem rerum dolorem voluptas fuga sed exercitationem quidem. Quia repellendus qui quis dolor aliquam adipisci. Odio et eligendi nemo velit eos.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:25&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:25.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;author_id&quot;: 14,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Ipsum recusandae ex iusto excepturi. Dolorum explicabo aut est assumenda illum qui nobis magnam. Commodi quia sunt explicabo nam temporibus et. Quis voluptatem culpa est placeat debitis.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 30,
+        &quot;author_id&quot;: 35,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Saepe ullam est maxime adipisci voluptate quia. Impedit fugit pariatur asperiores molestias ut sed velit assumenda. Dolore molestiae commodi est blanditiis quisquam.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;author_id&quot;: 90,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Dolorum autem sunt est. Sunt tempora qui quaerat numquam laborum ratione veniam omnis.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;author_id&quot;: 70,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Aut incidunt qui quibusdam non ea eum doloribus quaerat. Autem ipsa qui quia voluptas. Et dolor officia qui et. Aspernatur voluptatum ut ut repudiandae occaecati.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;author_id&quot;: 87,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Quia incidunt accusantium expedita quae. In non rerum rem sint maxime.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 35,
+        &quot;author_id&quot;: 81,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Molestiae cumque tempora numquam ipsam cum magni. Ipsum nulla quia eum ut nihil quaerat voluptatibus. Quod inventore dolore eum optio facilis. Fugit eum nesciunt provident voluptas culpa incidunt.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;author_id&quot;: 86,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Sint at dignissimos aut voluptatem non ullam culpa. Est placeat minima voluptatibus debitis id non. Quo ipsam asperiores velit labore et alias. Ut ea et et.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;author_id&quot;: 87,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Error facilis eaque quod fuga occaecati et esse. Reiciendis dolor sapiente sunt eos nisi. Odit numquam laborum temporibus laboriosam. Non eos est velit dignissimos.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;author_id&quot;: 69,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Architecto nobis adipisci ut voluptatem. Non esse ea omnis. Est sed laborum at aut saepe.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 40,
+        &quot;author_id&quot;: 94,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Aut consequatur iure dolores animi et distinctio ratione. Corporis a ut quia doloribus. Minus id nemo rerum sunt excepturi maxime.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;author_id&quot;: 53,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Id aliquid reprehenderit expedita sint a officiis hic. Dolorem qui ut quod maiores maxime non. Sint quo corporis vitae perferendis. Nihil maxime perspiciatis ducimus numquam labore ut.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 42,
+        &quot;author_id&quot;: 95,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Placeat laudantium accusamus ut ipsum ratione. Ut ratione vero voluptatem est. Pariatur quidem laudantium commodi consequuntur facilis eum. Suscipit et qui adipisci eum nam.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 43,
+        &quot;author_id&quot;: 47,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Inventore numquam officia voluptatem facilis nihil. Voluptatem eos sed sit voluptatem voluptatem. Qui est amet beatae. Ea sunt cum maxime ut sunt praesentium.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 44,
+        &quot;author_id&quot;: 46,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Debitis repellat dolores aut voluptas perferendis quo voluptatum. Cupiditate enim ab nihil ut sint. Inventore distinctio cumque veritatis aperiam fugiat.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 45,
+        &quot;author_id&quot;: 17,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;Facere velit assumenda natus aspernatur explicabo dolores quos. Accusamus sit aut enim. Numquam et sapiente eaque quia. Ut non maiores incidunt neque impedit.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:26&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:26.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 47,
+        &quot;author_id&quot;: 65,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Recusandae dolores natus accusantium eum. Aut nulla voluptatum exercitationem explicabo dolore assumenda eius. Ut non debitis numquam vel facere. Dolorem atque accusamus labore voluptas.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 49,
+        &quot;author_id&quot;: 58,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Omnis sunt explicabo blanditiis animi quod et harum. Soluta minus nulla rerum culpa adipisci id incidunt aut. Dicta ad quam sed illo cupiditate.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 50,
+        &quot;author_id&quot;: 15,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Delectus dolor vero sequi unde. Quia cumque quo enim ratione tempora voluptate temporibus. Assumenda voluptatem in excepturi id ut quo animi.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 51,
+        &quot;author_id&quot;: 39,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Voluptates quasi amet animi autem amet tempore molestiae. Qui cumque ad ut ipsum rerum officiis provident accusamus. Sint a neque aut laborum. Fuga sapiente veniam nam ipsum soluta et enim.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 52,
+        &quot;author_id&quot;: 96,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Eveniet architecto debitis vero ratione repellendus doloribus. Molestiae assumenda saepe voluptatem sunt. Reprehenderit voluptas consequatur consequuntur ut recusandae. Aliquid recusandae voluptate consequatur ut necessitatibus.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 53,
+        &quot;author_id&quot;: 27,
+        &quot;post_id&quot;: 2,
+        &quot;content&quot;: &quot;Cupiditate et voluptas suscipit veritatis aut. Omnis dolor accusamus magni nihil voluptatem quibusdam.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 55,
+        &quot;author_id&quot;: 40,
+        &quot;post_id&quot;: 4,
+        &quot;content&quot;: &quot;Alias quisquam dolorem itaque blanditiis corrupti. Possimus natus dolor ducimus sunt recusandae quod. Ut rerum repudiandae vitae vel voluptatem voluptatibus. Tempore sed ea illo rerum. Nihil numquam ullam dolores officia non molestiae.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 56,
+        &quot;author_id&quot;: 10,
+        &quot;post_id&quot;: 5,
+        &quot;content&quot;: &quot;Ipsa ipsam est mollitia. Eaque temporibus voluptatem nesciunt. Ut quibusdam veritatis eaque minima voluptatum.&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 10:35:27&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T10:35:27.000000Z&quot;,
+        &quot;crops&quot;: 0
+    },
+    {
+        &quot;id&quot;: 60,
+        &quot;author_id&quot;: 104,
+        &quot;post_id&quot;: 3,
+        &quot;content&quot;: &quot;this is just ridiculous?&quot;,
+        &quot;Created_at&quot;: &quot;2023-04-07 14:47:45&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-07T17:23:18.000000Z&quot;,
+        &quot;crops&quot;: 0
+    }
+]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-comments" hidden>
@@ -2479,14 +3844,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/comment/ut" \
+    "http://127.0.0.1:8000/api/comment/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment/ut"
+    "http://127.0.0.1:8000/api/comment/aut"
 );
 
 const headers = {
@@ -2571,10 +3936,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="commentId"                data-endpoint="PUTapi-comment--commentId-"
-               value="ut"
+               value="aut"
                data-component="url">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>aut</code></p>
             </div>
                     </form>
 
@@ -2591,14 +3956,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/comment/fugit" \
+    "http://127.0.0.1:8000/api/comment/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment/fugit"
+    "http://127.0.0.1:8000/api/comment/et"
 );
 
 const headers = {
@@ -2683,10 +4048,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="commentId"                data-endpoint="DELETEapi-comment--commentId-"
-               value="fugit"
+               value="et"
                data-component="url">
     <br>
-<p>Example: <code>fugit</code></p>
+<p>Example: <code>et</code></p>
             </div>
                     </form>
 
@@ -2731,20 +4096,926 @@ fetch(url, {
 
 <span id="example-responses-GETapi-subraddits">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 48
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;NAME EDITED HEHE JSUIS UN HACKER?&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:22:40.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Leannon, Carter and Gerhold&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Huel Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Bosco LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Stanton, Braun and Weimann&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Konopelski-Wilderman&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Roberts Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;Boehm, Dickinson and Kautzer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Miller-Kemmer&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;name&quot;: &quot;Treutel, Gutkowski and Hirthe&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Greenfelder, Brown and Daugherty&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Feest LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;name&quot;: &quot;Bradtke and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;name&quot;: &quot;Hermann, Quitzon and Cummings&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;name&quot;: &quot;Cronin Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;name&quot;: &quot;Muller and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 17,
+        &quot;name&quot;: &quot;Casper-Veum&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;name&quot;: &quot;Barton Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 19,
+        &quot;name&quot;: &quot;Weber-Carroll&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 20,
+        &quot;name&quot;: &quot;Boehm, Larson and Batz&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;name&quot;: &quot;Rohan-Shields&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 22,
+        &quot;name&quot;: &quot;Boyer, Predovic and Rowe&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;name&quot;: &quot;Graham, Pacocha and Ortiz&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;name&quot;: &quot;Johns, Schoen and Greenholt&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 25,
+        &quot;name&quot;: &quot;Reilly Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 26,
+        &quot;name&quot;: &quot;Gulgowski-Windler&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 27,
+        &quot;name&quot;: &quot;Pacocha Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 28,
+        &quot;name&quot;: &quot;O&#039;Kon Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;name&quot;: &quot;Trantow-Simonis&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 30,
+        &quot;name&quot;: &quot;Flatley Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:45.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;name&quot;: &quot;Franecki LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;name&quot;: &quot;Adams-Wisoky&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 33,
+        &quot;name&quot;: &quot;Hirthe-Williamson&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;name&quot;: &quot;Gulgowski-Mante&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 35,
+        &quot;name&quot;: &quot;Huel, Huel and Franecki&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;name&quot;: &quot;Treutel Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;name&quot;: &quot;Farrell, Gulgowski and Marvin&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 38,
+        &quot;name&quot;: &quot;Russel-Mitchell&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;name&quot;: &quot;Bernier-Green&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 40,
+        &quot;name&quot;: &quot;Hoppe LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;name&quot;: &quot;Abbott-Morar&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 42,
+        &quot;name&quot;: &quot;Gaylord, Hansen and Greenholt&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 43,
+        &quot;name&quot;: &quot;Quigley-Greenfelder&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 44,
+        &quot;name&quot;: &quot;Vandervort-Smith&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 45,
+        &quot;name&quot;: &quot;Kuvalis Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 46,
+        &quot;name&quot;: &quot;Bailey, Grant and Batz&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:46.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 47,
+        &quot;name&quot;: &quot;Homenick, Thompson and Macejkovic&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 48,
+        &quot;name&quot;: &quot;Hodkiewicz-Rogahn&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 49,
+        &quot;name&quot;: &quot;Bradtke-Flatley&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 50,
+        &quot;name&quot;: &quot;Herman Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 51,
+        &quot;name&quot;: &quot;Goodwin Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 52,
+        &quot;name&quot;: &quot;Dickens Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 53,
+        &quot;name&quot;: &quot;Upton, Russel and Moore&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 54,
+        &quot;name&quot;: &quot;Cronin Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 55,
+        &quot;name&quot;: &quot;Ebert, Smith and Aufderhar&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 56,
+        &quot;name&quot;: &quot;Gleason PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 57,
+        &quot;name&quot;: &quot;Hessel, West and Hartmann&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 58,
+        &quot;name&quot;: &quot;Abbott-Fay&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 59,
+        &quot;name&quot;: &quot;McDermott-Gislason&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 60,
+        &quot;name&quot;: &quot;Wisoky PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 61,
+        &quot;name&quot;: &quot;Corkery-Pfannerstill&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 62,
+        &quot;name&quot;: &quot;Rohan and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 63,
+        &quot;name&quot;: &quot;Barton-Zemlak&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 64,
+        &quot;name&quot;: &quot;Berge, Tremblay and Waters&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 65,
+        &quot;name&quot;: &quot;Rosenbaum LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 66,
+        &quot;name&quot;: &quot;Dickinson-Donnelly&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:47.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 67,
+        &quot;name&quot;: &quot;Heathcote Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 68,
+        &quot;name&quot;: &quot;Rogahn, Auer and Cronin&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 69,
+        &quot;name&quot;: &quot;Cartwright and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 70,
+        &quot;name&quot;: &quot;Kris and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 71,
+        &quot;name&quot;: &quot;Dibbert and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 72,
+        &quot;name&quot;: &quot;Buckridge Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 73,
+        &quot;name&quot;: &quot;Maggio-DuBuque&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 74,
+        &quot;name&quot;: &quot;Roob LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 75,
+        &quot;name&quot;: &quot;Reichert PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 76,
+        &quot;name&quot;: &quot;Keebler, Buckridge and Hudson&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 77,
+        &quot;name&quot;: &quot;O&#039;Connell, Jakubowski and Turner&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 78,
+        &quot;name&quot;: &quot;Trantow Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 79,
+        &quot;name&quot;: &quot;Cormier PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 80,
+        &quot;name&quot;: &quot;Feeney PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 81,
+        &quot;name&quot;: &quot;Gulgowski-Reinger&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 82,
+        &quot;name&quot;: &quot;Rippin-Kutch&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 83,
+        &quot;name&quot;: &quot;Ruecker PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 84,
+        &quot;name&quot;: &quot;Kunde Ltd&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 85,
+        &quot;name&quot;: &quot;Stoltenberg and Sons&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 86,
+        &quot;name&quot;: &quot;Koss PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 87,
+        &quot;name&quot;: &quot;Ruecker-Kub&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 88,
+        &quot;name&quot;: &quot;Emard-Nader&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:48.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 89,
+        &quot;name&quot;: &quot;Batz, Kohler and Harvey&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 90,
+        &quot;name&quot;: &quot;Windler LLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 91,
+        &quot;name&quot;: &quot;Walsh, D&#039;Amore and Kshlerin&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 92,
+        &quot;name&quot;: &quot;Adams PLC&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 93,
+        &quot;name&quot;: &quot;Metz, Krajcik and King&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 94,
+        &quot;name&quot;: &quot;Ledner Group&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 95,
+        &quot;name&quot;: &quot;Collins, Koelpin and Bergnaum&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 96,
+        &quot;name&quot;: &quot;Casper-Hegmann&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 97,
+        &quot;name&quot;: &quot;Mohr-Frami&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 98,
+        &quot;name&quot;: &quot;Hintz-Botsford&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 99,
+        &quot;name&quot;: &quot;Steuber-Smith&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 100,
+        &quot;name&quot;: &quot;Bailey Inc&quot;,
+        &quot;about&quot;: null,
+        &quot;subraddit_picture_URL&quot;: null,
+        &quot;banner_picture_URL&quot;: null,
+        &quot;created_at&quot;: &quot;2023-04-06T14:13:44.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2023-04-06T14:13:49.000000Z&quot;
+    }
+]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-subraddits" hidden>
@@ -2827,7 +5098,7 @@ vary: Origin
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"cxozomflzmrghiyecylnipjd\"
+    \"name\": \"psobpizo\"
 }"
 </code></pre></div>
 
@@ -2843,7 +5114,7 @@ const headers = {
 };
 
 let body = {
-    "name": "cxozomflzmrghiyecylnipjd"
+    "name": "psobpizo"
 };
 
 fetch(url, {
@@ -2924,10 +5195,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-r-create"
-               value="cxozomflzmrghiyecylnipjd"
+               value="psobpizo"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>cxozomflzmrghiyecylnipjd</code></p>
+<p>Must not be greater than 100 characters. Example: <code>psobpizo</code></p>
         </div>
         </form>
 
@@ -2944,14 +5215,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/r/corporis" \
+    --get "http://127.0.0.1:8000/api/r/qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/r/corporis"
+    "http://127.0.0.1:8000/api/r/qui"
 );
 
 const headers = {
@@ -2977,7 +5248,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 47
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3139,6 +5415,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Middleware/CorsMiddleware.php&quot;,
+            &quot;line&quot;: 11,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Middleware\\CorsMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -3507,10 +5797,10 @@ vary: Origin
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="GETapi-r--subName-"
-               value="corporis"
+               value="qui"
                data-component="url">
     <br>
-<p>Example: <code>corporis</code></p>
+<p>Example: <code>qui</code></p>
             </div>
                     </form>
 
@@ -3527,14 +5817,14 @@ vary: Origin
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/r/totam" \
+    "http://127.0.0.1:8000/api/r/rem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/r/totam"
+    "http://127.0.0.1:8000/api/r/rem"
 );
 
 const headers = {
@@ -3619,10 +5909,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="PUTapi-r--subName-"
-               value="totam"
+               value="rem"
                data-component="url">
     <br>
-<p>Example: <code>totam</code></p>
+<p>Example: <code>rem</code></p>
             </div>
                     </form>
 
@@ -3639,14 +5929,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://127.0.0.1:8000/api/r/quae" \
+    "http://127.0.0.1:8000/api/r/laudantium" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/r/quae"
+    "http://127.0.0.1:8000/api/r/laudantium"
 );
 
 const headers = {
@@ -3731,10 +6021,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="subName"                data-endpoint="DELETEapi-r--subName-"
-               value="quae"
+               value="laudantium"
                data-component="url">
     <br>
-<p>Example: <code>quae</code></p>
+<p>Example: <code>laudantium</code></p>
             </div>
                     </form>
 
@@ -3789,6 +6079,11 @@ fetch(url, {
 content-type: application/json
 x-ratelimit-limit: 60
 x-ratelimit-remaining: 59
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5115,7 +7410,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 45
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-headers: Content-Type, Authorization
+accept: application/json
+access-control-allow-credentials: true
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5277,6 +7577,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/app/Http/Middleware/CorsMiddleware.php&quot;,
+            &quot;line&quot;: 11,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;/Users/nicolasrocagel/Documents/cs/EPITECH/EXOS/Rendu/finalproject/C-DEV-160-PAR-1-2-yowl-nicolas.rocagel/back-raddit/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Middleware\\CorsMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -5669,9 +7983,9 @@ vary: Origin
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"qejgahdqtmjkrt\",
-    \"email\": \"jesus.kuphal@example.net\",
-    \"password\": \"fugit\"
+    \"name\": \"rcbvswtkhjenxxnhljfrw\",
+    \"email\": \"brunte@example.org\",
+    \"password\": \"voluptas\"
 }"
 </code></pre></div>
 
@@ -5687,9 +8001,9 @@ const headers = {
 };
 
 let body = {
-    "name": "qejgahdqtmjkrt",
-    "email": "jesus.kuphal@example.net",
-    "password": "fugit"
+    "name": "rcbvswtkhjenxxnhljfrw",
+    "email": "brunte@example.org",
+    "password": "voluptas"
 };
 
 fetch(url, {
@@ -5770,10 +8084,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-register"
-               value="qejgahdqtmjkrt"
+               value="rcbvswtkhjenxxnhljfrw"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>qejgahdqtmjkrt</code></p>
+<p>Must not be greater than 255 characters. Example: <code>rcbvswtkhjenxxnhljfrw</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -5781,10 +8095,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-register"
-               value="jesus.kuphal@example.net"
+               value="brunte@example.org"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>jesus.kuphal@example.net</code></p>
+<p>Must not be greater than 255 characters. Example: <code>brunte@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -5792,10 +8106,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-register"
-               value="fugit"
+               value="voluptas"
                data-component="body">
     <br>
-<p>Example: <code>fugit</code></p>
+<p>Example: <code>voluptas</code></p>
         </div>
         </form>
 
@@ -5816,8 +8130,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"jeanne.flatley@example.net\",
-    \"password\": \";#3&lt;&gt;N.6ul,q;?%6dy\\\\\"
+    \"email\": \"patricia42@example.com\",
+    \"password\": \"\\/)=RNQ1u}?\"
 }"
 </code></pre></div>
 
@@ -5833,8 +8147,8 @@ const headers = {
 };
 
 let body = {
-    "email": "jeanne.flatley@example.net",
-    "password": ";#3&lt;&gt;N.6ul,q;?%6dy\\"
+    "email": "patricia42@example.com",
+    "password": "\/)=RNQ1u}?"
 };
 
 fetch(url, {
@@ -5915,10 +8229,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-login"
-               value="jeanne.flatley@example.net"
+               value="patricia42@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>jeanne.flatley@example.net</code></p>
+<p>Must be a valid email address. Example: <code>patricia42@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -5926,10 +8240,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-login"
-               value=";#3<>N.6ul,q;?%6dy\"
+               value="/)=RNQ1u}?"
                data-component="body">
     <br>
-<p>Example: <code>;#3&lt;&gt;N.6ul,q;?%6dy\</code></p>
+<p>Example: <code>/)=RNQ1u}?</code></p>
         </div>
         </form>
 
@@ -6138,6 +8452,118 @@ fetch(url, {
  &nbsp;
                 <input type="number" style="display: none"
                name="id"                data-endpoint="DELETEapi-user--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="user-management-PUTapi-user--id-">USER EDIT</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi-user--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://127.0.0.1:8000/api/user/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/user/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-user--id-">
+</span>
+<span id="execution-results-PUTapi-user--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-user--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-user--id-" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-user--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-user--id-"></code></pre>
+</span>
+<form id="form-PUTapi-user--id-" data-method="PUT"
+      data-path="api/user/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-user--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-user--id-"
+                    onclick="tryItOut('PUTapi-user--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-user--id-"
+                    onclick="cancelTryOut('PUTapi-user--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-user--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/user/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="PUTapi-user--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="PUTapi-user--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="id"                data-endpoint="PUTapi-user--id-"
                value="1"
                data-component="url">
     <br>

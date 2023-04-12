@@ -34,6 +34,34 @@ export const useImageStore = defineStore('imageStore', {
       console.log(idValue)
 
       this.imageUrl = imageUrlRes
+
+      //get user id from local storage
+      const userData = JSON.parse(localStorage.getItem('user'))
+
+      console.log(userData.id)
+
+      //AXIOS
+      if (idValue == 'user') {
+        axios
+          .patch(
+            'http://127.0.0.1:8000/api/user/' + userData.id,
+            {
+              profile_picture_URL: imageUrlRes
+            },
+            {
+              headers: {
+                Accept: 'application/vnd.api+json',
+                'Content-Type': 'application/vnd.api+json',
+                Authorization: `Bearer ${localStorage.getItem('userToken')}`
+              }
+            }
+          )
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err))
+      }
+      if (idValue == 'banner') {
+        axios.put('')
+      }
     }
   }
 })

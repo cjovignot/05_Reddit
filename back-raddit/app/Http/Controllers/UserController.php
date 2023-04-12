@@ -12,6 +12,7 @@ use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use Illuminate\Support\Facades\Route;
 
+
 /**
  * @group USER Management
  * 
@@ -88,7 +89,30 @@ class UserController extends Controller
 
 
 
+    /**
+     * USER EDIT
+     * 
+     */
 
+    public function editOne(Request $request, $id)
+    {
+
+        // return $id;
+        return $request;
+
+        $user = User::where('id', $id)->firstOrFail();
+        return  $user;
+
+        // $user->update($request->all());
+        // return $edit;
+        // dd($request);
+        // return request("name");
+        // return Auth::user()->id;
+
+        //if User::auth id est celle de l'id en param - on fait passer
+        // Auth::user()->id
+
+    }
 
 
     /**
