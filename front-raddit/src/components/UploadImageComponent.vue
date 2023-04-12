@@ -1,32 +1,48 @@
 <script setup>
-import {ref} from 'vue';
-import { createToaster } from "@meforma/vue-toaster";
-const url = ref('');
-const toaster = createToaster({ /* options */ });
+import { ref } from 'vue'
+import { createToaster } from '@meforma/vue-toaster'
+import { useImageStore } from '../stores/ImageStore'
+const imageStore = useImageStore()
+
+const props = defineProps({ id: String })
+
+const id = ref(props.id)
+// const { imageUrl } = storeToRefs(imageStore)
+const url = ref('')
+const toaster = createToaster({
+  /* options */
+})
+//window.cloudinary.createUploadWidget
 const widget = window.cloudinary.createUploadWidget(
   {
-    cloud_name: 'dbivyjzla',
-    upload_preset: 'ml_default'
+    cloudName: 'dbivyjzla',
+    uploadPreset: 'ml_default'
   },
   (error, result) => {
     if (!error && result && result.event === 'success') {
-      url.value = result.info.url;
-      console.log(url.value);
-      toaster.success('Picture uploaded successfully');
-      return url;
+      url.value = result.info.url
+      console.log(url.value)
+
+      // 🍍
+      imageStore.storeImage(result.info.url)
+
+      toaster.success('Picture uploaded successfully')
+      return url
     }
   }
 )
 const openModal = () => {
+  console.log(id.value)
+
   widget.open()
 }
 </script>
 
 <template>
-    <button class="border-2 rounded-full p-2" @click="openModal" style="margin: 10px;" >
-      <i class="fa-solid fa-camera-retro"></i>
-    </button>
-  <img style="height: auto; width: 50px;" :src="url" alt="">
+  <button class="border-2 rounded-full p-2" @click="openModal" style="margin: 10px">
+    <i class="fa-solid fa-camera-retro"></i>
+  </button>
+  <img style="height: auto; width: 50px" :src="url" alt="" />
 </template>
 
 <style>

@@ -2,6 +2,14 @@
 import { AdvancedImage } from '@cloudinary/vue'
 import { Cloudinary } from '@cloudinary/url-gen'
 import UploadImageComponent from '../components/UploadImageComponent.vue'
+import { useImageStore } from '../stores/ImageStore'
+import { storeToRefs } from 'pinia'
+const imageStore = useImageStore()
+
+//pinia to get user name
+// import { useAdminStore } from '../stores/AdminStore'
+
+const { imageUrl } = storeToRefs(imageStore)
 
 const cld = new Cloudinary({
   cloud: {
@@ -12,6 +20,11 @@ const myImg = cld.image('docs/models')
 </script>
 
 <template>
+  <div v-if="imageStore.imageUrl">
+    <h1>IMAGE UPLOADED</h1>
+
+    {{ imageUrl }}
+  </div>
   <h1 class="text-3xl font-bold text-center">User settings</h1>
   <div class="flex justify-center">
     <div class="flex flex-col justify-center content-center max-w-[50%] m-2">
@@ -24,7 +37,7 @@ const myImg = cld.image('docs/models')
       />
       <div>
         <span>IMAGES</span>
-        <HR></HR>
+        <hr />
       </div>
       <article class="flex">
         <section class="flex flex-col">
@@ -36,7 +49,8 @@ const myImg = cld.image('docs/models')
             </div>
           </div>
           <div class="ml-20 -translate-y-3">
-            <UploadImageComponent></UploadImageComponent>
+            <!-- <UploadImageComponent :upload_origin="user" /> -->
+            <UploadImageComponent id="user" />
           </div>
         </section>
         <section class="mt-6">
@@ -45,7 +59,8 @@ const myImg = cld.image('docs/models')
               <div class="max-w-md">
                 <p class="py-6">Upload Banner Image</p>
 
-                <UploadImageComponent></UploadImageComponent>
+                <UploadImageComponent id="banner" />
+                <!-- <UploadImageComponent /> -->
               </div>
             </div>
           </div>
