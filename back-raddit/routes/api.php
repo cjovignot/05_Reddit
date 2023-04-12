@@ -48,8 +48,6 @@ Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
 Route::get('/{subName}/{id}', [PostController::class, 'displayOne']);
-// Creates a Post in a Subraddit called from input -> Change values in function
-Route::post('/post', [PostController::class, 'storePost']);
 // Edits a post from its ID
 Route::put('/{id}', [PostController::class, 'editPost']);
 // Deletes a post from its ID
@@ -91,13 +89,15 @@ Route::get('/user', [UserController::class, 'displayAll']);
 Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
 
 
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
 
 // PROTECTED ROUTES (if logged in)
 Route::group(['middleware' => ['auth:sanctum']], function () {
-
-    Route::get('/posts', [PostController::class, 'displayAllPosts']);
-
-
+    
+    
+    // Creates a Post in a Subraddit called from input -> Change values in function
+    Route::post('/post', [PostController::class, 'storePost']);
+    
     Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
     Route::get('/comments', [CommentsController::class, 'displayAll']);
     Route::post('/comment', [CommentsController::class, 'store']);
