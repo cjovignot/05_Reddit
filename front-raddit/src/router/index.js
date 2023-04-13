@@ -37,7 +37,12 @@ const router = createRouter({
       path: '/user/:id',
       name: 'User Page',
       component: UserView
-    }
+    },
+    {
+      path: '/:subraddit_name',
+      name: 'Subraddit Page',
+      component: UserView
+    },
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

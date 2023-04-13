@@ -27,13 +27,13 @@ class SubRadditController extends Controller
         return $subraddit->toJson(JSON_PRETTY_PRINT);
     }
 
-
-    public function displaySubUser($id) {
-        $subraddits = Subraddits::select('subraddits.*')
-            ->join('admins_subraddits_link', 'admins_subraddits_link.admin_id', '=', 'subraddits.id')
-            ->where('subraddits.id', '=', $id)
+// Display all subraddits from current user
+    public function displaySubUser($id) {        
+        $subraddits = Subraddits::select()
+            ->join('admins_subraddits_link', 'admins_subraddits_link.subraddit_id', '=', 'subraddits.id')
+            ->where('admins_subraddits_link.admin_id', '=', $id)
             ->get();
-        return $subraddits->toJson(JSON_PRETTY_PRINT);
+        return response()->json($subraddits);
     }
 
 

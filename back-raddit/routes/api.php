@@ -47,7 +47,7 @@ Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 // Displays All Posts from a Subraddit
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
-Route::get('/{subName}/{id}', [PostController::class, 'displayOne']);
+// Route::get('/{subName}/{id}', [PostController::class, 'displayOne']); // CHECK IF NEEDS TO BE DELETED
 // Edits a post from its ID
 Route::put('/{id}', [PostController::class, 'editPost']);
 // Deletes a post from its ID
