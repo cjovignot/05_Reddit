@@ -40,6 +40,9 @@ class UserController extends Controller
     public function displayOne($id)
     {
 
+
+        // return 'test';
+
         $user = User::find($id);
 
         return $user->toJson(JSON_PRETTY_PRINT);;

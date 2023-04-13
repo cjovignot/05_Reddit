@@ -10,7 +10,7 @@ const toaster = createToaster()
 export const useAuthStore = defineStore('authStore', {
   // In here we define things like the state
   state: () => ({
-    id: 'users',
+    id: 'user',
     loggedIn: !!localStorage.getItem('userToken'),
     axiosHeaders: {
       'Content-Type': 'application/vnd.api+json',
@@ -18,7 +18,8 @@ export const useAuthStore = defineStore('authStore', {
       Authorization: `Bearer ${localStorage.getItem('userToken')}`
     },
     user: {},
-    userToken: ''
+    userToken: '',
+    isSuperA: false
   }),
 
   actions: {
@@ -60,9 +61,24 @@ export const useAuthStore = defineStore('authStore', {
           const userData = response.data.data.user
           const userToken = response.data.data.token
 
+          const userLocal = {
+            id: userData.id,
+            name: userData.name,
+            email: userData.email,
+            created_at: userData.created_at,
+            updated_at: userData.updated_at,
+            profile_picture_URL: userData.profile_picture_URL,
+            banner_picture_URL: userData.banner_picture_URL
+          }
+
+          console.log('king admin? ', userData.king_admin)
+
+          userData.king_admin == 1 ? (this.isSuperA = true) : (this.isSuperA = false)
+
+          console.log('isAdmin state: ', this.isSuperA)
           this.user = userData
           this.userToken = userToken
-          localStorage.setItem('user', JSON.stringify(userData))
+          localStorage.setItem('user', JSON.stringify(userLocal))
           localStorage.setItem('userToken', userToken)
           toaster.success(`Logged in 🚀`)
           this.loggedIn = true
@@ -96,6 +112,8 @@ export const useAuthStore = defineStore('authStore', {
           localStorage.removeItem('userToken')
           //router.push('/')
           toaster.success(`Logged out`)
+          this.isSuperA = false
+          this.loggedIn = false
         })
         .catch((err) => {
           console.error(err)
@@ -105,9 +123,42 @@ export const useAuthStore = defineStore('authStore', {
     editUserData(userInput) {
       // get called on three occasions:
       // 1. name change
-      // 2. image (avatar) changed
-      // 3. image (banner) changed
+      // 2. password change
+      // 3.
+
       console.log(userInput)
+    },
+    getUser(userId) {
+      console.log('🍍')
+      console.log(userId)
+      // axios to get one user by userInput
+      // http://127.0.0.1:8000/api/user/show/101
+
+      let config = {
+        method: 'get',
+        maxBodyLength: Infinity,
+        url: 'http://127.0.0.1:8000/api/user/show/' + userId,
+        headers: {
+          Accept: 'application/vnd.api+json',
+          'Content-Type': 'application/vnd.api+json',
+          Authorization: `Bearer ${localStorage.getItem('userToken')}`
+        }
+      }
+
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(response.data)
+
+          if (response.data.king_admin === 1) {
+            console.log('KING')
+            this.isSuperA = true
+          }
+        })
+        .catch((err) => {
+          console.error(err)
+          // toaster.error(`Could not log out`)
+        })
     }
   }
 })

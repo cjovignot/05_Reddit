@@ -58,45 +58,36 @@ Route::delete('/post/{id}', [PostController::class, 'deletePost']);
 
 
 
-// Displays all COMMENTS of ONE POST
-Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
-// SUBRADDIT
-
-
-Route::post('/r/create', [SubRadditController::class, 'store']);
-Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
-
 // COMMENTS
+Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
 Route::get('/comment/{id}', [CommentsController::class, 'displayOne']);
 
-
-// Route::get('/')
-
-
-// USER 
-Route::get('/user/{id}', [UserController::class, 'displayOne']);
-
-// LOGIN / LOGOUT
-// if not logged in...
-Route::post('/register', [UserController::class, 'register']);
-Route::post('/login', [UserController::class, 'login']);
-Route::post('/logout', [UserController::class, 'logout']);
-// Route::get('', [HomeController::class, 'display']);
-// Route::get('/', [PostController::class, 'display']);
-// Route::get('/subraddit', [SubRadditController::class, 'display']);
-
-// to move in protected after tests
-Route::get('/user', [UserController::class, 'displayAll']);
-Route::delete('/user/{id}', [UserController::class, 'deleteOne']);
-
-Route::get('/posts', [PostController::class, 'displayAllPosts']);
-
-
-Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
 Route::get('/comments', [CommentsController::class, 'displayAll']);
 Route::post('/comment', [CommentsController::class, 'store']);
 Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
 Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);
+
+
+
+// SUBRADDIT
+Route::post('/r/create', [SubRadditController::class, 'store']);
+Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
+Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
+
+
+
+// USER 
+Route::get('/user/show/{id}', [UserController::class, 'displayOne']);
+Route::get('/user', [UserController::class, 'displayAll']);
+Route::delete('/user/{id}', [UserController::class, 'deleteOne']); // MARCHE PLUS ->     "message": "SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`raddit`.`posts`, CONSTRAINT `posts_author_id_foreign` FOREIGN KEY (`author_id`) REFERENCES `users` (`id`)) (Connection: mysql, SQL: delete from `users` where `id` = 1)",
+
+Route::get('/posts', [PostController::class, 'displayAllPosts']);
+
+
+// LOGIN / LOGOUT
+Route::post('/register', [UserController::class, 'register']);
+Route::post('/login', [UserController::class, 'login']);
+
 
 
 // PROTECTED ROUTES (if logged in)
