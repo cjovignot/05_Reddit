@@ -32,17 +32,11 @@ console.log(!!localStorage.getItem('userToken'))
       </div>
 
       <!-- *** POSTS *** -->
-        <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5" v-if="PostStore.isLoading == false">
-        <div> HEY </div>
-          
-          <div v-for="post in PostStore.posts">
+        <div class="flex flex-col  w-[78%] m-auto mb-5" v-if="PostStore.isLoading == false">          
+          <div v-for="post in PostStore.posts" class="pb-10">
 
             <Post
-            SubRadditTitle="Tout sur le Radis"
-            Author="Dino"
-            PostTitle="Les radis sont nos amis"
-            PostBody="Le bon vieux lorem ipsum"
-            class="content-center"
+            :post=post
             />
           </div>
           
