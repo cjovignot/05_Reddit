@@ -8,7 +8,7 @@ let props =defineProps({
     <!-- <div class="w-3/12"> -->
         <img src="../assets/images/arrosoir.png"> 
         <h1 class="text-center">{{post}}</h1>
-        <img  src="../assets/images/waterDrop.png" alt="..."> 
+        <img  src="../assets/images/secateur.png" alt="..."> 
 
     <!-- </div> -->
 
