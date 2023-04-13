@@ -8,8 +8,8 @@ import { useAuthStore } from '../stores/AuthStore'
 
 const router = useRouter()
 
-const userToken = localStorage.getItem('userToken')
-const userData = JSON.parse(localStorage.getItem('user'))
+// const userToken = localStorage.getItem('userToken')
+// const userData = JSON.parse(localStorage.getItem('user'))
 
 const authStore = useAuthStore()
 
@@ -17,12 +17,13 @@ const authStore = useAuthStore()
 
 const { isSuperA } = storeToRefs(authStore)
 
+console.log(isSuperA.value)
 // REDIRECTION IF NOT TOP ADMIN LOGGED IN
-if (isSuperA) {
-  console.log(userData.king_admin)
-  if (userData.king_admin !== 1 && userToken) router.push('/')
-} else if (!userToken) {
+if (isSuperA.value == false) {
+  console.log('not super a')
   router.push('/')
+  // console.log(userData.king_admin)
+  // if (userData.king_admin !== 1 && userToken) router.push('/')
 }
 
 const adminStore = useAdminStore()

@@ -1,9 +1,12 @@
 <script setup>
 import Register from './UserConnexionModal.vue'
-// import { ref } from 'vue'
+import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
 import CreatePost from './CreatePostModal.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 import { useImageStore } from '../stores/ImageStore'
 
@@ -48,6 +51,23 @@ if (localStorage.getItem('user')) {
 
   authStore.getUser(userData.id)
 }
+
+const search = ref('')
+const searchSub = (event) => {
+  // console.log(event)
+  // console.log(event.key)
+
+  console.log(search.value)
+  if (event.key == 'Enter') {
+    console.log(search.value)
+    event.target.blur()
+
+    // redirection to sub page
+    router.push('/r/' + search.value)
+  }
+
+  // updateCatToDb()
+}
 </script>
 
 <template>
@@ -62,8 +82,24 @@ if (localStorage.getItem('user')) {
     </div>
     <div class="flex-none gap-2">
       <div class="form-control">
-        <input type="text" placeholder="Search" class="input input-bordered" />
+        <input
+          name="search"
+          v-on:keyup.enter="searchSub($event)"
+          type="text"
+          v-model="search"
+          placeholder="search"
+          class="input input-bordered"
+        />
       </div>
+      <!-- 
+      <input
+        v-on:focusout="updateName"
+        v-on:keyup.enter="updateName($event)"
+        name="username"
+        type="text"
+        v-model="userName"
+        class="input input-ghost w-full max-w-xs"
+      /> -->
 
       <!-- The button to open Post modal -->
       <label v-if="loggedIn" for="my-modal-5" class="btn"><i class="fa-solid fa-plus"></i></label>

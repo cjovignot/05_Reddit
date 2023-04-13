@@ -7,23 +7,30 @@ import { useImageStore } from '../stores/ImageStore'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 const imageStore = useImageStore()
 // const authStore = useAuthStore()
 const router = useRouter()
 
 const authStore = useAuthStore()
+
 const { loggedIn, user } = storeToRefs(authStore)
 
-if (!loggedIn) {
-  console.log('redirection to home')
+// const { isSuperA } = storeToRefs(authStore)
+console.log(loggedIn)
+// REDIRECTION IF NOT TOP ADMIN LOGGED IN
+if (loggedIn.value == false) {
+  console.log('not super a')
   router.push('/')
+  // console.log(userData.king_admin)
+  // if (userData.king_admin !== 1 && userToken) router.push('/')
 }
-
+let userName
+const userLocal = JSON.parse(localStorage.getItem('user'))
 try {
-  const userLocal = JSON.parse(localStorage.getItem('user'))
   const userPicLocal = userLocal.profile_picture_URL
   const bannerPicLocal = userLocal.banner_picture_URL
-
+  userName = ref(userLocal.name)
   console.log(userPicLocal)
   console.log(bannerPicLocal)
 } catch (err) {
@@ -41,15 +48,21 @@ if (imageStore.imageUrl !== '') {
   imageStore.storeImage
 }
 
-// const cld = new Cloudinary(
-//   'https://res.cloudinary.com/dbivyjzla/image/upload/v1681320191/banners/pexels-vikki-106829_lsradk.jpg',
-//   {
-//     cloud: {
-//       cloudName: 'raddit'
-//     }
-//   }
-// )
-// const myImg = cld.image('raddit')
+const updateName = (event) => {
+  // console.log(event)
+  // console.log(event.key)
+
+  console.log(userName.value)
+  if (event.key == 'Enter') {
+    event.target.blur()
+    //call to pinia auth store to update
+    authStore.editUserName(userName.value)
+  }
+
+  // updateCatToDb()
+}
+
+console.log(authStore.user.name)
 </script>
 
 <template>
@@ -58,11 +71,21 @@ if (imageStore.imageUrl !== '') {
     <div class="flex flex-col justify-center content-center max-w-[50%] m-2">
       <label for="username">change name:</label>
       <input
+        v-on:focusout="updateName"
+        v-on:keyup.enter="updateName($event)"
         name="username"
         type="text"
-        :placeholder="user.name"
+        v-model="userName"
         class="input input-ghost w-full max-w-xs"
       />
+
+      <!-- <input
+        v-on:focusout="updateCat"
+        v-on:keyup.enter="updateCat($event)"
+        type="text"
+        v-model="categoryName"
+        class="input input-ghost w-full max-w-xs font-bold"
+      /> -->
       <div>
         <span>IMAGES</span>
         <hr />

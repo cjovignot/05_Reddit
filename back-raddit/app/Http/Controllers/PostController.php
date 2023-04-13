@@ -9,8 +9,9 @@ use App\Models\Users;
 use App\Models\Comments;
 
 class PostController extends Controller
-{   
-    public function displayAllPosts() {
+{
+    public function displayAllPosts()
+    {
         // $posts = Posts::all();
         $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
             ->join('users', 'users.id', '=', 'posts.author_id')
@@ -33,13 +34,15 @@ class PostController extends Controller
 
     public function storePost(Request $request)
     {
+
+        // return $request;
         $post = new Posts;
 
         $post->author_id = request('author_id');
         $post->subraddit_id = request('subraddit_id');
         $post->title = request('title');
         $post->content = request('content');
-        $post->img_url = request('img_url');
+        // $post->img_url = request('img_url');
         $post->nsfw = request('nsfw');
         $post->OC = request('OC');
         $post->spoiler = request('spoiler');
