@@ -88,6 +88,7 @@ Route::post('/login', [UserController::class, 'login']);
 
 
 Route::get('/posts', [PostController::class, 'displayAllPosts']);
+Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
 
 // PROTECTED ROUTES (if logged in)
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -96,7 +97,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     // Creates a Post in a Subraddit called from input -> Change values in function
     Route::post('/post', [PostController::class, 'storePost']);
     
-    Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
     Route::get('/comments', [CommentsController::class, 'displayAll']);
     Route::post('/comment', [CommentsController::class, 'store']);
     Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);

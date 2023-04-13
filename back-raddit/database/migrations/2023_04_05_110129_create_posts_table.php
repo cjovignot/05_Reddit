@@ -25,8 +25,8 @@ return new class extends Migration
             $table->boolean('OC')->default(0);
             $table->integer('crops')->default(0);
             
-            $table->foreign('author_id')->references('id')->on('users');
-            $table->foreign('subraddit_id')->references('id')->on('subraddits');
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('subraddit_id')->references('id')->on('subraddits')->onDelete('cascade');
         });
     }
 
