@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import AdminView from '../views/AdminView.vue'
 import SettingsView from '../views/SettingsView.vue'
 import UserView from '../views/UserView.vue'
+import SubView from '../views/SubradditView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,9 +41,9 @@ const router = createRouter({
       component: UserView
     },
     {
-      path: '/:subraddit_name',
+      path: '/r/:subraddit_name',
       name: 'Subraddit Page',
-      component: UserView
+      component: SubView
     },
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
