@@ -6,11 +6,18 @@ import { usePostStore } from '../stores/PostStore'
 
 const PostStore = usePostStore()
 
-const posts = PostStore.getAllPosts()
-console.log('here')
-console.log(posts)
+PostStore.getAllPosts()
+// Infinity scroll
 
-console.log(!!localStorage.getItem('userToken'))
+window.onscroll = () => {
+        let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+        if (bottomOfWindow) {
+          PostStore.page++ 
+          console.log(PostStore.page)
+          PostStore.getAllPosts();
+        }
+      }
+    
 </script>
 <template>   
 
@@ -32,12 +39,14 @@ console.log(!!localStorage.getItem('userToken'))
       </div>
 
       <!-- *** POSTS *** -->
-        <div class="flex flex-col  w-[78%] m-auto mb-5" v-if="PostStore.isLoading == false">          
-          <div v-for="post in PostStore.posts.data" class="pb-10">
+        <div class="flex flex-col  w-[78%] m-auto mb-5" v-if="PostStore.posts != undefined">          
+          <div v-for="posty in PostStore.posts" class="pb-10">
+          <div v-for="post in posty" class="pb-10">
 
             <Post
             :post=post
             />
+          </div>
           </div>
           
       </div>
