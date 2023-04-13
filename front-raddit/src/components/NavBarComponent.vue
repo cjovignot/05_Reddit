@@ -59,6 +59,7 @@ if (userData) {
 
       <Register v-if="!loggedIn" />
       <CreatePost />
+      {{ isSuperAdmin }}
 
       <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">

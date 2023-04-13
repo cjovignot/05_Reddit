@@ -12,8 +12,9 @@ console.log(props.post)
 
     <div class="flex flex-row bg-red-500 w-[100%] text-sm">
         <div class="w-16 bg-green-100 w-[5%] " >
-            <Vote></Vote>
-        </div>
+            <vote
+            :post=post.crops
+            />        </div>
 
         <div class ="flex flex-col bg-green-400 w-[100%] ">
 
