@@ -5,7 +5,6 @@ import { defineProps } from 'vue';
 let props =defineProps({
     post: Object,
 })
-console.log(props.post)
 </script>
 
 <template>

@@ -45,7 +45,7 @@ class UserController extends Controller
 
         $user = User::find($id);
 
-        return $user->toJson(JSON_PRETTY_PRINT);;
+        return $user->toJson(JSON_PRETTY_PRINT);
     }
 
 

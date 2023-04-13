@@ -6,7 +6,8 @@ export const usePostStore = defineStore('postStore', {
     state: () => ({
         isLoading: false,
         posts: [],
-        page:1
+        page:1,
+
 
 
     }),
@@ -17,23 +18,12 @@ export const usePostStore = defineStore('postStore', {
         getAllPosts() {
             this.isLoading = true
             axios
-              .get('http://localhost:8000/api/posts?page=1')
+              .get('http://localhost:8000/api/posts?page='+this.page)
               .then((response) => {
-                this.posts = response.data
-                this.isLoading = false
-                console.log(this.posts)
-              })
-              .catch((err) => {
-                console.log('could not load posts ❌')
-                console.error(err)
-              })
-           
-          },getMorePosts() {
-            this.isLoading = true
-            axios
-              .get('http://localhost:8000/api/posts?page='+page)
-              .then((response) => {
-                this.posts = response.data
+                let temp= response.data
+                this.posts.push(temp.data)                
+
+                
                 this.isLoading = false
                 console.log(this.posts)
               })

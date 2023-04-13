@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 import { createToaster } from '@meforma/vue-toaster'
-const toaster = createToaster()
 // import { useRouter } from 'vue-router'
+const toaster = createToaster()
 // const router = useRouter()
 
 // for our const variable, 'use...'is a naming convention
@@ -110,7 +110,7 @@ export const useAuthStore = defineStore('authStore', {
           console.log(response)
           localStorage.removeItem('user')
           localStorage.removeItem('userToken')
-          //router.push('/')
+          // router.push({ path: '/' })
           toaster.success(`Logged out`)
           this.isSuperA = false
           this.loggedIn = false
@@ -153,6 +153,7 @@ export const useAuthStore = defineStore('authStore', {
           if (response.data.king_admin === 1) {
             console.log('KING')
             this.isSuperA = true
+            this.user = response.data
           }
         })
         .catch((err) => {

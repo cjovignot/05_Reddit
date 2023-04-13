@@ -47,7 +47,7 @@ Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 // Displays All Posts from a Subraddit
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
-Route::get('/{subName}/{id}', [PostController::class, 'displayOne']);
+// Route::get('/{subName}/{id}', [PostController::class, 'displayOne']); // CHECK IF NEEDS TO BE DELETED
 // Edits a post from its ID
 Route::put('/{id}', [PostController::class, 'editPost']);
 // Deletes a post from its ID
@@ -65,10 +65,9 @@ Route::post('/comment', [CommentsController::class, 'store']);
 Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
 Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);
 
-
-
-// SUBRADDIT
-Route::post('/r/create', [SubRadditController::class, 'store']);
+Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
+Route::post('/r/create/{id}', [SubRadditController::class, 'store']);
+Route::get('/r/subraddits/{id}', [SubRadditController::class, 'displaySubUser']);
 Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
 

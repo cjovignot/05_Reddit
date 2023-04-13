@@ -2,7 +2,10 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 // import { createToaster } from '@meforma/vue-toaster'
 // import { ref } from 'vue'
+// import { useAuthStore } from './AuthStore'
 
+// const authStore = useAuthStore()
+// const { user } = storeToRefs(authStore)
 // const toaster = createToaster()
 
 // for our const variable, 'use...'is a naming convention
@@ -83,6 +86,9 @@ export const useImageStore = defineStore('imageStore', {
           }
           localStorage.setItem('user', JSON.stringify(userUpdate))
           console.log(localStorage.getItem('user'))
+
+          // update user state in auth store
+          // authStore.user = userUpdate
         })
         .catch((err) => {
           console.log('💩📸')

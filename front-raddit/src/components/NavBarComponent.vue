@@ -47,8 +47,6 @@ if (localStorage.getItem('user')) {
   // get user info from axio+pinia to see if kindadmin
 
   authStore.getUser(userData.id)
-} else {
-  console.log('NOT LOGGED IN 🤷🏻‍♂️')
 }
 </script>
 
@@ -79,8 +77,8 @@ if (localStorage.getItem('user')) {
           <div v-if="loggedIn" class="avatar online">
             <div class="w-10 rounded-full">
               <!-- if user photo updated -->
-              <div v-if="imageUrl">
-                <img src="imageUrl" alt="user profile picture" />
+              <div v-if="authStore.user.profile_picture_URL">
+                <img :src="authStore.user.profile_picture_URL" alt="user profile picture" />
               </div>
               <!-- else -->
               <div v-else>
@@ -103,10 +101,9 @@ if (localStorage.getItem('user')) {
           class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
         >
           <li>
-            <a class="justify-between">
+            <RouterLink :to="'/user/' + authStore.user.id" class="justify-between">
               Profile
-              <span class="badge">New</span>
-            </a>
+            </RouterLink>
           </li>
           <li>
             <button id="random-btn">Theme <i class="fa-solid fa-palette"></i>💥</button>

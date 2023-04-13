@@ -4,18 +4,26 @@ import { useAdminStore } from '../stores/AdminStore'
 import { ref } from 'vue'
 // import axios from 'axios'
 import { useRouter } from 'vue-router'
+import { useAuthStore } from '../stores/AuthStore'
+
 const router = useRouter()
 
 const userToken = localStorage.getItem('userToken')
 const userData = JSON.parse(localStorage.getItem('user'))
 
+const authStore = useAuthStore()
+
+// const isSuperAdmin = ref(false)
+
+const { isSuperA } = storeToRefs(authStore)
+
 // REDIRECTION IF NOT TOP ADMIN LOGGED IN
-// if (userToken && userData) {
-//   console.log(userData.king_admin)
-//   if (userData.king_admin !== 1 && userToken) router.push('/')
-// } else if (!userToken) {
-//   router.push('/')
-// }
+if (isSuperA) {
+  console.log(userData.king_admin)
+  if (userData.king_admin !== 1 && userToken) router.push('/')
+} else if (!userToken) {
+  router.push('/')
+}
 
 const adminStore = useAdminStore()
 
