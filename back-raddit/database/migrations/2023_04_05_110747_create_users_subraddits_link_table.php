@@ -15,8 +15,8 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('subraddit_id');
 
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('subraddit_id')->references('id')->on('subraddits');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('subraddit_id')->references('id')->on('subraddits')->onDelete('cascade');
 
 
         });
