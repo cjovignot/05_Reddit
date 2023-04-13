@@ -21,6 +21,7 @@ class PostsFactory extends Factory
             'subraddit_id' => fake()->numberBetween($min = 1, $max = 100),
             'title' => fake()->sentence() ,
             'content' => fake()->paragraph() , // password
+            'crops' => fake()->numberBetween($min = 1, $max = 100000) ,
         ];
     }
 }
