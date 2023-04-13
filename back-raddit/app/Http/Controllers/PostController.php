@@ -28,9 +28,13 @@ class PostController extends Controller
         $post = new Posts;
 
         $post->author_id = request('author_id');
-        $post->subraddit_name = request('subraddit_name');
+        $post->subraddit_id = request('subraddit_id');
         $post->title = request('title');
         $post->content = request('content');
+        $post->img_url = request('img_url');
+        $post->nsfw = request('nsfw');
+        $post->OC = request('OC');
+        $post->spoiler = request('spoiler');
 
         $post->save();
 
