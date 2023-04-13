@@ -4,6 +4,7 @@ import UploadImageComponent from '../components/UploadImageComponent.vue';
 import { useImageStore } from '@/stores/ImageStore';
 import axios from 'axios';
 import { createToaster } from '@meforma/vue-toaster';
+import { RouterLink } from 'vue-router';
 
 const imageStore = useImageStore();
 const toaster = createToaster({
@@ -44,20 +45,18 @@ function createSubraddit() {
         console.log(error);
     });
 }
+
 </script>
 
 <template>
   <div style="display: flex;flex-direction: column;">
-    <div style="display: flex; justify-content: space-between;">
+      <UploadImageComponent />
+    <div style="display: flex; justify-content: space-between; flex-direction: column;">
       <input placeholder="Please type your Subraddit title" type="text" v-model="subraddit_name" class="input input-bordered title_input"/>
       <input placeholder="Please type your Subraddit description" type="text" v-model="about" class="input input-bordered title_input"/>
+      <button class="btn btn-outline btn-success" @click="createSubraddit()">Create</button>
     </div>
-    <button class="btn btn-outline btn-success" @click="createSubraddit()">Create</button>
-    <div>
-      <UploadImageComponent />
-    </div>
-    
-    <div class="divider"></div>
+    <button class="btn btn-outline btn-primary" @click="RouterLink">{{ subraddit_name }}</button>
   </div>
 </template>
 
@@ -66,8 +65,8 @@ function createSubraddit() {
   margin: 0 10px;
 }
 .title_input {
-  width: -webkit-fill-available;
-  max-width: 89%;
+  /* width: -webkit-fill-available;
+  max-width: 89%; */
 }
 img {
   border: 1px white solid;
