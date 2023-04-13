@@ -19,3 +19,11 @@ axios.get('/user/12345')
     }
     console.log(error.config);
   });
+
+  --------------------------------------------
+  Eloquent Join 
+
+
+  $users = User::join('posts', 'users.id', '=', 'posts.user_id')
+            ->select('users.*', 'posts.title', 'posts.body')
+            ->get();

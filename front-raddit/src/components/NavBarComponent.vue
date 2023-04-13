@@ -1,9 +1,28 @@
 <script setup>
 import Register from './UserConnexionModal.vue'
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { useAuthStore } from '../stores/AuthStore'
 import { storeToRefs } from 'pinia'
 import CreatePost from './CreatePostModal.vue'
+
+import { useImageStore } from '../stores/ImageStore'
+
+const imageStore = useImageStore()
+
+try {
+  const userLocal = JSON.parse(localStorage.getItem('user'))
+  const userPicLocal = userLocal.profile_picture_URL
+  const bannerPicLocal = userLocal.banner_picture_URL
+  console.log(userPicLocal)
+  console.log(bannerPicLocal)
+} catch (err) {
+  console.log(err)
+}
+
+//pinia to get user name
+// import { useAdminStore } from '../stores/AdminStore'
+
+const { imageUrl } = storeToRefs(imageStore)
 
 // import { storeToRefs } from 'pinia'
 const authStore = useAuthStore()
@@ -34,7 +53,6 @@ if (localStorage.getItem('user')) {
 </script>
 
 <template>
-  {{ user }}
   <div class="navbar bg-base-100">
     <div class="flex-1">
       <RouterLink class="flex" to="/">
@@ -58,10 +76,26 @@ if (localStorage.getItem('user')) {
       <RouterLink v-if="isSuperA" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img
-              src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/wholeRaddit_x3fbys.png"
-            />
+          <div v-if="loggedIn" class="avatar online">
+            <div class="w-10 rounded-full">
+              <!-- if user photo updated -->
+              <div v-if="imageUrl">
+                <img src="imageUrl" alt="user profile picture" />
+              </div>
+              <!-- else -->
+              <div v-else>
+                <img
+                  src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/wholeRaddit_x3fbys.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div v-else class="avatar offline">
+            <div class="w-10 rounded-full">
+              <img
+                src="https://res.cloudinary.com/dnzb3s4a0/image/upload/v1680856051/raddit/wholeRaddit_x3fbys.png"
+              />
+            </div>
           </div>
         </label>
         <ul

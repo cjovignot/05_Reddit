@@ -1,17 +1,23 @@
 <script setup>
-import { AdvancedImage } from '@cloudinary/vue'
-import { Cloudinary } from '@cloudinary/url-gen'
+// import { AdvancedImage } from '@cloudinary/vue'
+// import { Cloudinary } from '@cloudinary/url-gen'
 import UploadImageComponent from '../components/UploadImageComponent.vue'
 import { useImageStore } from '../stores/ImageStore'
 // import { useAuthStore } from '../stores/useAuthStore'
 import { storeToRefs } from 'pinia'
 const imageStore = useImageStore()
 // const authStore = useAuthStore()
+const userLocal = JSON.parse(localStorage.getItem('user'))
+const userPicLocal = userLocal.profile_picture_URL
+const bannerPicLocal = userLocal.banner_picture_URL
+
+console.log(userPicLocal)
+console.log(bannerPicLocal)
 
 //pinia to get user name
 // import { useAdminStore } from '../stores/AdminStore'
 
-const { imageUrl } = storeToRefs(imageStore)
+const { imageUrl, picId } = storeToRefs(imageStore)
 // const { user } = storeToRefs(authStore)
 
 if (imageStore.imageUrl !== '') {
@@ -19,23 +25,24 @@ if (imageStore.imageUrl !== '') {
   imageStore.storeImage
 }
 
-const cld = new Cloudinary(
-  'https://res.cloudinary.com/dbivyjzla/image/upload/v1681320191/banners/pexels-vikki-106829_lsradk.jpg',
-  {
-    cloud: {
-      cloudName: 'raddit'
-    }
-  }
-)
-const myImg = cld.image('raddit')
+// const cld = new Cloudinary(
+//   'https://res.cloudinary.com/dbivyjzla/image/upload/v1681320191/banners/pexels-vikki-106829_lsradk.jpg',
+//   {
+//     cloud: {
+//       cloudName: 'raddit'
+//     }
+//   }
+// )
+// const myImg = cld.image('raddit')
 </script>
 
 <template>
-  <div v-if="imageStore.imageUrl">
+  <!-- <div v-if="imageStore.imageUrl">
     <h1>IMAGE UPLOADED</h1>
 
+    {{ picId }}
     {{ imageUrl }}
-  </div>
+  </div> -->
   <h1 class="text-3xl font-bold text-center">User settings</h1>
   <div class="flex justify-center">
     <div class="flex flex-col justify-center content-center max-w-[50%] m-2">
@@ -55,9 +62,12 @@ const myImg = cld.image('raddit')
           <div class="avatar flex flex-col m-5 mb-0">
             <h3 class="text-xl">Avatar and banner image</h3>
             <span>Images must be .png or .jpg format</span>
-            <div v-if="imageStore.imageUrl" class="w-24 mask mask-squircle">
+            <div v-if="imageStore.imageUrl && picId == 'user'" class="w-24 mask mask-squircle">
               <!-- <AdvancedImage :cldImg="myImg" /> -->
               <img :src="imageUrl" alt="User profile image" />
+            </div>
+            <div class="w-24 mask mask-squircle" v-else-if="userPicLocal">
+              <img :src="userPicLocal" alt="User profile image" />
             </div>
             <div v-else class="w-24 mask mask-squircle">
               <!-- <AdvancedImage :cldImg="myImg" /> -->
@@ -80,15 +90,21 @@ const myImg = cld.image('raddit')
 
                 <UploadImageComponent id="banner" />
                 <!-- <UploadImageComponent /> -->
-                <div v-if="imageStore.imageUrl" class="w-24 mask mask-squircle">
+                <div
+                  v-if="imageStore.imageUrl && picId == 'banner'"
+                  class="w-24 mask mask-squircle"
+                >
                   <!-- <AdvancedImage :cldImg="myImg" /> -->
                   <img :src="imageUrl" alt="User profile image" />
+                </div>
+                <div v-else-if="bannerPicLocal">
+                  <img :src="bannerPicLocal" alt="User banner image" />
                 </div>
                 <div v-else class="w-24 mask mask-squircle">
                   <!-- <AdvancedImage :cldImg="myImg" /> -->
                   <img
-                    src="https://res.cloudinary.com/dbivyjzla/image/upload/v1681285175/wholeRaddit_rxzaqn.png"
-                    alt="User default profile image"
+                    src="https://res.cloudinary.com/dbivyjzla/image/upload/v1681320189/banners/pexels-lukas-rodriguez-3473085_djhzyy.jpg"
+                    alt="User default banner image"
                   />
                 </div>
               </div>

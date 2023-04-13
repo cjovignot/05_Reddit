@@ -11,7 +11,7 @@ export const useImageStore = defineStore('imageStore', {
   // In here we define things like the state
   state: () => ({
     imageUrl: '',
-    id: '',
+    picId: '',
 
     name: 'Image Store'
   }),
@@ -32,6 +32,8 @@ export const useImageStore = defineStore('imageStore', {
     storeImage(imageUrlRes, idValue) {
       let keyDB
 
+      this.picId = idValue
+
       idValue == 'user' ? (keyDB = 'profile_picture_URL') : (keyDB = 'banner_picture_URL')
 
       console.log(keyDB)
@@ -49,7 +51,7 @@ export const useImageStore = defineStore('imageStore', {
         .patch(
           'http://127.0.0.1:8000/api/user/' + userData.id,
           {
-            keyDB: imageUrlRes
+            [keyDB]: imageUrlRes
           },
           {
             headers: {
@@ -74,13 +76,13 @@ export const useImageStore = defineStore('imageStore', {
             name: userLocal.name,
             email: userLocal.email,
             kingAdmin: userLocal.kingAdmin,
-            profile_picture_URL: idValue == 'user' ? imageUrlRes : '',
-            banner_picture_URL: idValue == 'banner' ? imageUrlRes : '',
+            profile_picture_URL: idValue == 'user' ? imageUrlRes : userLocal.profile_picture_URL,
+            banner_picture_URL: idValue == 'banner' ? imageUrlRes : userLocal.banner_picture_URL,
             updated_at: d.toLocaleString(),
             created_at: userLocal.created_at
           }
           localStorage.setItem('user', JSON.stringify(userUpdate))
-          // console.log(localStorage.getItem('user'))
+          console.log(localStorage.getItem('user'))
         })
         .catch((err) => {
           console.log('💩📸')
