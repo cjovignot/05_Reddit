@@ -5,9 +5,10 @@ import { storeToRefs } from 'pinia'
 import { usePostStore } from '../stores/PostStore'
 
 const PostStore = usePostStore()
-const { totalCount, userCount } = storeToRefs(PostStore)
 
 const posts = PostStore.getAllPosts()
+console.log('here')
+console.log(posts)
 
 console.log(!!localStorage.getItem('userToken'))
 </script>
@@ -31,39 +32,15 @@ console.log(!!localStorage.getItem('userToken'))
       </div>
 
       <!-- *** POSTS *** -->
-        <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
-          
-        <Post
-          SubRadditTitle="Tout sur le Radis"
-          Author="Dino"
-          PostTitle="Les radis sont nos amis"
-          PostBody="Le bon vieux lorem ipsum"
-          class="content-center"
-          />
+        <div class="flex flex-col  w-[78%] m-auto mb-5" v-if="PostStore.isLoading == false">          
+          <div v-for="post in PostStore.posts" class="pb-10">
+
+            <Post
+            :post=post
+            />
+          </div>
           
       </div>
-      <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
-          
-          <Post
-            SubRadditTitle="Tout sur le Radis"
-            Author="Dino"
-            PostTitle="Les radis sont nos amis"
-            PostBody="Le bon vieux lorem ipsum"
-            class="content-center"
-            />
-            
-        </div>
-        <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-5">
-          
-          <Post
-            SubRadditTitle="Tout sur le Radis"
-            Author="Dino"
-            PostTitle="Les radis sont nos amis"
-            PostBody="Le bon vieux lorem ipsum"
-            class="content-center"
-            />
-            
-        </div>
     
     </section>
   </body>

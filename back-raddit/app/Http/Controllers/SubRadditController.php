@@ -46,6 +46,7 @@ class SubRadditController extends Controller
             'about' => $request->about,
             'subraddit_picture_URL' => $request->subraddit_picture_URL,
             'banner_picture_URL' => $request->banner_picture_URL
+
         ]);
 
         return ["isCreated" => $created->toJson(JSON_PRETTY_PRINT)];
