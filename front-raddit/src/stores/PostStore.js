@@ -2,36 +2,29 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 
 export const usePostStore = defineStore('postStore', {
-    // In here we define things like the state
-    state: () => ({
-        isLoading: false,
-        posts: [],
-        page:1,
+  // In here we define things like the state
+  state: () => ({
+    isLoading: false,
+    posts: [],
+    page: 1
+  }),
 
+  actions: {
+    getAllPosts() {
+      this.isLoading = true
+      axios
+        .get('http://localhost:8000/api/posts?page=' + this.page)
+        .then((response) => {
+          let temp = response.data
+          this.posts.push(temp.data)
 
-
-    }),
-    getters: {
-      
-    },
-    actions: {
-        getAllPosts() {
-            this.isLoading = true
-            axios
-              .get('http://localhost:8000/api/posts?page='+this.page)
-              .then((response) => {
-                let temp= response.data
-                this.posts.push(temp.data)                
-
-                
-                this.isLoading = false
-                console.log(this.posts)
-              })
-              .catch((err) => {
-                console.log('could not load posts ❌')
-                console.error(err)
-              })
-           
-          }
+          this.isLoading = false
+          console.log(this.posts)
+        })
+        .catch((err) => {
+          console.log('could not load posts ❌')
+          console.error(err)
+        })
     }
-  })
+  }
+})

@@ -78,7 +78,6 @@ export const useImageStore = defineStore('imageStore', {
             id: userLocal.id,
             name: userLocal.name,
             email: userLocal.email,
-            kingAdmin: userLocal.kingAdmin,
             profile_picture_URL: idValue == 'user' ? imageUrlRes : userLocal.profile_picture_URL,
             banner_picture_URL: idValue == 'banner' ? imageUrlRes : userLocal.banner_picture_URL,
             updated_at: d.toLocaleString(),

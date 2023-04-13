@@ -110,23 +110,78 @@ export const useAuthStore = defineStore('authStore', {
           console.log(response)
           localStorage.removeItem('user')
           localStorage.removeItem('userToken')
-          // router.push({ path: '/' })
+
           toaster.success(`Logged out`)
           this.isSuperA = false
           this.loggedIn = false
+
+          console.log('isLoggedin state: ', this.loggedIn)
+
+          localStorage.removeItem('user')
         })
         .catch((err) => {
           console.error(err)
           toaster.error(`Could not log out`)
         })
     },
-    editUserData(userInput) {
+    editUserName(userInput) {
       // get called on three occasions:
       // 1. name change
       // 2. password change
       // 3.
 
       console.log(userInput)
+
+      //get user id from local storage
+      const userData = JSON.parse(localStorage.getItem('user'))
+
+      const userToken = localStorage.getItem('userToken')
+
+      //AXIOS
+
+      axios
+        .patch(
+          'http://127.0.0.1:8000/api/user/' + userData.id,
+          {
+            name: userInput
+          },
+          {
+            headers: {
+              Accept: 'application/vnd.api+json',
+              'Content-Type': 'application/vnd.api+json',
+              Authorization: `Bearer ${userToken}`
+            }
+          }
+        )
+        .then((res) => {
+          console.log('user name updated')
+          console.log(res)
+          const d = new Date()
+
+          // update local storage
+          const userLocal = JSON.parse(localStorage.getItem('user'))
+
+          console.log(userLocal)
+
+          const userUpdate = {
+            id: userLocal.id,
+            name: userInput,
+            email: userLocal.email,
+
+            profile_picture_URL: userLocal.profile_picture_URL,
+            banner_picture_URL: userLocal.banner_picture_URL,
+            updated_at: d.toLocaleString(),
+            created_at: userLocal.created_at
+          }
+          localStorage.setItem('user', JSON.stringify(userUpdate))
+          console.log(localStorage.getItem('user'))
+
+          // update user state in auth store
+          // authStore.user = userUpdate
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
     getUser(userId) {
       console.log('🍍')
