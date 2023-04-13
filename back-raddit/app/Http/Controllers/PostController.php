@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // Will need Posts Model to request API
 use App\Models\Posts;
+use App\Models\Users;
 use App\Models\Comments;
 
 class PostController extends Controller
 {   
     public function displayAllPosts() {
-        $posts = Posts::all();
-        return response()->json($posts);
+        // $posts = Posts::all();
+        $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
+            ->join('users', 'users.id', '=', 'posts.author_id')
+            ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
+            ->get();
+        return response()->json($post);
     }
 
     public function display(string $subName)
