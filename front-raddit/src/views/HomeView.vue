@@ -26,10 +26,10 @@ window.onscroll = () => {
    <LeftPanelComponent class="hidden" />
     <section class="page">
     <div class="ctnr_top">
-      <div class="ctnr_field topSubRaddit1"><img src="../assets/images/RadditsField.png" /></div>
-      <div class="ctnr_field topSubRaddit2"><img src="../assets/images/RadditsField.png" /></div>
-      <div class="ctnr_field topSubRaddit3"><img src="../assets/images/RadditsField.png" /></div>
-      <div class="ctnr_field topSubRaddit4"><img src="../assets/images/RadditsField.png" /></div>
+      <div class="ctnr_field topSubRaddit1"><img src="../assets/images/TopFields.png" />SubRaddit 1</div>
+      <div class="ctnr_field topSubRaddit2"><img src="../assets/images/TopFields.png" />SubRaddit 2</div>
+      <div class="ctnr_field topSubRaddit3"><img src="../assets/images/TopFields.png" />SubRaddit 3</div>
+      <div class="ctnr_field topSubRaddit4"><img src="../assets/images/TopFields.png" />SubRaddit 4</div>
     </div>
 
       <!-- *** FILTERBAR *** -->
