@@ -11,10 +11,10 @@ class PostController extends Controller
 {   
     public function displayAllPosts() {
         // $posts = Posts::all();
-        $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
+        $post = Posts::query()
             ->join('users', 'users.id', '=', 'posts.author_id')
             ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
-            ->get();
+            ->paginate(20);
         return response()->json($post);
     }
 
