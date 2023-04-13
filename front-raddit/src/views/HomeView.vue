@@ -33,7 +33,7 @@ console.log(!!localStorage.getItem('userToken'))
 
       <!-- *** POSTS *** -->
         <div class="flex flex-col  w-[78%] m-auto mb-5" v-if="PostStore.isLoading == false">          
-          <div v-for="post in PostStore.posts" class="pb-10">
+          <div v-for="post in PostStore.posts.data" class="pb-10">
 
             <Post
             :post=post
