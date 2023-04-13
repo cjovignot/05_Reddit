@@ -28,7 +28,7 @@ function createSubraddit() {
   let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'http://127.0.0.1:8000/api/r/create',
+        url: 'http://127.0.0.1:8000/api/r/create/' + author_id.id,
         headers: {
           Accept: 'application/vnd.api+json',
           'Content-Type': 'application/vnd.api+json',
@@ -46,6 +46,36 @@ function createSubraddit() {
     });
 }
 
+function getSubUser() {
+  let objects =  {
+    name: subraddit_name.value,
+    author_id: author_id.id,
+    about: about.value,
+    subraddit_picture_URL: imageStore.imageUrl,
+  };
+  // console.log('My new subraddit : ', objects);
+  
+  let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'http://127.0.0.1:8000/api/r/subraddits/' + author_id.id,
+    headers: {
+      Accept: 'application/vnd.api+json',
+      'Content-Type': 'application/vnd.api+json',
+      Authorization: `Bearer ${localStorage.getItem('userToken')}`,
+    },
+    data : objects
+  };
+  axios.request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch((error) => {
+        console.log(error);
+      });
+    }
+getSubUser();
+
 </script>
 
 <template>
@@ -56,8 +86,9 @@ function createSubraddit() {
       <input placeholder="Please type your Subraddit description" type="text" v-model="about" class="input input-bordered title_input"/>
       <button class="btn btn-outline btn-success" @click="createSubraddit()">Create</button>
     </div>
-    <button class="btn btn-outline btn-primary" @click="RouterLink">{{ subraddit_name }}</button>
+    <!-- <button class="btn btn-outline btn-primary" @click="RouterLink">{{ subraddit_name }}</button> -->
   </div>
+
 </template>
 
 <style scoped>

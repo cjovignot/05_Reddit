@@ -62,7 +62,7 @@ Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments'
 
 
 Route::get('/subraddits', [SubRadditController::class, 'displayAll']);
-Route::post('/r/create', [SubRadditController::class, 'store']);
+Route::post('/r/create/{id}', [SubRadditController::class, 'store']);
 Route::get('/r/subraddits/{id}', [SubRadditController::class, 'displaySubUser']);
 Route::get('/r/{subName}', [SubRadditController::class, 'displayOne']);
 

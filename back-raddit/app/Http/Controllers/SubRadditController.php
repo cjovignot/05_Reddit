@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Subraddits;
+use App\Models\Admins_subraddits_link;
 
 
 /**
@@ -27,9 +28,10 @@ class SubRadditController extends Controller
     }
 
 
-    public function displaySubUser() {
-        $subraddits = Subraddits::select('subraddits.name')
-            // ->join('admins_subraddits_link', 'admins_subraddits_link.admin_id', '=', 'subraddits.id')
+    public function displaySubUser($id) {
+        $subraddits = Subraddits::select('subraddits.*')
+            ->join('admins_subraddits_link', 'admins_subraddits_link.admin_id', '=', 'subraddits.id')
+            ->where('subraddits.id', '=', $id)
             ->get();
         return $subraddits->toJson(JSON_PRETTY_PRINT);
     }
@@ -43,7 +45,7 @@ class SubRadditController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $this->validate($request, [
             'name' => 'required|max:100',
@@ -57,8 +59,12 @@ class SubRadditController extends Controller
             'banner_picture_URL' => $request->banner_picture_URL
 
         ]);
+        $subraddits_info = Admins_subraddits_link::create([
+            'admin_id' => $id,
+            'subraddit_id' => $created->id,
+        ]);
 
-        return ["isCreated" => $created];
+        return ["isCreated" => $created, $subraddits_info];
     }
 
     /**
