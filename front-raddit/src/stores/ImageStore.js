@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
-import { createToaster } from '@meforma/vue-toaster'
-import { ref } from 'vue'
+// import { createToaster } from '@meforma/vue-toaster'
+// import { ref } from 'vue'
 
-const toaster = createToaster()
+// const toaster = createToaster()
 
 // for our const variable, 'use...'is a naming convention
 // adminStore -> ref name to use in components (must be unique)
@@ -30,10 +30,62 @@ export const useImageStore = defineStore('imageStore', {
   },
   actions: {
     storeImage(imageUrlRes, idValue) {
-      console.log(`coucou de la fonction storeImage 🍍 - url 👉 ${imageUrlRes}`)
-      console.log(idValue)
+      let keyDB
+
+      idValue == 'user' ? (keyDB = 'profile_picture_URL') : (keyDB = 'banner_picture_URL')
+
+      console.log(keyDB)
 
       this.imageUrl = imageUrlRes
+
+      //get user id from local storage
+      const userData = JSON.parse(localStorage.getItem('user'))
+
+      const userToken = localStorage.getItem('userToken')
+
+      //AXIOS
+
+      axios
+        .patch(
+          'http://127.0.0.1:8000/api/user/' + userData.id,
+          {
+            keyDB: imageUrlRes
+          },
+          {
+            headers: {
+              Accept: 'application/vnd.api+json',
+              'Content-Type': 'application/vnd.api+json',
+              Authorization: `Bearer ${userToken}`
+            }
+          }
+        )
+        .then((res) => {
+          console.log('pic url saved in db 📸')
+          console.log(res)
+          const d = new Date()
+
+          // update local storage
+          const userLocal = JSON.parse(localStorage.getItem('user'))
+
+          console.log(userLocal)
+
+          const userUpdate = {
+            id: userLocal.id,
+            name: userLocal.name,
+            email: userLocal.email,
+            kingAdmin: userLocal.kingAdmin,
+            profile_picture_URL: idValue == 'user' ? imageUrlRes : '',
+            banner_picture_URL: idValue == 'banner' ? imageUrlRes : '',
+            updated_at: d.toLocaleString(),
+            created_at: userLocal.created_at
+          }
+          localStorage.setItem('user', JSON.stringify(userUpdate))
+          // console.log(localStorage.getItem('user'))
+        })
+        .catch((err) => {
+          console.log('💩📸')
+          console.log(err)
+        })
     }
   }
 })

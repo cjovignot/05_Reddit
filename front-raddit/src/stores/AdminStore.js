@@ -18,6 +18,11 @@ export const useAdminStore = defineStore('adminStore', {
     kingAdmin() {
       return this.users.filter((u) => u.king_admin == 1)
     },
+    isKingAdmin(userId) {
+      console.log(userId)
+      // fetch a user by id in param and check if he is admin 1
+      return this.users.filter((u) => u.king_admin == 1)
+    },
     userCount() {
       return this.users.reduce((total, user) => {
         return user.king_admin == 0 ? total + 1 : total

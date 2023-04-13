@@ -8,13 +8,12 @@ import CreatePost from './CreatePostModal.vue'
 // import { storeToRefs } from 'pinia'
 const authStore = useAuthStore()
 
-const isSuperAdmin = ref(false)
+// const isSuperAdmin = ref(false)
 
-const { loggedIn } = storeToRefs(authStore)
+const { loggedIn, user, isSuperA } = storeToRefs(authStore)
 console.log({ loggedIn })
 
-// console.log(authStore.loggedIn)
-// const loggedIn = authStore.loggedIn
+console.log(user)
 
 console.log(loggedIn)
 
@@ -23,23 +22,19 @@ const logOut = () => {
   authStore.logout()
 }
 
-// // const isLoggedIn = ref(authStore.loggedIn)
-// // console.log({ isLoggedIn })
-// const { loggedIn } = storeToRefs(authStore)
-// console.log(loggedIn)
-
-// const userToken = localStorage.getItem('userToken')
 const userData = JSON.parse(localStorage.getItem('user'))
 
-if (userData) {
-  console.log(userData.king_admin)
-  if (userData.king_admin === 1 && authStore.loggedIn) isSuperAdmin.value = true
+if (localStorage.getItem('user')) {
+  // get user info from axio+pinia to see if kindadmin
 
-  console.log(isSuperAdmin.value)
+  authStore.getUser(userData.id)
+} else {
+  console.log('NOT LOGGED IN 🤷🏻‍♂️')
 }
 </script>
 
 <template>
+  {{ user }}
   <div class="navbar bg-base-100">
     <div class="flex-1">
       <RouterLink class="flex" to="/">
@@ -55,12 +50,12 @@ if (userData) {
       </div>
 
       <!-- The button to open Post modal -->
-      <label for="my-modal-5" class="btn">+</label>
+      <label v-if="loggedIn" for="my-modal-5" class="btn"><i class="fa-solid fa-plus"></i></label>
 
       <Register v-if="!loggedIn" />
       <CreatePost />
-
-      <RouterLink v-if="isSuperAdmin" class="btn" to="/admin">Admin</RouterLink>
+      <!-- {{ isSuperA }} -->
+      <RouterLink v-if="isSuperA" class="btn" to="/admin">Admin</RouterLink>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">

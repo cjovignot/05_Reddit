@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,8 +8,9 @@ use App\Models\Posts;
 use App\Models\Comments;
 
 class PostController extends Controller
-{   
-    public function displayAllPosts() {
+{
+    public function displayAllPosts()
+    {
         $posts = Posts::all();
         return response()->json($posts);
     }
@@ -18,13 +20,15 @@ class PostController extends Controller
         $posts = Posts::all()->where('subraddit_name', $subName);
         return response()->json($posts);
     }
-    
-    public function displayOne(string $subName, $id) {
+
+    public function displayOne(string $subName, $id)
+    {
         $post = Posts::where('subraddit_name', $subName)->where('id', $id)->firstOrFail();
         return response()->json($post);
     }
-    
-    public function storePost(Request $request) {
+
+    public function storePost(Request $request)
+    {
         $post = new Posts;
 
         $post->author_id = request('author_id');
@@ -41,14 +45,16 @@ class PostController extends Controller
         return Posts::all();
     }
 
-    public function editPost(Request $request, $id) {
+    public function editPost(Request $request, $id)
+    {
         $post = Posts::where('id', $id)->firstOrFail();
 
         $post->update($request->all());
         return $post;
     }
 
-    public function deletePost(string $id) {
+    public function deletePost(string $id)
+    {
         $post = Posts::where('id', $id)->firstOrFail();
         $success =  $post->delete();
 
@@ -60,27 +66,32 @@ class PostController extends Controller
 
     // TOP FILTTER BAR
 
-    public function postByCropsDown() {
+    public function postByCropsDown()
+    {
         $posts = Posts::orderBy('crops', 'desc')->get();
         return response()->json($posts);
     }
 
-    public function postByCropsUp() {
+    public function postByCropsUp()
+    {
         $posts = Posts::orderBy('crops', 'asc')->get();
         return response()->json($posts);
     }
 
-    public function postsByCreateDateUp() {
+    public function postsByCreateDateUp()
+    {
         $posts = Posts::orderBy('created_at', 'asc')->get();
         return response()->json($posts);
     }
 
-    public function postsByCreateDateDown() {
+    public function postsByCreateDateDown()
+    {
         $posts = Posts::orderBy('created_at', 'desc')->get();
         return response()->json($posts);
     }
 
-    public function postsHotUp() {
+    public function postsHotUp()
+    {
         $curdate = now();
         // $new = Posts::parse($curdate)->format('Y-m-d');;
         // $dates = Posts::all('created_at')->firstOrFail();
@@ -94,20 +105,22 @@ class PostController extends Controller
         return response()->json($curdate);
     }
 
-    public function postsHotDown() {
-        
+    public function postsHotDown()
+    {
     }
 
 
 
-    public function displayComments($post_id) {
+    public function displayComments($post_id)
+    {
         $post = Posts::all()->where('id', $post_id);
         $comments = Comments::all()->where('post_id', $post_id);
 
         $array = [
             'post' => $post,
-            'comments' => $comments
+            'comments' => $comments,
         ];
+
 
         return response()->json([$array]);
     }
