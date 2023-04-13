@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('admins_subraddits_link', function (Blueprint $table) {  
             $table->integer('admin_id');
             $table->integer('subraddit_id');
+            $table->timestamps();
 
-            $table->foreign('admin_id')->references('id')->on('users');
-            $table->foreign('subraddit_id')->references('id')->on('subraddits');
+
+            $table->foreign('admin_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('subraddit_id')->references('id')->on('subraddits')->onDelete('cascade');
 
         });
     }

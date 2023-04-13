@@ -11,7 +11,7 @@ class PostController extends Controller
 {   
     public function displayAllPosts() {
         // $posts = Posts::all();
-        $post = Posts::query()
+        $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
             ->join('users', 'users.id', '=', 'posts.author_id')
             ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
             ->paginate(20);

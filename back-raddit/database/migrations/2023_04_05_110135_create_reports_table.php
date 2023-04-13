@@ -24,11 +24,11 @@ return new class extends Migration
 
 
             
-            $table->foreign('reported_id')->references('id')->on('users');
-            $table->foreign('reporter_id')->references('id')->on('users');
-            $table->foreign('admin_id')->references('id')->on('users')->nullable();
-            $table->foreign('post_id')->references('id')->on('posts')->nullable();
-            $table->foreign('comment_id')->references('id')->on('comments')->nullable();
+            $table->foreign('reported_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('reporter_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('admin_id')->references('id')->on('users')->nullable()->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('posts')->nullable()->onDelete('cascade');
+            $table->foreign('comment_id')->references('id')->on('comments')->nullable()->onDelete('cascade');
 
         });
     }
