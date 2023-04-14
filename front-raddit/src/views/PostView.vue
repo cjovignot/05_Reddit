@@ -1,6 +1,8 @@
 <script setup>
 import { usePostStore } from '../stores/PostStore'
 import { useRoute } from 'vue-router'
+import Vote from "../components/VoteComponent.vue"
+
 const postStore = usePostStore()
 
 const url = useRoute()
@@ -11,6 +13,34 @@ postStore.getOnePost(url.params.postId)
 </script>
 
 <template>
-  {{ postStore.post }}
+      <div class="flex flex-row w-[100%] text-sm">
+
+          <div class="w-16 bg-green-100 w-[5%] " >
+            <vote
+            :post=postStore.post.crops
+            />        </div>
+            <div class ="flex flex-col bg-green-400 w-[100%] ">
+                
+                <div class="flex flex-row bg-slate-400 text-gray-500 h-[20%]" >
+                    <div class="w-[2.5%] rounded-xl bg-green-100">
+                        <img src="../assets/images/wholeRaddit.png" />
+                    </div>
+                    <div class="font-bold">{{ postStore.post.sname }}</div> <span class="ml-2 mr-2"> posted by </span> {{ postStore.post.uname }}  
+                </div>  
+                                <div class="flex flex-row font-bold text-xl ">{{ postStore.post.title }}</div>
+                    <br>
+                  <div class="flex flex-row text-base text-lg">{{ postStore.post.content }}</div>
+
+                  
+                  
+                  <div class="flex flex-row bg-slate-400 text-gray-500 h-[20%] mt-auto ">
+                    <div class="inline">⤴️ share</div>
+                    <div class="inline">⤴️ report</div>
+                    
+                  </div>
+            </div>
+      </div>
+  <br>
+
   <h1>post page</h1>
 </template>
