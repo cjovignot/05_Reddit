@@ -9,7 +9,26 @@ export const useSubradditStore = defineStore('subradditStore', {
     subradInfo: ''
   }),
   actions: {
-    getPosts() {},
+    getPosts(subName) {
+      let config = {
+        method: 'get',
+        maxBodyLength: Infinity,
+        url: 'http://127.0.0.1:8000/api/' + subName + '/posts',
+        headers: {}
+      }
+
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data))
+
+          this.posts = response.data
+          console.log(this.subradInfo)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
     getSubInfo(subName) {
       let config = {
         method: 'get',

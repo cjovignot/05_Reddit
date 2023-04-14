@@ -14,11 +14,16 @@ console.log(url.params.subraddit_name)
 const subradditStore = useSubradditStore()
 
 subradditStore.getSubInfo(url.params.subraddit_name)
+subradditStore.getPosts(url.params.subraddit_name)
 </script>
 
 <template>
   <!-- {{ subradditStore.subradInfo }} -->
   {{ subradditStore.subradInfo }}
+  <br />
+  <br />
+  <br />
+  {{ subradditStore.posts }}
   <br />
   <h1 class="text-3xl text-center">{{ subradditStore.subradInfo.name }}</h1>
   <p class="text-2xl text-center">{{ subradditStore.subradInfo.about }}</p>

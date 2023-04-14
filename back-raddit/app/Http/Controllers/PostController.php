@@ -20,9 +20,9 @@ class PostController extends Controller
         return response()->json($post);
     }
 
-    public function display(string $subName)
+    public function display(string $subId)
     {
-        $posts = Posts::all()->where('subraddit_name', $subName);
+        $posts = Posts::all()->where('subraddit_id', 1);
         return response()->json($posts);
     }
 
