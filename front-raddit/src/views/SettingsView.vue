@@ -132,7 +132,6 @@ console.log(authStore.user.name)
                   v-if="imageStore.imageUrl && picId == 'banner'"
                   class="claartboard artboard-horizontal phone-6"
                 >
-                  <h1>💥</h1>
                   <!-- <AdvancedImage :cldImg="myImg" /> -->
                   <img :src="imageUrl" alt="User profile image" />
                 </div>

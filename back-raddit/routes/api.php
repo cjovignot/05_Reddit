@@ -61,6 +61,7 @@ Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments'
 Route::get('/comment/{id}', [CommentsController::class, 'displayOne']);
 
 Route::get('/comments', [CommentsController::class, 'displayAll']);
+Route::get('/comments/{id}', [CommentsController::class, 'displayAll']);
 Route::post('/comment', [CommentsController::class, 'store']);
 Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
 Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);

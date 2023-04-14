@@ -1,5 +1,8 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { createToaster } from '@meforma/vue-toaster'
+
+const toaster = createToaster()
 
 export const usePostStore = defineStore('postStore', {
   // In here we define things like the state
@@ -7,7 +10,8 @@ export const usePostStore = defineStore('postStore', {
     isLoading: false,
     posts: [],
     page: 1,
-    post: {}
+    post: {},
+    comments: []
   }),
 
   actions: {
@@ -59,6 +63,61 @@ export const usePostStore = defineStore('postStore', {
         })
         .catch((err) => {
           console.log('could not load posts ❌')
+          console.error(err)
+        })
+    },
+    createComm(postId, commInput) {
+      console.log(postId)
+      console.log(commInput)
+
+      const user = JSON.parse(localStorage.getItem('user'))
+      console.log(user.id)
+      // return
+
+      let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'http://127.0.0.1:8000/api/comment',
+        headers: {
+          Accept: 'application/vnd.api+json',
+          'Content-Type': 'application/vnd.api+json',
+          Authorization: `Bearer ${localStorage.getItem('userToken')}`
+        },
+        data: {
+          post_id: postId,
+          content: commInput,
+          author_id: user.id
+        }
+      }
+
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(response.data)
+          this.comments = response.data
+          toaster.success(`Comment posted 🚀`)
+          // this.comments.push(response.data)
+          console.log(this.comments)
+        })
+        .catch((err) => {
+          console.error(err)
+          toaster.error(`Could not comment`)
+        })
+    },
+    getAllComms(postId) {
+      console.log(postId)
+
+      axios
+        .get('http://127.0.0.1:8000/api/comments/' + postId)
+        .then((response) => {
+          console.log(response.data)
+          // this.comments.push(response.data)
+          this.comments.push(...response.data)
+
+          console.log(this.comments)
+        })
+        .catch((err) => {
+          console.log('could not load comments ❌')
           console.error(err)
         })
     }

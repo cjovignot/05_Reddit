@@ -27,6 +27,18 @@ class CommentsController extends Controller
         return $comments->toJson(JSON_PRETTY_PRINT);
     }
 
+
+    /**
+     * Display all comments by post id
+     * 
+     */
+
+    public function displayAllByPost($id)
+    {
+        return 'YES';
+        $comments = Comments::all()->where('post_id', $id);
+        return response()->json($comments);
+    }
     /**
      * Display only one
      */
@@ -49,14 +61,14 @@ class CommentsController extends Controller
 
         // $request->validated($request->all());
 
-        $comment = Comments::create([
+        Comments::create([
             'author_id' => Auth::user()->id,
             'post_id' => $request->post_id,
             'content' => $request->content
         ]);
 
         // return new CommentsResource($comment);
-        return $comment;
+        return Comments::all()->where('post_id', $request->post_id);
     }
 
     /**
