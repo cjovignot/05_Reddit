@@ -16,19 +16,20 @@ class PostController extends Controller
         $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
             ->join('users', 'users.id', '=', 'posts.author_id')
             ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
+            ->orderBy('id', 'DESC')
             ->paginate(20);
         return response()->json($post);
     }
 
-    public function display(string $subName)
+    public function display(string $subId)
     {
-        $posts = Posts::all()->where('subraddit_name', $subName);
+        $posts = Posts::all()->where('subraddit_id', $subId);
         return response()->json($posts);
     }
 
-    public function displayOne(string $subName, $id)
+    public function displayOne($id)
     {
-        $post = Posts::where('subraddit_name', $subName)->where('id', $id)->firstOrFail();
+        $post = Posts::where('id', $id)->firstOrFail();
         return response()->json($post);
     }
 

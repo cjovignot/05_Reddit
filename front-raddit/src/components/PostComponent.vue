@@ -5,6 +5,11 @@ import { defineProps } from 'vue';
 let props =defineProps({
     post: Object,
 })
+
+function genUrl(id)
+{
+ return "/p/" + id;
+}
 </script>
 
 <template>
@@ -32,7 +37,7 @@ let props =defineProps({
 
                 <div class="flex flex-row text-base m-3">{{ post.content }}</div>
             </div>
-            
+        </RouterLink>
 
             <div class="flex flex-row bg-slate-100 text-gray-600 h-[20%] mt-auto ">
                 <div class="inline">📜 comment</div>
