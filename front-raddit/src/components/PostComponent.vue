@@ -29,6 +29,8 @@ function genUrl(id)
                 <div class="font-bold">{{ post.sname }}</div> <span class="ml-2 mr-2"> posted by </span> {{ post.uname }}  
             </div>
 
+            <RouterLink :to="genUrl(post.id)" >
+
             <div class="bg-gradient-to-b from-pink-400 to-slate-100 text-slate-950">
                 <div class="flex flex-row font-bold text-lg ml-2">{{ post.title }}</div>
                 <div class="flex flex-row text-base">

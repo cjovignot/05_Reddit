@@ -21,15 +21,18 @@ postStore.getOnePost(url.params.postId)
             />        </div>
             <div class ="flex flex-col bg-green-400 w-[100%] ">
                 
-                <div class="flex flex-row bg-slate-400 text-gray-500 h-[20%]" >
+                <div class="flex flex-row bg-green-400 text-gray-500 h-[20%]" >
                     <div class="w-[2.5%] rounded-xl bg-green-100">
                         <img src="../assets/images/wholeRaddit.png" />
                     </div>
                     <div class="font-bold">{{ postStore.post.sname }}</div> <span class="ml-2 mr-2"> posted by </span> {{ postStore.post.uname }}  
                 </div>  
-                                <div class="flex flex-row font-bold text-xl ">{{ postStore.post.title }}</div>
-                    <br>
+                <div class="bg-gradient-to-b from-pink-400 to-slate-100 text-slate-950">
+
+                  <div class="flex flex-row font-bold text-xl ">{{ postStore.post.title }}</div>
+                  <br>
                   <div class="flex flex-row text-base text-lg">{{ postStore.post.content }}</div>
+                </div>
 
                   
                   
