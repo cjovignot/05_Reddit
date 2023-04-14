@@ -25,20 +25,12 @@ window.onscroll = () => {
   <body class="flex">
     <LeftPanelComponent class="hidden" />
     <section class="page">
-      <div class="ctnr_top">
-        <div class="ctnr_field topSubRaddit1">
-          <img src="../assets/images/burriedRaddit.png" />SubRaddit 1
-        </div>
-        <div class="ctnr_field topSubRaddit2">
-          <img src="../assets/images/burriedRaddit.png" />SubRaddit 2
-        </div>
-        <div class="ctnr_field topSubRaddit3">
-          <img src="../assets/images/burriedRaddit.png" />SubRaddit 3
-        </div>
-        <div class="ctnr_field topSubRaddit4">
-          <img src="../assets/images/burriedRaddit.png" />SubRaddit 4
-        </div>
-      </div>
+    <div class="ctnr_top">
+      <div class="ctnr_field topSubRaddit1"><img src="../assets/images/300pxBurriedRaddit.png" />Tout sur le Radis</div>
+      <div class="ctnr_field topSubRaddit2"><img src="../assets/images/100pxBurriedRaddit.png" />Coucou la coding !</div>
+      <div class="ctnr_field topSubRaddit3"><img src="../assets/images/230pxBurriedRaddit.png" />1001 recettes autour du Radis</div>
+      <div class="ctnr_field topSubRaddit4"><img src="../assets/images/150pxBurriedRaddit.png" />Radineurs</div>
+    </div>
 
       <!-- *** FILTERBAR *** -->
       <div class="flex flex-row bg-slate-2 00 w-[78%] m-auto mb-10">

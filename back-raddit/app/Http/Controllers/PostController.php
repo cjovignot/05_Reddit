@@ -29,7 +29,15 @@ class PostController extends Controller
 
     public function displayOne($id)
     {
-        $post = Posts::where('id', $id)->firstOrFail();
+        $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
+            ->join('users', 'users.id', '=', 'posts.author_id')
+            ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
+            ->where('posts.id', $id)
+        ->firstOrFail();
+
+
+
+        // $post = Posts::where('id', $id)->firstOrFail();
         return response()->json($post);
     }
 
