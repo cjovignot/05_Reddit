@@ -1,24 +1,21 @@
 <script setup>
-import { ref } from 'vue'
-import { useImageStore } from '@/stores/ImageStore'
-import axios from 'axios'
-import { createToaster } from '@meforma/vue-toaster'
-import { RouterLink } from 'vue-router'
+// import { ref } from 'vue'
+// import { useImageStore } from '@/stores/ImageStore'
+// import axios from 'axios'
+// import { createToaster } from '@meforma/vue-toaster'
+// import { RouterLink } from 'vue-router'
 import { useSubradditStore } from '../stores/SubradditStore'
 
 import { useRoute } from 'vue-router'
 const url = useRoute()
 console.log(url.params.subraddit_name)
-// const urlName = url.name
 
 const subradditStore = useSubradditStore()
 
 subradditStore.getSubInfo(url.params.subraddit_name)
-subradditStore.getPosts(url.params.subraddit_name)
 </script>
 
 <template>
-  <!-- {{ subradditStore.subradInfo }} -->
   {{ subradditStore.subradInfo }}
   <br />
   <br />
