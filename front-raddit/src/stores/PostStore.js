@@ -94,7 +94,7 @@ export const usePostStore = defineStore('postStore', {
         .request(config)
         .then((response) => {
           console.log(response.data)
-          this.comments = response.data
+          this.comments = response.data.reverse()
           toaster.success(`Comment posted 🚀`)
           // this.comments.push(response.data)
           console.log(this.comments)
@@ -111,8 +111,8 @@ export const usePostStore = defineStore('postStore', {
         .get('http://127.0.0.1:8000/api/comments/' + postId)
         .then((response) => {
           console.log(response.data)
-          // this.comments.push(response.data)
-          this.comments.push(...response.data)
+          this.comments = response.data.reverse()
+          //this.comments.push(...response.data)
 
           console.log(this.comments)
         })

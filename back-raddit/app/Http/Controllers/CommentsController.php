@@ -35,9 +35,9 @@ class CommentsController extends Controller
 
     public function displayAllByPost($id)
     {
-
-        $comments = Comments::all()->where('post_id', $id);
-        return response()->json($comments);
+        $comments = Comments::all()->where('post_id', $id)->values();
+        // dump();
+        return $comments;
     }
     /**
      * Display only one
@@ -68,7 +68,7 @@ class CommentsController extends Controller
         ]);
 
         // return new CommentsResource($comment);
-        return Comments::all()->where('post_id', $request->post_id);
+        return Comments::all()->where('post_id', $request->post_id)->values();
     }
 
     /**

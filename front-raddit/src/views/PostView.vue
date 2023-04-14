@@ -25,7 +25,6 @@ const commentHandler = (postId) => {
 </script>
 
 <template>
-  {{ comments }}
   <div class="flex flex-row w-[100%] text-sm">
     <div class="w-16 bg-green-100 w-[5%]">
       <vote :post="postStore.post.crops" />
@@ -64,7 +63,7 @@ const commentHandler = (postId) => {
   </div>
 
   <!-- daisy -->
-  <div v-bind:key="index" v-for="(comment, index) in postStore.comments.reverse()">
+  <div v-bind:key="index" v-for="(comment, index) in comments">
     <div class="chat chat-start">
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
