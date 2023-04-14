@@ -12,6 +12,11 @@ use App\Traits\HttpResponses;
 
 
 
+/**
+ * @group COMMENTS Management
+ * 
+ * APIs to manage the COMMENTS resources.
+ */
 class CommentsController extends Controller
 {
 

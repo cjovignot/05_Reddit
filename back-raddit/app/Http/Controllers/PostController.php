@@ -8,8 +8,18 @@ use App\Models\Posts;
 use App\Models\Users;
 use App\Models\Comments;
 
+
+/**
+ * @group POST Management
+ * 
+ * APIs to manage the POST resources.
+ */
 class PostController extends Controller
 {
+    
+    /**
+     * Display all Posts 20 by 20
+     */
     public function displayAllPosts()
     {
         // $posts = Posts::all();
@@ -21,6 +31,10 @@ class PostController extends Controller
         return response()->json($post);
     }
 
+    
+    /**
+     * Display all Posts from a Subraddit ID
+     */
     public function display(string $subId)
     {
         $posts = Posts::all()->where('subraddit_id', $subId);
@@ -41,6 +55,11 @@ class PostController extends Controller
         return response()->json($post);
     }
 
+
+    
+    /**
+     * Function to store Post in DB
+     */
     public function storePost(Request $request)
     {
 
@@ -61,6 +80,10 @@ class PostController extends Controller
         return Posts::all();
     }
 
+    
+    /**
+     * Function to edit Post in DB
+     */
     public function editPost(Request $request, $id)
     {
         $post = Posts::where('id', $id)->firstOrFail();
@@ -69,6 +92,10 @@ class PostController extends Controller
         return $post;
     }
 
+    
+    /**
+     * Function to delete Post from DB
+     */
     public function deletePost(string $id)
     {
         $post = Posts::where('id', $id)->firstOrFail();
@@ -80,32 +107,51 @@ class PostController extends Controller
     }
 
 
-    // TOP FILTTER BAR
+    /**
+     * @group TOP FILTER BAR
+     * 
+     * APIs to manage the POST resources.
+     */
 
+    /**
+     * Filter to display posts BY CROPS DESC
+     */
     public function postByCropsDown()
     {
         $posts = Posts::orderBy('crops', 'desc')->get();
         return response()->json($posts);
     }
 
+    /**
+     * Filter to display posts BY CROPS ASC
+     */
     public function postByCropsUp()
     {
         $posts = Posts::orderBy('crops', 'asc')->get();
         return response()->json($posts);
     }
 
+    /**
+     * Filter to display posts BY CREATION DATE ASC
+     */
     public function postsByCreateDateUp()
     {
         $posts = Posts::orderBy('created_at', 'asc')->get();
         return response()->json($posts);
     }
 
+    /**
+     * Filter to display posts BY CREATION DATE DESC
+     */
     public function postsByCreateDateDown()
     {
         $posts = Posts::orderBy('created_at', 'desc')->get();
         return response()->json($posts);
     }
 
+    /**
+     * Filter to display posts BY HOT ASC -> Muliplies const by date of creation
+     */
     public function postsHotUp()
     {
         $curdate = now();
@@ -121,12 +167,24 @@ class PostController extends Controller
         return response()->json($curdate);
     }
 
+    /**
+     * Filter to display posts BY HOT DESC -> Muliplies const by date of creation
+     */
     public function postsHotDown()
     {
     }
 
 
 
+    /**
+     * @group POST Management
+     * 
+     * APIs to manage the POST resources.
+     */
+
+    /**
+     * Display comments of One Post, filtered by the Post ID
+     */
     public function displayComments($post_id)
     {
         $post = Posts::all()->where('id', $post_id);

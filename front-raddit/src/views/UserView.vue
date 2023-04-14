@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import UploadImageComponent from '../components/UploadImageComponent.vue';
+import TopVignette from '../components/TopVignettesComponent.vue';
 import { useImageStore } from '@/stores/ImageStore';
 import axios from 'axios';
 import { createToaster } from '@meforma/vue-toaster';
@@ -80,33 +81,86 @@ axios.request(config)
 
 </script>
 
-<template>
-  <div style="display: flex;flex-direction: column;">
+<template>    
+  <section>
+    <div class="create">
       <UploadImageComponent />
-    <div style="display: flex; justify-content: space-between; flex-direction: column;">
-      <input placeholder="Please type your Subraddit title" type="text" v-model="subraddit_name" class="input input-bordered title_input"/>
-      <input placeholder="Please type your Subraddit description" type="text" v-model="about" class="input input-bordered title_input"/>
-      <button class="btn btn-outline btn-success" @click="createSubraddit()">Create</button>
+      <div style="display: flex; flex-direction: column; min-width: 480px;">
+        <input placeholder="Please type your Subraddit title" type="text" v-model="subraddit_name" class="input input-bordered title_input"/>
+        <textarea placeholder="Please type your Subraddit description" type="text" v-model="about" class="input input-bordered title_input"></textarea>
+      </div>
+        <button class="btn btn-outline btn-success" @click="createSubraddit()">Create</button>
     </div>
-    <!-- <button class="btn btn-outline btn-primary" @click="RouterLink">{{ subraddit_name }}</button> -->
-    <div v-for="(sub, index) in subsUser" :key="index" >
-      <a class="btn btn-ghost" routerLink="/user/{{sub.name}}">{{ sub.name }}</a>
-    </div>
+    <TopVignette />
+  </section>
+
+    <div class="divider"></div> 
+  <div class="links">
+        <h1 class="text-3xl font-bold">ALL YOUR SUBRADDITS</h1>
+      <div class="divider"></div> 
+        <div v-for="(sub, index) in subsUser" :key="index" >
+          <a class="btn btn-ghost" routerLink="/user/{{sub.name}}">{{ sub.name }}</a>
+        </div>
   </div>
+
 
 </template>
 
 <style scoped>
 .title_input, button, input {
-  margin: 0 10px;
+  margin: 10px 10px;
+}
+button {
+  width: 100px;
+  align-self: center;
 }
 .title_input {
   /* width: -webkit-fill-available;
   max-width: 89%; */
 }
+textarea {
+  min-height: 126px;
+  padding-top: 12px;
+}
 img {
   border: 1px white solid;
   width: 100px;
   height: 100px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+
+}
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  align-self: stretch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1rem;
+  white-space: nowrap;
+}
+a {
+  justify-content: flex-start;
+  width: 300px;
+  border: 1px #1f293e solid;
+  margin: 3px 0px;
+}
+
+section {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+}
+.create {
+  display: flex;
 }
 </style>
