@@ -45,6 +45,23 @@ export const usePostStore = defineStore('postStore', {
           console.log('could not load post ❌')
           console.error(err)
         })
+    },
+    getAllPostsBycrops() {
+      this.isLoading = true
+      axios
+        .get('http://localhost:8000/api/posts?page=' + this.page)
+        .then((response) => {
+          let temp = response.data
+          this.posts.push(temp.data)
+
+          this.isLoading = false
+          console.log(this.posts)
+        })
+        .catch((err) => {
+          console.log('could not load posts ❌')
+          console.error(err)
+        })
     }
+
   }
 })
