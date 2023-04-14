@@ -47,7 +47,7 @@ Route::get('/posts/crops', [PostController::class, 'postByCrops']);
 // Displays All Posts from a Subraddit
 Route::get('/{subName}/posts', [PostController::class, 'display']);
 // Displays ONLY One Post from a Subraddit
-Route::get('/r/{id}', [PostController::class, 'displayOne']); // CHECK IF NEEDS TO BE DELETED
+Route::get('/p/{id}', [PostController::class, 'displayOne']); // CHECK IF NEEDS TO BE DELETED
 // Edits a post from its ID
 Route::put('/{id}', [PostController::class, 'editPost']);
 // Deletes a post from its ID
@@ -61,7 +61,7 @@ Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments'
 Route::get('/comment/{id}', [CommentsController::class, 'displayOne']);
 
 Route::get('/comments', [CommentsController::class, 'displayAll']);
-Route::get('/comments/{id}', [CommentsController::class, 'displayAll']);
+Route::get('/comments/{id}', [CommentsController::class, 'displayAllByPost']);
 Route::post('/comment', [CommentsController::class, 'store']);
 Route::put('/comment/{commentId}', [CommentsController::class, 'editOne']);
 Route::delete('/comment/{commentId}', [CommentsController::class, 'deleteOne']);

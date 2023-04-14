@@ -8,7 +8,6 @@ export const useSubradditStore = defineStore('subradditStore', {
     posts: [],
     subradInfo: '',
     page: 1
-
   }),
   actions: {
     getSubInfo(subName) {
@@ -31,7 +30,7 @@ export const useSubradditStore = defineStore('subradditStore', {
           let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://127.0.0.1:8000/api/' + this.subradInfo.id + '/posts?page='+ this.page,
+            url: 'http://127.0.0.1:8000/api/' + this.subradInfo.id + '/posts?page=' + this.page,
             headers: {}
           }
 
@@ -39,20 +38,19 @@ export const useSubradditStore = defineStore('subradditStore', {
             .request(config)
             .then((response) => {
               console.log('here')
-               this.posts.push(response.data)
-              
-    
+              this.posts.push(response.data)
+
               console.log(this.posts)
             })
-                .catch((error) => {
+            .catch((error) => {
               console.log(error)
             })
         })
         .catch((error) => {
           console.log(error)
         })
-    },getSubPosts() {
-
+    },
+    getSubPosts() {
       // let config = {
       //   method: 'get',
       //   maxBodyLength: Infinity,
@@ -60,8 +58,8 @@ export const useSubradditStore = defineStore('subradditStore', {
       //   headers: {}
       // }
 
-        axios
-        .get('http://127.0.0.1:8000/api/' + this.subradInfo.id +  '/posts?page='+ this.page)
+      axios
+        .get('http://127.0.0.1:8000/api/' + this.subradInfo.id + '/posts?page=' + this.page)
         .then((response) => {
           let temp = response.data
           this.posts.push(temp.data)
@@ -70,7 +68,6 @@ export const useSubradditStore = defineStore('subradditStore', {
           console.log('could not load posts ❌')
           console.error(err)
         })
-   }
-
+    }
   }
 })
