@@ -5,6 +5,11 @@ import { defineProps } from 'vue';
 let props =defineProps({
     post: Object,
 })
+
+function genUrl(id)
+{
+ return "/p/" + id;
+}
 </script>
 
 <template>
@@ -23,8 +28,8 @@ let props =defineProps({
                     </div>
                     <div class="font-bold">{{ post.sname }}</div> <span class="ml-2 mr-2"> posted by </span> {{ post.uname }}  
                 </div>
-                
-                <RouterLink to="/r/" + {{post.id}} :post="post">
+            
+                <RouterLink :to="genUrl(post.id)" >
             <div class="text-slate-950">
                 <div class="flex flex-row font-bold text-lg ">{{ post.title }}</div>
                 <div class="flex flex-row text-base">
