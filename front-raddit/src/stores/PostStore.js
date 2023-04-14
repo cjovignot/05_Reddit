@@ -6,7 +6,8 @@ export const usePostStore = defineStore('postStore', {
   state: () => ({
     isLoading: false,
     posts: [],
-    page: 1
+    page: 1,
+    post: {}
   }),
 
   actions: {
@@ -23,6 +24,25 @@ export const usePostStore = defineStore('postStore', {
         })
         .catch((err) => {
           console.log('could not load posts ❌')
+          console.error(err)
+        })
+    },
+    getOnePost(subName, postId) {
+      console.log(postId)
+      axios
+        .get('http://127.0.0.1:8000/api/r/' + postId)
+        .then((response) => {
+          // let temp = response.data
+          // this.posts.push(temp.data)
+
+          // // this.isLoading = false
+          // console.log(this.posts)
+
+          console.log(response.data)
+          this.post = response.data
+        })
+        .catch((err) => {
+          console.log('could not load post ❌')
           console.error(err)
         })
     }

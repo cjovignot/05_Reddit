@@ -26,9 +26,9 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
-    public function displayOne(string $subName, $id)
+    public function displayOne($id)
     {
-        $post = Posts::where('subraddit_name', $subName)->where('id', $id)->firstOrFail();
+        $post = Posts::where('id', $id)->firstOrFail();
         return response()->json($post);
     }
 
