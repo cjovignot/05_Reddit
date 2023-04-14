@@ -19,7 +19,7 @@ postStore.getOnePost(url.params.postId)
             <vote
             :post=postStore.post.crops
             />        </div>
-            <div class ="flex flex-col bg-green-400 w-[100%] ">
+            <div class ="flex flex-col bg-slate-100 w-[100%] ">
                 
                 <div class="flex flex-row bg-green-400 text-gray-500 h-[20%]" >
                     <div class="w-[2.5%] rounded-xl bg-green-100">
