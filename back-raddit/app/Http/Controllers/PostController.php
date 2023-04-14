@@ -16,6 +16,7 @@ class PostController extends Controller
         $post = Posts::select('posts.*', 'users.name AS uname', 'subraddits.name AS sname')
             ->join('users', 'users.id', '=', 'posts.author_id')
             ->join('subraddits', 'subraddits.id', '=', 'posts.subraddit_id')
+            ->orderBy('id', 'DESC')
             ->paginate(20);
         return response()->json($post);
     }
