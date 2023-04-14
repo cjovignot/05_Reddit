@@ -24,7 +24,7 @@ let props =defineProps({
                     <div class="font-bold">{{ post.sname }}</div> <span class="ml-2 mr-2"> posted by </span> {{ post.uname }}  
                 </div>
                 
-                <RouterLink to="/r/" + {{post.id}}>
+                <RouterLink to="/r/" + {{post.id}} :post="post">
             <div class="text-slate-950">
                 <div class="flex flex-row font-bold text-lg ">{{ post.title }}</div>
                 <div class="flex flex-row text-base">
