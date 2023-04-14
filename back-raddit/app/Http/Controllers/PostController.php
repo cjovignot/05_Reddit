@@ -22,7 +22,7 @@ class PostController extends Controller
 
     public function display(string $subId)
     {
-        $posts = Posts::all()->where('subraddit_id', 1);
+        $posts = Posts::all()->where('subraddit_id', $subId);
         return response()->json($posts);
     }
 

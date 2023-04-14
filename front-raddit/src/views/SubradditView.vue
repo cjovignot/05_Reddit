@@ -14,7 +14,7 @@ console.log(url.params.subraddit_name)
 const subradditStore = useSubradditStore()
 
 subradditStore.getSubInfo(url.params.subraddit_name)
-subradditStore.getPosts(url.params.subraddit_name)
+// subradditStore.getPosts(url.params.subraddit_name)
 </script>
 
 <template>
