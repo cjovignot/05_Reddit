@@ -7,6 +7,8 @@ import axios from 'axios'
 
 let post_title = ref('')
 let post_content = ref('')
+let subraddit_name_input = ref()
+let subraddit_id = ref()
 
 let nsfw = ref('')
 let OC = ref('')
@@ -16,6 +18,46 @@ const imageStore = useImageStore()
 const toaster = createToaster({
   /* options */
 })
+////  GET SUBRADDIT NAME FROM INPUT
+const getSubName = (event) => {
+  console.log(event)
+  // return
+  // console.log(event.key)
+
+  // console.log(search.value)
+  if (event.key == 'Enter') {
+    // console.log(search.value)
+    console.log(event.key)
+    event.target.blur()
+
+    //router.push('/r/' + search.value)
+
+    // axios to get subraddit id
+
+    let config = {
+      method: 'get',
+      maxBodyLength: Infinity,
+      url: 'http://127.0.0.1:8000/api/r/' + subraddit_name_input.value,
+      headers: {}
+    }
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log('🚀')
+        console.log(JSON.stringify(response.data))
+        console.log(JSON.stringify(response.data.id))
+        subraddit_id.value = response.data.id
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  // updateCatToDb()
+}
+
+////
 
 function createPost() {
   let author_id = JSON.parse(localStorage.user)
@@ -38,7 +80,7 @@ function createPost() {
   let object = {
     title: post_title.value,
     author_id: author_id.id,
-    subraddit_id: 106,
+    subraddit_id: subraddit_id.value,
     nsfw: nsfw.value,
     OC: OC.value,
     spoiler: spoiler.value,
@@ -72,6 +114,7 @@ function createPost() {
 </script>
 
 <template>
+  {{ subraddit_name_input }}
   <input type="checkbox" id="my-modal-5" class="modal-toggle" />
   <div class="modal">
     <div class="modal-box w-11/12 max-w-5xl">
@@ -100,6 +143,14 @@ function createPost() {
       </div>
       <UploadImage />
       <div id="input_div">
+        <input
+          v-on:focusout="getSubName($event)"
+          v-on:keyup.enter="getSubName($event)"
+          v-model="subraddit_name_input"
+          type="text"
+          placeholder="Enter the subraddit name"
+          class="input input-bordered input-md w-full"
+        />
         <input
           v-model="post_title"
           type="text"
