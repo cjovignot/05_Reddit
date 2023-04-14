@@ -27,7 +27,7 @@ export const usePostStore = defineStore('postStore', {
           console.error(err)
         })
     },
-    getOnePost(subName, postId) {
+    getOnePost(postId) {
       console.log(postId)
       axios
         .get('http://127.0.0.1:8000/api/r/' + postId)
@@ -62,6 +62,5 @@ export const usePostStore = defineStore('postStore', {
           console.error(err)
         })
     }
-
   }
 })

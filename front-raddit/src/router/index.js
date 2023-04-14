@@ -46,7 +46,7 @@ const router = createRouter({
       component: SubView
     },
     {
-      path: '/r/:postId',
+      path: '/p/:postId',
       name: 'Single Post Page',
       component: PostView
     }
