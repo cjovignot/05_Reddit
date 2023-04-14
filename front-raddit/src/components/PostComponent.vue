@@ -8,6 +8,7 @@ let props =defineProps({
 </script>
 
 <template>
+<RouterLink class="flex" to="/">
 
     <div class="flex flex-row bg-red-500 w-[100%] text-sm">
         <div class="w-16 bg-green-100 w-[5%] " >
@@ -43,6 +44,7 @@ let props =defineProps({
         </div>
     </div>
 
+      </RouterLink>
 </template>
 <style scoped>
 </style>
