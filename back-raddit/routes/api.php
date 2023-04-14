@@ -57,7 +57,7 @@ Route::delete('/post/{id}', [PostController::class, 'deletePost']);
 
 
 // COMMENTS
-Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
+// Route::get('/post/comments/{post_id}', [PostController::class, 'displayComments']);
 Route::get('/comment/{id}', [CommentsController::class, 'displayOne']);
 
 Route::get('/comments', [CommentsController::class, 'displayAll']);

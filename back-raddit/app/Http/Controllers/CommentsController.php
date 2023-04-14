@@ -35,7 +35,7 @@ class CommentsController extends Controller
 
     public function displayAllByPost($id)
     {
-        return 'YES';
+
         $comments = Comments::all()->where('post_id', $id);
         return response()->json($comments);
     }
