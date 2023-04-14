@@ -33,7 +33,7 @@ window.onscroll = () => {
     </div>
 
       <!-- *** FILTERBAR *** -->
-      <div class="flex flex-row bg-red-500 w-[78%] m-auto mb-10">
+      <div class="flex flex-row bg-slate-2  00 w-[78%] m-auto mb-10">
         <div class="ctnr_new">🆕</div>
         <div class="ctnr_hot">🔥</div>
       </div>
